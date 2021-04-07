@@ -1,0 +1,20 @@
+:root {
+  --container-width: 1536px;
+}
+
+label, input, textarea, button, select, a, summary {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus, button:focus, input:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  outline: none !important;
+  border: 0 !important;
+}
+
+.container {
+  max-width: var(--container-width);
+}

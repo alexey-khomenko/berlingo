@@ -1,5 +1,15 @@
 :root {
-  --container-width: 1536px;
+  --container-width: 1160px;
+}
+@media (max-width: 1199px) {
+  :root {
+    --container-width: 940px;
+  }
+}
+@media (max-width: 959px) {
+  :root {
+    --container-width: 280px;
+  }
 }
 
 label, input, textarea, button, select, a, summary {
@@ -15,6 +25,69 @@ button::-moz-focus-inner {
   border: 0 !important;
 }
 
+.index-bottom {
+  display: block;
+  position: relative;
+}
+
+.index-bottom-back {
+  display: block;
+  position: absolute;
+}
+
+.index-bottom-main {
+  height: 398px;
+}
+.index-bottom-main .content {
+  display: block;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  background-color: #ff0000;
+}
+
+.index-footer {
+  display: block;
+  position: relative;
+  border-top: 1px solid #ffffff;
+}
+
+.index-footer-back {
+  display: block;
+  position: absolute;
+}
+
+.index-footer-main {
+  height: 196px;
+}
+.index-footer-main .content {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  background-color: #ff0000;
+}
+
+.wrapper {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: visible;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
 .container {
+  display: block;
+  position: relative;
   max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
 }

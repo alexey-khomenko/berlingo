@@ -1,3 +1,19 @@
+.wrapper {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: visible;
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
 .container {
+    display: block;
+    position: relative;
     max-width: var(--container-width);
+    width: 100%;
+    margin: 0 auto;
 }

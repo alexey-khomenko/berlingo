@@ -1,13 +1,9 @@
-.index-bottom-main {
-    height: 398px;
+.index-bottom__main {
+    top: 209px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .content {
-        display: block;
-        position: absolute;
-        top: 120px;
-        left: 0;
-        right: 0;
-        bottom: 100px;
-        background-color: #ff0000;
+        height: 178px;
     }
 }

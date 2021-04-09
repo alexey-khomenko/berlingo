@@ -1,13 +1,9 @@
-.index-footer-main {
-    height: 196px;
+.index-footer__main {
+    top: 99px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .content {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 60px;
-        background-color: #ff0000;
+        height: 76px;
     }
 }

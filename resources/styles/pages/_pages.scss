@@ -1,9 +1,26 @@
-//@import "index/header";
-//@import "index/top";
-//@import "index/stages";
-//@import "index/prizes";
-//@import "index/prize";
-//@import "index/shops";
+@import "index/header";
+@import "index/header-back";
+@import "index/header-main";
+
+@import "index/top";
+@import "index/top-back";
+@import "index/top-main";
+
+@import "index/stages";
+@import "index/stages-back";
+@import "index/stages-main";
+
+@import "index/prizes";
+@import "index/prizes-back";
+@import "index/prizes-main";
+
+@import "index/prize";
+@import "index/prize-back";
+@import "index/prize-main";
+
+@import "index/shops";
+@import "index/shops-back";
+@import "index/shops-main";
 
 @import "index/bottom";
 @import "index/bottom-back";

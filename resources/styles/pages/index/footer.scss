@@ -1,5 +1,5 @@
 .index-footer {
-    height: 197px;
+    height: var(--index-footer-height);
 
     &::before {
         content: "";

@@ -1,5 +1,5 @@
 .index-bottom__back {
-    top: 156px;
+    top: var(--index-bottom-back-top);
     left: 50%;
-    transform: translateX(-113px);
+    transform: translateX(var(--index-bottom-back-transform));
 }

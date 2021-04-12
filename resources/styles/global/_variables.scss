@@ -1,11 +1,146 @@
+$md: 1199px;
+$sm: 959px;
+//----------------------------------------------------------------------------------------------------------------------
 :root {
     --container-width: 1160px;
 
-    @media (max-width: 1199px) {
+    @media (max-width: $md) {
         --container-width: 940px;
     }
 
-    @media (max-width: 959px) {
+    @media (max-width: $sm) {
         --container-width: 280px;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-header-height: 60px;
+    --index-header-back-top: -230px;
+    --index-header-back-transform: 156px;
+
+    @media (max-width: $md) {
+        --index-header-height: 60px;
+        --index-header-back-top: -160px;
+        --index-header-back-transform: 112px;
+    }
+
+    @media (max-width: $sm) {
+        --index-header-height: 40px;
+        --index-header-back-top: -160px;
+        --index-header-back-transform: 230px;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-top-height: 780px;
+    --index-top-back-top: -40px;
+    --index-top-back-transform: 1128px;
+
+    @media (max-width: $md) {
+        --index-top-height: 580px;
+        --index-top-back-top: -20px;
+        --index-top-back-transform: 839px;
+    }
+
+    @media (max-width: $sm) {
+        --index-top-height: 590px;
+        --index-top-back-top: 280px;
+        --index-top-back-transform: 290px;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-stages-height: 760px;
+
+    @media (max-width: $md) {
+        --index-stages-height: 680px;
+    }
+
+    @media (max-width: $sm) {
+        --index-stages-height: 1138px;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-prizes-height: 1086px;
+    --index-prizes-back-top: 11px;
+    --index-prizes-back-transform: 639px;
+
+    @media (max-width: $md) {
+        --index-prizes-height: 999px;
+        --index-prizes-back-top: 0;
+        --index-prizes-back-transform: 0;
+    }
+
+    @media (max-width: $sm) {
+        --index-prizes-height: 1945px;
+        --index-prizes-back-top: 0;
+        --index-prizes-back-transform: 0;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-prize-height: 790px;
+
+    @media (max-width: $md) {
+        --index-prize-height: 647px;
+    }
+
+    @media (max-width: $sm) {
+        --index-prize-height: 722px;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-bottom-height: 418px;
+
+    //todo переделать
+    --index-bottom-back-top: 156px;
+    --index-bottom-back-transform: -113px;
+
+
+    --index-bottom-main-top: 229px;
+
+    @media (max-width: $md) {
+        --index-bottom-height: 324px;
+
+        //todo переделать
+        --index-bottom-back-top: -304px;
+        --index-bottom-back-transform: 0;
+
+
+        --index-bottom-main-top: 162px;
+    }
+
+    @media (max-width: $sm) {
+        --index-bottom-height: 407px;
+
+        //todo переделать
+        --index-bottom-back-top: -232px;
+        --index-bottom-back-transform: -320px;
+
+
+        --index-bottom-main-top: 204px;
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+:root {
+    --index-footer-height: 197px;
+    --index-footer-back-top: -398px;
+    --index-footer-back-transform: 0;
+    --index-footer-main-top: 99px;
+
+    @media (max-width: $md) {
+        --index-footer-height: 149px;
+        --index-footer-back-top: -304px;
+        --index-footer-back-transform: 0;
+        --index-footer-main-top: 74px;
+    }
+
+    @media (max-width: $sm) {
+        --index-footer-height: 274px;
+        --index-footer-back-top: -232px;
+        --index-footer-back-transform: -320px;
+        --index-footer-main-top: 137px;
     }
 }

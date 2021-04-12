@@ -3,6 +3,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    // todo
+    @media (max-width: $md) {
+        display: none !important;
+    }
+
     .content {
         height: 926px;
         display: flex;
@@ -55,6 +60,15 @@
                 font-weight: normal;
                 font-size: 48px;
                 line-height: 1.125;
+
+                img {
+                    width: 160px;
+                    height: 6px;
+                    position: absolute;
+                    top: 100%;
+                    right: 50%;
+                    transform: translateX(19px);
+                }
             }
 
             &_secondary {

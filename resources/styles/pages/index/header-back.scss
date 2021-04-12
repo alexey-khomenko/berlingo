@@ -1,5 +1,5 @@
 .index-header__back {
-    top: -230px;
+    top: var(--index-header-back-top);
     right: 50%;
-    transform: translateX(156px);
+    transform: translateX(var(--index-header-back-transform));
 }

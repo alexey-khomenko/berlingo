@@ -1,5 +1,5 @@
 .index-footer__back {
-    top: -398px;
+    top: var(--index-footer-back-top);
     left: 50%;
-    transform: translateX(0);
+    transform: translateX(var(--index-footer-back-transform));
 }

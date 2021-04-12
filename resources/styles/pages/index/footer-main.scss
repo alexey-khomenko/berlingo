@@ -1,9 +1,9 @@
 .index-footer__main {
-    top: 99px;
+    top: var(--index-footer-main-top);
     left: 50%;
     transform: translate(-50%, -50%);
 
     .content {
-        height: 76px;
+
     }
 }

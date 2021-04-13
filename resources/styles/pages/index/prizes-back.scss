@@ -4,7 +4,7 @@
     transform: translateX(var(--index-prizes-back-transform));
 
     // todo
-    @media (max-width: $md) {
+    @media (max-width: $md_max) {
         display: none !important;
     }
 }

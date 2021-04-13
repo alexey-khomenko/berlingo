@@ -40,3 +40,27 @@
         position: relative;
     }
 }
+
+.image {
+    &_lg, &_md, &_sm {
+        display: none;
+    }
+
+    &_lg {
+        @media (min-width: $lg_min) {
+            display: block;
+        }
+    }
+
+    &_md {
+        @media (min-width: $md_min) and (max-width: $md_max) {
+            display: block;
+        }
+    }
+
+    &_sm {
+        @media (max-width: $sm_max) {
+            display: block;
+        }
+    }
+}

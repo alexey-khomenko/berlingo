@@ -1,6 +1,5 @@
 {
     "/js/scripts.js": "/js/scripts.js",
-    "/css/styles.css": "/css/styles.css",
     "/images/_content-index-shops-large-1.png": "/images/_content-index-shops-large-1.png",
     "/images/_content-index-shops-large-2.png": "/images/_content-index-shops-large-2.png",
     "/images/_content-index-shops-large-3.png": "/images/_content-index-shops-large-3.png",
@@ -69,5 +68,6 @@
     "/images/index-top-back-3-lg.png": "/images/index-top-back-3-lg.png",
     "/images/index-top-back-3-md.png": "/images/index-top-back-3-md.png",
     "/images/index-top-back-3-sm.png": "/images/index-top-back-3-sm.png",
-    "/index.html": "/index.html"
+    "/index.html": "/index.html",
+    "/css/styles.css": "/css/styles.css"
 }

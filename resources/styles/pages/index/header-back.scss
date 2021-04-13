@@ -1,5 +1,20 @@
+:root {
+    --index-header-back-top: -230px;
+    --index-header-back-transform: 156px;
+
+    @media (max-width: $md_max) {
+        --index-header-back-top: -160px;
+        --index-header-back-transform: 112px;
+    }
+
+    @media (max-width: $sm_max) {
+        --index-header-back-top: -160px;
+        --index-header-back-transform: 230px;
+    }
+}
+
 .index-header__back {
     top: var(--index-header-back-top);
-    right: 50%;
     transform: translateX(var(--index-header-back-transform));
+    right: 50%;
 }

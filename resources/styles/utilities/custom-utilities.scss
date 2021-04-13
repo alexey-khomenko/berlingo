@@ -29,8 +29,16 @@
 
 .main {
     display: block;
-    width: var(--container-width);
     z-index: 10;
+    width: 1160px;
+
+    @media (max-width: $md_max) {
+        width: 940px;
+    }
+
+    @media (max-width: $sm_max) {
+        width: 280px;
+    }
 
     &_abs {
         position: absolute;
@@ -40,7 +48,7 @@
         position: relative;
     }
 }
-
+//----------------------------------------------------------------------------------------------------------------------
 .image {
     &_lg, &_md, &_sm {
         display: none;

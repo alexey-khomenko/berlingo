@@ -1,3 +1,15 @@
+:root {
+    --index-prizes-height: 1086px;
+
+    @media (max-width: $md_max) {
+        --index-prizes-height: 999px;
+    }
+
+    @media (max-width: $sm_max) {
+        --index-prizes-height: 1945px;
+    }
+}
+
 .index-prizes {
     height: var(--index-prizes-height);
 }

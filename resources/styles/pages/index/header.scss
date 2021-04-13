@@ -1,3 +1,15 @@
+:root {
+    --index-header-height: 60px;
+
+    @media (max-width: $md_max) {
+        --index-header-height: 60px;
+    }
+
+    @media (max-width: $sm_max) {
+        --index-header-height: 40px;
+    }
+}
+
 .index-header {
     height: var(--index-header-height);
 

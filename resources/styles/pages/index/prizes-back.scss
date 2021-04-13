@@ -1,5 +1,20 @@
+:root {
+    --index-prizes-back-top: 11px;
+    --index-prizes-back-transform: 639px;
+
+    @media (max-width: $md_max) {
+        --index-prizes-back-top: -9px;
+        --index-prizes-back-transform: 576px;
+    }
+
+    @media (max-width: $sm_max) {
+        --index-prizes-back-top: 20px;
+        --index-prizes-back-transform: 386px;
+    }
+}
+
 .index-prizes__back {
     top: var(--index-prizes-back-top);
-    right: 50%;
     transform: translateX(var(--index-prizes-back-transform));
+    right: 50%;
 }

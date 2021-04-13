@@ -1,3 +1,15 @@
+:root {
+    --index-bottom-height: 418px;
+
+    @media (max-width: $md_max) {
+        --index-bottom-height: 324px;
+    }
+
+    @media (max-width: $sm_max) {
+        --index-bottom-height: 407px;
+    }
+}
+
 .index-bottom {
     height: var(--index-bottom-height);
 }

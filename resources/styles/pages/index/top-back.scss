@@ -1,5 +1,20 @@
+:root {
+    --index-top-back-top: -40px;
+    --index-top-back-transform: 1128px;
+
+    @media (max-width: $md_max) {
+        --index-top-back-top: -20px;
+        --index-top-back-transform: 839px;
+    }
+
+    @media (max-width: $sm_max) {
+        --index-top-back-top: 280px;
+        --index-top-back-transform: 290px;
+    }
+}
+
 .index-top__back {
     top: var(--index-top-back-top);
-    right: 50%;
     transform: translateX(var(--index-top-back-transform));
+    right: 50%;
 }

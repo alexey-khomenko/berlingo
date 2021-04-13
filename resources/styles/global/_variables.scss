@@ -70,14 +70,14 @@ $sm_max: 959px;
 
     @media (max-width: $md_max) {
         --index-prizes-height: 999px;
-        --index-prizes-back-top: 0;
-        --index-prizes-back-transform: 0;
+        --index-prizes-back-top: -9px;
+        --index-prizes-back-transform: 576px;
     }
 
     @media (max-width: $sm_max) {
         --index-prizes-height: 1945px;
-        --index-prizes-back-top: 0;
-        --index-prizes-back-transform: 0;
+        --index-prizes-back-top: 20px;
+        --index-prizes-back-transform: 386px;
     }
 }
 //----------------------------------------------------------------------------------------------------------------------
@@ -95,33 +95,21 @@ $sm_max: 959px;
 //----------------------------------------------------------------------------------------------------------------------
 :root {
     --index-bottom-height: 418px;
-
-    //todo переделать
-    --index-bottom-back-top: 156px;
+    --index-bottom-back-top: 176px;
     --index-bottom-back-transform: -113px;
-
-
     --index-bottom-main-top: 229px;
 
     @media (max-width: $md_max) {
         --index-bottom-height: 324px;
-
-        //todo переделать
-        --index-bottom-back-top: -304px;
-        --index-bottom-back-transform: 0;
-
-
+        --index-bottom-back-top: 86px;
+        --index-bottom-back-transform: -63px;
         --index-bottom-main-top: 162px;
     }
 
     @media (max-width: $sm_max) {
         --index-bottom-height: 407px;
-
-        //todo переделать
-        --index-bottom-back-top: -232px;
-        --index-bottom-back-transform: -320px;
-
-
+        --index-bottom-back-top: 89px;
+        --index-bottom-back-transform: 79px;
         --index-bottom-main-top: 204px;
     }
 }

@@ -2,9 +2,4 @@
     top: var(--index-prizes-back-top);
     right: 50%;
     transform: translateX(var(--index-prizes-back-transform));
-
-    // todo
-    @media (max-width: $md_max) {
-        display: none !important;
-    }
 }

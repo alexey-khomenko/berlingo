@@ -1,3 +1,66 @@
 .index-prize__main {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
+    .title {
+        display: block;
+        position: absolute;
+        transform: translateY(-50%);
+        color: #ffffff;
+        top: 212px;
+        left: 100px;
+        width: 460px;
+
+        @media (max-width: $md_max) {
+            display: none;
+        }
+    }
+
+    .text {
+        display: block;
+        position: absolute;
+        transform: translateY(-50%);
+        color: #ffffff;
+        top: 325px;
+        left: 100px;
+        width: 460px;
+
+        @media (max-width: $md_max) {
+            display: none;
+        }
+    }
+
+    .button {
+        display: flex;
+        position: absolute;
+        transform: translateY(-50%);
+        justify-content: center;
+        align-items: center;
+        border-radius: 99999px;
+        background-color: #ffffff;
+        text-decoration: none;
+        top: 468px;
+        left: 100px;
+        width: 253px;
+        height: 80px;
+
+        @media (max-width: $md_max) {
+            display: none;
+        }
+
+        &:hover span {
+            transform: scale(1.05, 1.15);
+        }
+
+        span {
+            text-transform: uppercase;
+            color: #000000;
+            font-family: "Bebas Neue", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            font-size: 20px;
+        }
+    }
 }

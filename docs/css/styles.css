@@ -92,7 +92,7 @@ img {
 }
 @media (max-width: 1199px) {
   .index-top__back {
-    top: -20px;
+    top: -12px;
     transform: translateX(839px);
   }
 }
@@ -100,6 +100,111 @@ img {
   .index-top__back {
     top: 280px;
     transform: translateX(290px);
+  }
+}
+
+.index-top__main {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.index-top__main .text {
+  transform: translateY(-50%);
+  position: absolute;
+  display: block;
+  left: 0;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  top: 138px;
+}
+@media (max-width: 1199px) {
+  .index-top__main .text {
+    font-size: 36px;
+    line-height: 43px;
+    top: 103px;
+  }
+}
+@media (max-width: 959px) {
+  .index-top__main .text {
+    font-size: 22px;
+    line-height: 26px;
+    top: 66px;
+  }
+}
+.index-top__main .button {
+  transform: translateY(-50%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  text-decoration: none;
+  left: 0;
+  width: 368px;
+  height: 80px;
+}
+@media (max-width: 959px) {
+  .index-top__main .button {
+    width: 254px;
+    height: 60px;
+  }
+}
+.index-top__main .button_check {
+  background-color: #ffffff;
+  top: 276px;
+}
+@media (max-width: 1199px) {
+  .index-top__main .button_check {
+    top: 226px;
+  }
+}
+@media (max-width: 959px) {
+  .index-top__main .button_check {
+    top: 162px;
+  }
+}
+.index-top__main .button_check span {
+  color: #000000;
+}
+.index-top__main .button_pen {
+  background-color: #000000;
+  top: 396px;
+}
+@media (max-width: 1199px) {
+  .index-top__main .button_pen {
+    top: 346px;
+  }
+}
+@media (max-width: 959px) {
+  .index-top__main .button_pen {
+    top: 242px;
+  }
+}
+.index-top__main .button_pen span {
+  color: #ffffff;
+}
+.index-top__main .button:hover span {
+  transform: scale(1.05, 1.15);
+}
+.index-top__main .button span {
+  padding-top: 2px;
+  transition: transform 500ms ease;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .index-top__main .button span {
+    font-size: 14px;
   }
 }
 

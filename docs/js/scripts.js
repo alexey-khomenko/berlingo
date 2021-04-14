@@ -1969,6 +1969,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _misc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./misc */ "./resources/scripts/misc.js");
+/* harmony import */ var _misc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_misc__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 window.alpinejsComponentData = function () {
@@ -1976,6 +1979,20 @@ window.alpinejsComponentData = function () {
 };
 
 console.log("hello, World");
+
+/***/ }),
+
+/***/ "./resources/scripts/misc.js":
+/*!***********************************!*\
+  !*** ./resources/scripts/misc.js ***!
+  \***********************************/
+/***/ (() => {
+
+//----------------------------------------------------------------------------------------------------------------------
+// пустые ссылки #
+document.addEventListener("click", function (e) {
+  if (e.target.href === "#" || e.target.closest("[href=\"#\"]")) e.preventDefault();
+});
 
 /***/ }),
 

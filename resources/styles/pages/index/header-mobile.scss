@@ -1,0 +1,27 @@
+.index-header__mobile {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+
+    .content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1160px;
+
+        @media (max-width: $md_max) {
+            width: 940px;
+        }
+
+        @media (max-width: $sm_max) {
+            width: 280px;
+        }
+
+
+    }
+}

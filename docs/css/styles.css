@@ -46,7 +46,7 @@ img {
   content: "";
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 12;
   left: 0;
   right: 0;
   bottom: 0;
@@ -68,6 +68,33 @@ img {
 @media (max-width: 959px) {
   .index-header__back {
     transform: translateX(230px);
+  }
+}
+
+.index-header__mobile {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+.index-header__mobile .content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1160px;
+}
+@media (max-width: 1199px) {
+  .index-header__mobile .content {
+    width: 940px;
+  }
+}
+@media (max-width: 959px) {
+  .index-header__mobile .content {
+    width: 280px;
   }
 }
 
@@ -307,7 +334,7 @@ img {
   transform: scale(1.05, 1.15);
 }
 .index-top__main .button span {
-  padding-top: 2px;
+  padding-top: 3px;
   transition: transform 500ms ease;
   text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
@@ -861,7 +888,7 @@ img {
   transform: scale(1.05, 1.15);
 }
 .index-prize__main .button span {
-  padding-top: 2px;
+  padding-top: 3px;
   transition: transform 500ms ease;
   color: #000000;
   text-transform: uppercase;
@@ -1007,7 +1034,7 @@ img {
   transform: scale(1.05, 1.15);
 }
 .index-bottom__main .element_button span {
-  padding-top: 2px;
+  padding-top: 3px;
   transition: transform 500ms ease;
   color: #ffffff;
   text-transform: uppercase;
@@ -1104,7 +1131,7 @@ img {
   content: "";
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 12;
   top: 0;
   left: 0;
   right: 0;

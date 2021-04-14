@@ -95,7 +95,7 @@
             color: #ffffff;
             transition: transform 500ms ease;
 
-            &:hover {
+            &:hover, &:focus {
                 transform: scale(1.05, 1.15);
             }
         }

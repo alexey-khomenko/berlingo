@@ -86,7 +86,7 @@
                 height: 60px;
             }
 
-            &:hover span {
+            &:hover span, &:focus span {
                 transform: scale(1.05, 1.15);
             }
 
@@ -161,7 +161,7 @@
                     }
                 }
 
-                &:hover svg {
+                &:hover svg, &:focus svg {
                     transform: scale(1.2);
                 }
 

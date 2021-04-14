@@ -82,7 +82,7 @@
             }
         }
 
-        &:hover span {
+        &:hover span, &:focus span {
             transform: scale(1.05, 1.15);
         }
 

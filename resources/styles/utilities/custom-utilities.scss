@@ -30,14 +30,14 @@
 .main {
     display: block;
     z-index: 10;
-    width: 1160px;
+    width: $container_lg;
 
     @media (max-width: $md_max) {
-        width: 940px;
+        width: $container_md;
     }
 
     @media (max-width: $sm_max) {
-        width: 280px;
+        width: $container_sm;
     }
 
     &_abs {

@@ -1,15 +1,11 @@
-:root {
-    --index-top-height: 780px;
+.index-top {
+    height: 780px;
 
     @media (max-width: $md_max) {
-        --index-top-height: 580px;
+        height: 580px;
     }
 
     @media (max-width: $sm_max) {
-        --index-top-height: 590px;
+        height: 590px;
     }
-}
-
-.index-top {
-    height: var(--index-top-height);
 }

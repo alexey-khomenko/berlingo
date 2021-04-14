@@ -1,20 +1,15 @@
-:root {
-    --index-top-back-top: -40px;
-    --index-top-back-transform: 1128px;
+.index-top__back {
+    right: 50%;
+    top: -40px;
+    transform: translateX(1128px);
 
     @media (max-width: $md_max) {
-        --index-top-back-top: -20px;
-        --index-top-back-transform: 839px;
+        top: -20px;
+        transform: translateX(839px);
     }
 
     @media (max-width: $sm_max) {
-        --index-top-back-top: 280px;
-        --index-top-back-transform: 290px;
+        top: 280px;
+        transform: translateX(290px);
     }
-}
-
-.index-top__back {
-    top: var(--index-top-back-top);
-    transform: translateX(var(--index-top-back-transform));
-    right: 50%;
 }

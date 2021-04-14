@@ -1,17 +1,13 @@
-:root {
-    --index-footer-height: 197px;
+.index-footer {
+    height: 197px;
 
     @media (max-width: $md_max) {
-        --index-footer-height: 149px;
+        height: 149px;
     }
 
     @media (max-width: $sm_max) {
-        --index-footer-height: 274px;
+        height: 274px;
     }
-}
-
-.index-footer {
-    height: var(--index-footer-height);
 
     &::before {
         content: "";

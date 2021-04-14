@@ -1,20 +1,15 @@
-:root {
-    --index-footer-back-top: -398px;
-    --index-footer-back-transform: 0;
+.index-footer__back {
+    left: 50%;
+    top: -398px;
+    transform: translateX(0);
 
     @media (max-width: $md_max) {
-        --index-footer-back-top: -304px;
-        --index-footer-back-transform: 0;
+        top: -304px;
+        transform: translateX(0);
     }
 
     @media (max-width: $sm_max) {
-        --index-footer-back-top: -232px;
-        --index-footer-back-transform: -320px;
+        top: -232px;
+        transform: translateX(-320px);
     }
-}
-
-.index-footer__back {
-    top: var(--index-footer-back-top);
-    transform: translateX(var(--index-footer-back-transform));
-    left: 50%;
 }

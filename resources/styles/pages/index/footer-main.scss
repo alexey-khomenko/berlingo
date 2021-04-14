@@ -1,19 +1,15 @@
-:root {
-    --index-footer-main-top: 99px;
+.index-footer__main {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 99px;
 
     @media (max-width: $md_max) {
-        --index-footer-main-top: 74px;
+        top: 74px;
     }
 
     @media (max-width: $sm_max) {
-        --index-footer-main-top: 137px;
+        top: 137px;
     }
-}
-
-.index-footer__main {
-    top: var(--index-footer-main-top);
-    transform: translate(-50%, -50%);
-    left: 50%;
 
     .content {
 

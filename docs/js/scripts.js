@@ -11,7 +11,23 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _misc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./misc */ "./resources/scripts/misc.js");
 /* harmony import */ var _misc__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_misc__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./resources/scripts/menu.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
 
+
+
+/***/ }),
+
+/***/ "./resources/scripts/menu.js":
+/*!***********************************!*\
+  !*** ./resources/scripts/menu.js ***!
+  \***********************************/
+/***/ (() => {
+
+document.querySelector('[data-s-menu]').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('.index-header').classList.toggle('open');
+});
 
 /***/ }),
 

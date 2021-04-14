@@ -1,10 +1,6 @@
 .index-header {
     height: 60px;
 
-    @media (max-width: $md_max) {
-        height: 60px;
-    }
-
     @media (max-width: $sm_max) {
         height: 40px;
     }

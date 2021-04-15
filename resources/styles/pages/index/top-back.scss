@@ -2,6 +2,7 @@
     right: 50%;
     top: -40px;
     transform: translateX(1128px);
+    transition: opacity 1s ease;
 
     @media (max-width: $md_max) {
         top: -12px;
@@ -11,5 +12,13 @@
     @media (max-width: $sm_max) {
         top: 280px;
         transform: translateX(290px);
+    }
+
+    &[data-hidden="on"] {
+        opacity: 0;
+    }
+
+    &[data-hidden="off"] {
+        opacity: 1;
     }
 }

@@ -1,13 +1,11 @@
-document.querySelector('[data-menu-open]').addEventListener('click', function (e) {
-    e.preventDefault();
+const header = document.querySelector('.index-header');
 
-    document.querySelector('.index-header').classList.add('open');
+document.querySelector('[data-menu-open]').addEventListener('click', function () {
+    header.classList.add('open');
 });
 
-document.querySelector('[data-menu-close]').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    document.querySelector('.index-header').classList.remove('open');
+document.querySelector('[data-menu-close]').addEventListener('click', function () {
+    header.classList.remove('open');
 });
 
 document.addEventListener('click', function (e) {
@@ -15,9 +13,6 @@ document.addEventListener('click', function (e) {
 
     if (!anchor) return true;
 
-    console.log(anchor);
-
-    const header = document.querySelector('.index-header');
     const menuIsOpen = header.classList.contains('open');
 
     if (menuIsOpen) {
@@ -25,8 +20,13 @@ document.addEventListener('click', function (e) {
     }
 
     setTimeout(() => {
-        // todo anchor scroll
-        //document.querySelector(`.index-${anchor}`).scrollIntoView();
-        //document.querySelector(`.wrapper-outer`).scrollTo(0,300);
+        const target = document.querySelector(`.index-${anchor}__main`);
+        const wrapper = document.querySelector('.wrapper-outer');
+
+        wrapper.scrollTo(0, getY(target));
+
+        function getY(elem) {
+            return elem.getBoundingClientRect().top + pageYOffset - 5;
+        }
     }, menuIsOpen ? 700 : 10);
 });

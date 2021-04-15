@@ -313,6 +313,7 @@ img {
   right: 50%;
   top: -40px;
   transform: translateX(1128px);
+  transition: opacity 1s ease;
 }
 @media (max-width: 1199px) {
   .index-top__back {
@@ -325,6 +326,12 @@ img {
     top: 280px;
     transform: translateX(290px);
   }
+}
+.index-top__back[data-hidden=on] {
+  opacity: 0;
+}
+.index-top__back[data-hidden=off] {
+  opacity: 1;
 }
 
 .index-top__main {

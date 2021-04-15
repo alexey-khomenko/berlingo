@@ -1,9 +1,7 @@
 document.addEventListener('click', function (e) {
-    const modal = e.target.dataset.modal ?? e.target.closest('[data-modal]')?.dataset.modal;
+    const modal = e.target.dataset.modalOpen ?? e.target.closest('[data-modal-open]')?.dataset.modalOpen;
 
     if (!modal) return true;
-
-    console.log(modal);
 
     const header = document.querySelector('.index-header');
     const menuIsOpen = header.classList.contains('open');
@@ -13,6 +11,6 @@ document.addEventListener('click', function (e) {
     }
 
     setTimeout(() => {
-        // todo modal
+        console.log(modal);
     }, menuIsOpen ? 700 : 10);
 });

@@ -15,6 +15,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal */ "./resources/scripts/modal.js");
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modal__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider */ "./resources/scripts/slider.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tabs */ "./resources/scripts/tabs.js");
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
@@ -27,30 +33,32 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /***/ (() => {
 
+var header = document.querySelector('.index-header');
 document.querySelector('[data-menu-open]').addEventListener('click', function (e) {
-  e.preventDefault();
-  document.querySelector('.index-header').classList.add('open');
+  header.classList.add('open');
 });
 document.querySelector('[data-menu-close]').addEventListener('click', function (e) {
-  e.preventDefault();
-  document.querySelector('.index-header').classList.remove('open');
+  header.classList.remove('open');
 });
 document.addEventListener('click', function (e) {
   var _e$target$dataset$anc, _e$target$closest;
 
   var anchor = (_e$target$dataset$anc = e.target.dataset.anchor) !== null && _e$target$dataset$anc !== void 0 ? _e$target$dataset$anc : (_e$target$closest = e.target.closest('[data-anchor]')) === null || _e$target$closest === void 0 ? void 0 : _e$target$closest.dataset.anchor;
   if (!anchor) return true;
-  console.log(anchor);
-  var header = document.querySelector('.index-header');
   var menuIsOpen = header.classList.contains('open');
 
   if (menuIsOpen) {
     header.classList.remove('open');
   }
 
-  setTimeout(function () {// todo anchor scroll
-    //document.querySelector(`.index-${anchor}`).scrollIntoView();
-    //document.querySelector(`.wrapper-outer`).scrollTo(0,300);
+  setTimeout(function () {
+    var target = document.querySelector(".index-".concat(anchor, "__main"));
+    var wrapper = document.querySelector('.wrapper-outer');
+    wrapper.scrollTo(0, getY(target));
+
+    function getY(elem) {
+      return elem.getBoundingClientRect().top + pageYOffset - 5;
+    }
   }, menuIsOpen ? 700 : 10);
 });
 
@@ -85,9 +93,8 @@ document.addEventListener('click', function (e) {
 document.addEventListener('click', function (e) {
   var _e$target$dataset$mod, _e$target$closest;
 
-  var modal = (_e$target$dataset$mod = e.target.dataset.modal) !== null && _e$target$dataset$mod !== void 0 ? _e$target$dataset$mod : (_e$target$closest = e.target.closest('[data-modal]')) === null || _e$target$closest === void 0 ? void 0 : _e$target$closest.dataset.modal;
+  var modal = (_e$target$dataset$mod = e.target.dataset.modalOpen) !== null && _e$target$dataset$mod !== void 0 ? _e$target$dataset$mod : (_e$target$closest = e.target.closest('[data-modal-open]')) === null || _e$target$closest === void 0 ? void 0 : _e$target$closest.dataset.modalOpen;
   if (!modal) return true;
-  console.log(modal);
   var header = document.querySelector('.index-header');
   var menuIsOpen = header.classList.contains('open');
 
@@ -95,9 +102,41 @@ document.addEventListener('click', function (e) {
     header.classList.remove('open');
   }
 
-  setTimeout(function () {// todo modal
+  setTimeout(function () {
+    console.log(modal);
   }, menuIsOpen ? 700 : 10);
 });
+
+/***/ }),
+
+/***/ "./resources/scripts/slider.js":
+/*!*************************************!*\
+  !*** ./resources/scripts/slider.js ***!
+  \*************************************/
+/***/ (() => {
+
+// todo slider
+var slides = document.querySelectorAll('[data-slider]');
+var oldNumber = 0;
+var max = slides.length - 1;
+var timerId = setTimeout(function tick() {
+  var newNumber = oldNumber < max ? oldNumber + 1 : 0;
+  console.log(oldNumber, newNumber);
+  slides[oldNumber].dataset.hidden = 'on';
+  slides[newNumber].dataset.hidden = 'off';
+  oldNumber = newNumber;
+  timerId = setTimeout(tick, 2800);
+}, 2800);
+
+/***/ }),
+
+/***/ "./resources/scripts/tabs.js":
+/*!***********************************!*\
+  !*** ./resources/scripts/tabs.js ***!
+  \***********************************/
+/***/ (() => {
+
+// todo tabs
 
 /***/ }),
 

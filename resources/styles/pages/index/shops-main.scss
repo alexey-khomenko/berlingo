@@ -348,15 +348,20 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: #ffffff;
                         border-radius: 99999px;
                         background-color: rgba(255, 255, 255, 0.2);
                         text-decoration: none;
                         width: 40px;
                         height: 40px;
 
+                        &:hover svg, &:focus svg {
+                            transform: scale(1.2);
+                        }
+
                         svg {
                             display: block;
+                            transition: transform 500ms ease;
+                            color: #ffffff;
                         }
                     }
                 }

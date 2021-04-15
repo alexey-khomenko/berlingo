@@ -11,7 +11,67 @@ document.addEventListener('click', function (e) {
     }
 
     setTimeout(() => {
-        // todo
-        console.log(modal);
+        modalOpen(modal);
     }, menuIsOpen ? 700 : 10);
 });
+
+document.addEventListener('click', function (e) {
+    const [shadow, wrapper, modal] = getModalElements();
+
+    if (e.target !== shadow && e.target !== wrapper) return true;
+
+    if (modal.dataset.modalImportant === 'on') return true;
+
+    modalClose();
+});
+
+document.addEventListener('click', function (e) {
+    const close = e.target.hasAttribute('data-modal-close') || e.target.closest('[data-modal-close]');
+
+    if (!close) return true;
+
+    modalClose();
+});
+
+function modalClose() {
+    const [shadow, wrapper, modal] = getModalElements();
+
+    wrapper.classList.remove('open');
+
+    setTimeout(function () {
+        modal.classList.remove('open');
+        shadow.classList.remove('open');
+    }, 600);
+}
+
+function modalOpen(t) {
+    const [shadow, wrapper, modal] = getModalElements();
+    const target = document.querySelector(`[data-modal-name="${t}"]`);
+
+    let timeout = wrapper.classList.contains('open') ? 500 : 10;
+
+    if (wrapper.classList.contains('open')) {
+        wrapper.classList.remove('open');
+
+        setTimeout(function () {
+            modal.classList.remove('open');
+            target.classList.add('open');
+        }, timeout);
+    }
+    else {
+        shadow.classList.add('open');
+        target.classList.add('open');
+    }
+
+    setTimeout(function () {
+        wrapper.classList.add('open');
+    }, timeout);
+}
+
+function getModalElements() {
+    return [
+        document.querySelector('.shadow'),
+        document.querySelector('.modal-wrapper'),
+        document.querySelector('.modal.open'),
+    ];
+}

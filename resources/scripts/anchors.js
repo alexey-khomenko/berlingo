@@ -1,5 +1,5 @@
 document.addEventListener('click', function (e) {
-    const anchor = e.target.dataset.anchor ?? e.target.closest('[data-anchor]')?.dataset.anchor;
+    const anchor = e.target.dataset.anchor || e.target.closest('[data-anchor]')?.dataset.anchor;
 
     if (!anchor) return true;
 
@@ -9,11 +9,11 @@ document.addEventListener('click', function (e) {
         window.misc.header.classList.remove('open');
     }
 
-    // todo if modalIsOpen
-    const modalIsOpen = false;
+    // todo
+    const modalIsOpen = !!document.querySelector('.modal.open');
 
     if (modalIsOpen) {
-        //
+        modalClose();
     }
 
     setTimeout(() => {

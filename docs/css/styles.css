@@ -36,6 +36,114 @@ img {
   display: block;
 }
 
+.shadow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.shadow.open {
+  z-index: 600;
+}
+.shadow .modal-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  transform: translateY(-100%);
+  transition-duration: 450ms;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+  padding: 5px;
+}
+@media (max-width: 959px) {
+  .shadow .modal-wrapper {
+    padding: 0;
+  }
+}
+.shadow .modal-wrapper.open {
+  transform: translateY(0%);
+}
+.shadow .modal-wrapper .modal {
+  position: relative;
+  z-index: 700;
+  width: 100%;
+  max-height: 100%;
+  background-color: #ffffff;
+  overflow: auto;
+  display: none;
+  border-radius: 40px;
+}
+@media (max-width: 959px) {
+  .shadow .modal-wrapper .modal {
+    border-radius: 0;
+  }
+}
+.shadow .modal-wrapper .modal.open {
+  display: block;
+}
+.shadow .modal-wrapper .modal__close {
+  position: absolute;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  top: 39px;
+  right: 39px;
+}
+@media (max-width: 959px) {
+  .shadow .modal-wrapper .modal__close {
+    top: 20px;
+    right: 20px;
+  }
+}
+.shadow .modal-wrapper .modal__close:hover svg, .shadow .modal-wrapper .modal__close:focus svg {
+  transform: scale(1.2);
+}
+.shadow .modal-wrapper .modal__close svg {
+  display: block;
+  transition: transform 500ms ease;
+  color: #000000;
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 959px) {
+  .shadow .modal-wrapper .modal__close svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.modal_auth {
+  max-width: 1160px;
+  height: 702px;
+}
+@media (max-width: 1199px) {
+  .modal_auth {
+    max-width: 940px;
+    height: 597px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth {
+    max-width: 320px;
+    height: auto;
+  }
+}
+
 .index-header {
   height: 60px;
 }

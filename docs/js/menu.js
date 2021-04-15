@@ -1,5 +1,5 @@
 document.addEventListener('click', function (e) {
-    const menuOpen = e.target.dataset.menuOpen ?? e.target.closest('[data-menu-open]');
+    const menuOpen = e.target.hasAttribute('data-menu-open') || e.target.closest('[data-menu-open]');
 
     if (!menuOpen) return true;
 
@@ -7,7 +7,7 @@ document.addEventListener('click', function (e) {
 });
 
 document.addEventListener('click', function (e) {
-    const menuClose = e.target.dataset.menuClose ?? e.target.closest('[data-menu-close]');
+    const menuClose = e.target.hasAttribute('data-menu-close') || e.target.closest('[data-menu-close]');
 
     if (!menuClose) return true;
 

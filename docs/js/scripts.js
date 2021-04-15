@@ -166,7 +166,19 @@ if (slides.length) {
   \***********************************/
 /***/ (() => {
 
-// todo tabs
+var tabs = document.querySelectorAll('[data-tab-open]');
+document.addEventListener('click', function (e) {
+  var _e$target$dataset$tab, _e$target$closest, _e$target$dataset$sel, _e$target$closest2;
+
+  var newTabNumber = (_e$target$dataset$tab = e.target.dataset.tabOpen) !== null && _e$target$dataset$tab !== void 0 ? _e$target$dataset$tab : (_e$target$closest = e.target.closest('[data-tab-open]')) === null || _e$target$closest === void 0 ? void 0 : _e$target$closest.dataset.tabOpen;
+  if (!newTabNumber) return true;
+  if (((_e$target$dataset$sel = e.target.dataset.selected) !== null && _e$target$dataset$sel !== void 0 ? _e$target$dataset$sel : (_e$target$closest2 = e.target.closest('[data-tab-open]')) === null || _e$target$closest2 === void 0 ? void 0 : _e$target$closest2.dataset.selected) === 'on') return true;
+  var oldTabNumber = document.querySelector("[data-tab-open][data-selected=\"on\"]").dataset.tabOpen;
+  document.querySelector("[data-tab-open=\"".concat(oldTabNumber, "\"]")).dataset.selected = 'off';
+  document.querySelector("[data-tab-body=\"".concat(oldTabNumber, "\"]")).dataset.hidden = 'on';
+  document.querySelector("[data-tab-open=\"".concat(newTabNumber, "\"]")).dataset.selected = 'on';
+  document.querySelector("[data-tab-body=\"".concat(newTabNumber, "\"]")).dataset.hidden = 'off';
+});
 
 /***/ }),
 

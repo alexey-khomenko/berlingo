@@ -996,7 +996,240 @@ img {
 
 .index-shops__main {
   margin: 0 auto;
-  display: none !important;
+}
+.index-shops__main .title {
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.index-shops__main .tabs {
+  display: block;
+}
+.index-shops__main .tabs__head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs__head {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head {
+    margin-bottom: 40px;
+  }
+}
+.index-shops__main .tabs__head .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 80px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head .button {
+    height: 60px;
+  }
+}
+.index-shops__main .tabs__head .button[data-selected=off] {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+.index-shops__main .tabs__head .button:not(:last-of-type) {
+  margin: 0 20px 0 0;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head .button:not(:last-of-type) {
+    margin: 0 0 20px 0;
+  }
+}
+.index-shops__main .tabs__head .button_retail {
+  width: 274px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head .button_retail {
+    width: 188px;
+  }
+}
+.index-shops__main .tabs__head .button_retail[data-selected=on] {
+  background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
+}
+.index-shops__main .tabs__head .button_internet {
+  width: 262px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head .button_internet {
+    width: 180px;
+  }
+}
+.index-shops__main .tabs__head .button_internet[data-selected=on] {
+  background: linear-gradient(180deg, #00a2f6 0%, #c153ff 100%);
+}
+.index-shops__main .tabs__head .button_federal {
+  width: 253px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head .button_federal {
+    width: 174px;
+  }
+}
+.index-shops__main .tabs__head .button_federal[data-selected=on] {
+  background: linear-gradient(180deg, #ff9c47 0%, #e600c6 100%);
+}
+.index-shops__main .tabs__head .button[data-selected=off]:hover span, .index-shops__main .tabs__head .button[data-selected=off]:focus span {
+  transform: scale(1.05, 1.15);
+}
+.index-shops__main .tabs__head .button span {
+  padding-top: 3px;
+  transition: transform 500ms ease;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs__head .button span {
+    font-size: 14px;
+  }
+}
+.index-shops__main .tabs__body[data-hidden=on] {
+  display: none;
+}
+.index-shops__main .tabs__body[data-hidden=off] {
+  display: block;
+}
+.index-shops__main .tabs .grid {
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.index-shops__main .tabs .grid li {
+  padding: 0;
+}
+.index-shops__main .tabs .grid li .image {
+  background-color: #ffffff;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+.index-shops__main .tabs .grid li .image_large {
+  width: 360px;
+  height: 220px;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs .grid li .image_large {
+    width: 300px;
+    height: 180px;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .grid li .image_large {
+    width: 280px;
+    height: 180px;
+  }
+}
+.index-shops__main .tabs .grid li .image_small {
+  width: 216px;
+  height: 120px;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs .grid li .image_small {
+    width: 172px;
+    height: 100px;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .grid li .image_small {
+    width: 130px;
+    height: 80px;
+  }
+}
+.index-shops__main .tabs .grid_primary {
+  margin: 0 0 40px 0;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs .grid_primary {
+    margin: 0 0 20px 0;
+  }
+}
+.index-shops__main .tabs .grid_primary li {
+  display: block;
+}
+.index-shops__main .tabs .grid_primary li:not(:last-of-type) {
+  margin: 0 40px 0 0;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs .grid_primary li:not(:last-of-type) {
+    margin: 0 20px 0 0;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .grid_primary li:not(:last-of-type) {
+    margin: 0 0 20px 0;
+  }
+}
+.index-shops__main .tabs .grid_primary li a {
+  display: block;
+}
+.index-shops__main .tabs .grid_secondary {
+  margin: -10px;
+}
+.index-shops__main .tabs .grid_secondary li {
+  display: block;
+  margin: 10px;
+}
+.index-shops__main .tabs .grid_federal {
+  margin: -10px;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs .grid_federal {
+    margin: -20px -10px 20px;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .grid_federal {
+    margin: -10px;
+  }
+}
+.index-shops__main .tabs .grid_federal li {
+  display: block;
+  margin: 10px;
+}
+@media (max-width: 1199px) {
+  .index-shops__main .tabs .grid_federal li {
+    margin: 20px 10px;
+  }
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .grid_federal li {
+    margin: 10px;
+  }
 }
 
 .index-bottom {

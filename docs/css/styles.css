@@ -12,6 +12,13 @@
   src: local(""), url(../fonts/Bebas-Neue-Bold.woff2?69d6b71412b772b8984adc36abdaab0b) format("woff2"), url(../fonts/Bebas-Neue-Bold.woff?9486b74186403905390988646bb89330) format("woff");
   font-display: swap;
 }
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url(../fonts/Bebas-Neue-Regular.woff2?6da6c0140f313a9b60f31dc5ef17f6b9) format("woff2"), url(../fonts/Bebas-Neue-Regular.woff?81b7eb1c08fa1c527a281f7ee70568cc) format("woff");
+  font-display: swap;
+}
 label, input, textarea, button, select, a, summary {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -1120,6 +1127,238 @@ img {
   display: none;
 }
 .index-shops__main .tabs__body[data-hidden=off] {
+  display: block;
+}
+.index-shops__main .tabs form {
+  display: block;
+  position: relative;
+}
+.index-shops__main .tabs form input {
+  display: block;
+  width: 100%;
+  border: 1px solid #828282;
+  border-radius: 99999px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0 39px;
+  height: 80px;
+  line-height: 78;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs form input {
+    padding: 0 19px;
+    height: 60px;
+    line-height: 58;
+    font-size: 16px;
+  }
+}
+.index-shops__main .tabs form input::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.index-shops__main .tabs form input:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.index-shops__main .tabs form input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.index-shops__main .tabs form input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.index-shops__main .tabs form input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.index-shops__main .tabs form input:focus::placeholder {
+  opacity: 0;
+}
+.index-shops__main .tabs form svg {
+  display: block;
+  color: #ffffff;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 40px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs form svg {
+    right: 20px;
+    width: 18px;
+    height: 10px;
+  }
+}
+.index-shops__main .tabs .retails-wrapper {
+  margin-top: 20px;
+  position: relative;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails-wrapper {
+    margin-top: 10px;
+  }
+}
+.index-shops__main .tabs .retails-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  transform: scale(1, -1);
+  pointer-events: none;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails-wrapper::after {
+    height: 70px;
+  }
+}
+.index-shops__main .tabs .retails {
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 400px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails {
+    max-height: 360px;
+  }
+}
+.index-shops__main .tabs .retails li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.index-shops__main .tabs .retails li .retails__lg {
+  display: flex;
+  flex-basis: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 99999px;
+  padding: 0 40px;
+  min-height: 50px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10px 0 20px;
+    min-height: 60px;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg:hover {
+  background-color: #4f4f4f;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg:hover {
+    background-color: transparent;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__icon {
+  color: #ffffff;
+  display: block;
+  margin-right: 10px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg .retails__icon {
+    display: none;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__icon svg {
+  display: block;
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__title {
+  flex-basis: 332px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg .retails__title {
+    flex-basis: auto;
+    flex-shrink: 1;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__title span {
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg .retails__title span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__address span {
+  color: #bdbdbd;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg .retails__address span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__link {
+  display: flex;
+  margin-left: auto;
+  text-decoration: none;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__lg .retails__link {
+    display: none;
+  }
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__link:hover span, .index-shops__main .tabs .retails li .retails__lg .retails__link:focus span {
+  transform: scale(1.05, 1.15);
+}
+.index-shops__main .tabs .retails li .retails__lg .retails__link span {
+  color: #bdbdbd;
+  text-transform: uppercase;
+  transition: transform 500ms ease;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+.index-shops__main .tabs .retails li .retails__sm {
+  display: none;
+  margin: 0 20px 0 auto;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li .retails__sm {
+    display: block;
+  }
+}
+.index-shops__main .tabs .retails li .retails__sm a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 99999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+}
+.index-shops__main .tabs .retails li .retails__sm a svg {
   display: block;
 }
 .index-shops__main .tabs .grid {

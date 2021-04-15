@@ -11,6 +11,7 @@ document.addEventListener('click', function (e) {
     }
 
     setTimeout(() => {
+        // todo
         console.log(modal);
     }, menuIsOpen ? 700 : 10);
 });

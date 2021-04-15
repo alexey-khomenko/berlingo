@@ -1,6 +1,7 @@
 {
     "/js/scripts.js": "/js/scripts.js",
     "/css/styles.css": "/css/styles.css",
+    "/images/___modal___test.png": "/images/___modal___test.png",
     "/images/_content-index-shops-large-1.png": "/images/_content-index-shops-large-1.png",
     "/images/_content-index-shops-large-2.png": "/images/_content-index-shops-large-2.png",
     "/images/_content-index-shops-large-3.png": "/images/_content-index-shops-large-3.png",
@@ -70,5 +71,8 @@
     "/images/index-top-back-3-md.png": "/images/index-top-back-3-md.png",
     "/images/index-top-back-3-sm.png": "/images/index-top-back-3-sm.png",
     "/favicons/favicon.png": "/favicons/favicon.png",
-    "/index.html": "/index.html"
+    "/account.html": "/account.html",
+    "/index.html": "/index.html",
+    "/pens.html": "/pens.html",
+    "/winners.html": "/winners.html"
 }

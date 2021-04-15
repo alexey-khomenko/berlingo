@@ -1,5 +1,6 @@
 import './misc';
 import './menu';
-import './modal';
+import './anchors';
+import './modals';
 import './slider';
 import './tabs';

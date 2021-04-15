@@ -1,6 +1,42 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./resources/scripts/anchors.js":
+/*!**************************************!*\
+  !*** ./resources/scripts/anchors.js ***!
+  \**************************************/
+/***/ (() => {
+
+document.addEventListener('click', function (e) {
+  var _e$target$dataset$anc, _e$target$closest;
+
+  var anchor = (_e$target$dataset$anc = e.target.dataset.anchor) !== null && _e$target$dataset$anc !== void 0 ? _e$target$dataset$anc : (_e$target$closest = e.target.closest('[data-anchor]')) === null || _e$target$closest === void 0 ? void 0 : _e$target$closest.dataset.anchor;
+  if (!anchor) return true;
+  var menuIsOpen = window.misc.header.classList.contains('open');
+
+  if (menuIsOpen) {
+    window.misc.header.classList.remove('open');
+  } // todo if modalIsOpen
+
+
+  var modalIsOpen = false;
+
+  if (modalIsOpen) {//
+  }
+
+  setTimeout(function () {
+    var target = document.querySelector(".index-".concat(anchor, "__main"));
+    var wrapper = document.querySelector('.wrapper-outer');
+    wrapper.scrollTo(0, getY(target));
+
+    function getY(elem) {
+      return elem.getBoundingClientRect().top + pageYOffset - 5;
+    }
+  }, menuIsOpen || modalIsOpen ? 700 : 10);
+});
+
+/***/ }),
+
 /***/ "./resources/scripts/app.js":
 /*!**********************************!*\
   !*** ./resources/scripts/app.js ***!
@@ -13,12 +49,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _misc__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_misc__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./resources/scripts/menu.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal */ "./resources/scripts/modal.js");
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modal__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider */ "./resources/scripts/slider.js");
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tabs */ "./resources/scripts/tabs.js");
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _anchors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./anchors */ "./resources/scripts/anchors.js");
+/* harmony import */ var _anchors__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_anchors__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modals */ "./resources/scripts/modals.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modals__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider */ "./resources/scripts/slider.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tabs */ "./resources/scripts/tabs.js");
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -33,33 +72,19 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /***/ (() => {
 
-var header = document.querySelector('.index-header');
-document.querySelector('[data-menu-open]').addEventListener('click', function (e) {
-  header.classList.add('open');
-});
-document.querySelector('[data-menu-close]').addEventListener('click', function (e) {
-  header.classList.remove('open');
+document.addEventListener('click', function (e) {
+  var _e$target$dataset$men;
+
+  var menuOpen = (_e$target$dataset$men = e.target.dataset.menuOpen) !== null && _e$target$dataset$men !== void 0 ? _e$target$dataset$men : e.target.closest('[data-menu-open]');
+  if (!menuOpen) return true;
+  window.misc.header.classList.add('open');
 });
 document.addEventListener('click', function (e) {
-  var _e$target$dataset$anc, _e$target$closest;
+  var _e$target$dataset$men2;
 
-  var anchor = (_e$target$dataset$anc = e.target.dataset.anchor) !== null && _e$target$dataset$anc !== void 0 ? _e$target$dataset$anc : (_e$target$closest = e.target.closest('[data-anchor]')) === null || _e$target$closest === void 0 ? void 0 : _e$target$closest.dataset.anchor;
-  if (!anchor) return true;
-  var menuIsOpen = header.classList.contains('open');
-
-  if (menuIsOpen) {
-    header.classList.remove('open');
-  }
-
-  setTimeout(function () {
-    var target = document.querySelector(".index-".concat(anchor, "__main"));
-    var wrapper = document.querySelector('.wrapper-outer');
-    wrapper.scrollTo(0, getY(target));
-
-    function getY(elem) {
-      return elem.getBoundingClientRect().top + pageYOffset - 5;
-    }
-  }, menuIsOpen ? 700 : 10);
+  var menuClose = (_e$target$dataset$men2 = e.target.dataset.menuClose) !== null && _e$target$dataset$men2 !== void 0 ? _e$target$dataset$men2 : e.target.closest('[data-menu-close]');
+  if (!menuClose) return true;
+  window.misc.header.classList.remove('open');
 });
 
 /***/ }),
@@ -70,12 +95,15 @@ document.addEventListener('click', function (e) {
   \***********************************/
 /***/ (() => {
 
-window.mobileFlag = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+window.misc = {
+  mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+  header: document.querySelector('.index-header')
+};
 document.addEventListener('click', function (e) {
   if (e.target.href === '#' || e.target.closest("[href=\"#\"]")) e.preventDefault();
 });
 document.addEventListener('click', function (e) {
-  var link = e.target.href ? e.target : e.target.closest("[href]");
+  var link = e.target.href ? e.target : e.target.closest('[href]');
   if (!link) return true;
   setTimeout(function () {
     return link.blur();
@@ -84,10 +112,10 @@ document.addEventListener('click', function (e) {
 
 /***/ }),
 
-/***/ "./resources/scripts/modal.js":
-/*!************************************!*\
-  !*** ./resources/scripts/modal.js ***!
-  \************************************/
+/***/ "./resources/scripts/modals.js":
+/*!*************************************!*\
+  !*** ./resources/scripts/modals.js ***!
+  \*************************************/
 /***/ (() => {
 
 document.addEventListener('click', function (e) {
@@ -103,6 +131,7 @@ document.addEventListener('click', function (e) {
   }
 
   setTimeout(function () {
+    // todo
     console.log(modal);
   }, menuIsOpen ? 700 : 10);
 });
@@ -115,18 +144,19 @@ document.addEventListener('click', function (e) {
   \*************************************/
 /***/ (() => {
 
-// todo slider
 var slides = document.querySelectorAll('[data-slider]');
-var oldNumber = 0;
-var max = slides.length - 1;
-var timerId = setTimeout(function tick() {
-  var newNumber = oldNumber < max ? oldNumber + 1 : 0;
-  console.log(oldNumber, newNumber);
-  slides[oldNumber].dataset.hidden = 'on';
-  slides[newNumber].dataset.hidden = 'off';
-  oldNumber = newNumber;
-  timerId = setTimeout(tick, 2800);
-}, 2800);
+
+if (slides.length) {
+  var oldNumber = 0;
+  var max = slides.length - 1;
+  var timerId = setTimeout(function tick() {
+    var newNumber = oldNumber < max ? oldNumber + 1 : 0;
+    slides[oldNumber].dataset.hidden = 'on';
+    slides[newNumber].dataset.hidden = 'off';
+    oldNumber = newNumber;
+    timerId = setTimeout(tick, 3200);
+  }, 3200);
+}
 
 /***/ }),
 

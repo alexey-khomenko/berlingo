@@ -1,5 +1,4 @@
 {
-    "/js/scripts.js": "/js/scripts.js",
     "/css/styles.css": "/css/styles.css",
     "/images/___modal___test.png": "/images/___modal___test.png",
     "/images/_svg_index-prizes-line.svg": "/images/_svg_index-prizes-line.svg",
@@ -71,6 +70,12 @@
     "/images/index-top-back-3-md.png": "/images/index-top-back-3-md.png",
     "/images/index-top-back-3-sm.png": "/images/index-top-back-3-sm.png",
     "/favicons/favicon.png": "/favicons/favicon.png",
+    "/js/anchors.js": "/js/anchors.js",
+    "/js/menu.js": "/js/menu.js",
+    "/js/misc.js": "/js/misc.js",
+    "/js/modals.js": "/js/modals.js",
+    "/js/slider.js": "/js/slider.js",
+    "/js/tabs.js": "/js/tabs.js",
     "/account.html": "/account.html",
     "/index.html": "/index.html",
     "/pens.html": "/pens.html",

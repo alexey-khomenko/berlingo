@@ -1,5 +1,3 @@
-const tabs = document.querySelectorAll('[data-tab-open]');
-
 document.addEventListener('click', function (e) {
     const newTabNumber = e.target.dataset.tabOpen ?? e.target.closest('[data-tab-open]')?.dataset.tabOpen;
 

@@ -107,8 +107,8 @@
 
                 span {
                     padding-top: 3px;
-                    transition: transform 500ms ease;
                     color: #ffffff;
+                    transition: transform 500ms ease;
                     text-transform: uppercase;
                     font-family: "Bebas Neue", sans-serif;
                     font-style: normal;
@@ -188,12 +188,8 @@
         }
 
         .retails-wrapper {
-            margin-top: 20px;
+            overflow: hidden;
             position: relative;
-
-            @media (max-width: $sm_max) {
-                margin-top: 10px;
-            }
 
             &::after {
                 content: "";
@@ -205,48 +201,45 @@
                 background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
                 transform: scale(1, -1);
                 pointer-events: none;
+            }
+
+            [data-hidden="on"] {
+                display: none;
+            }
+
+            ul {
+                display: block;
+                overflow-x: hidden;
+                overflow-y: auto;
+                padding: 0;
+                margin: 20px 0 0;
+                max-height: 400px;
 
                 @media (max-width: $sm_max) {
-                    height: 70px;
+                    margin: 10px 0 0;
+                    max-height: 360px;
                 }
-            }
-        }
 
-        .retails {
-            margin: 0;
-            padding: 0;
-            display: block;
-            overflow-x: hidden;
-            overflow-y: auto;
-            max-height: 400px;
-
-            @media (max-width: $sm_max) {
-                max-height: 360px;
-            }
-
-            li {
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-
-                .retails__lg {
+                li {
+                    margin: 0;
+                    padding: 0 40px;
+                    border-radius: 99999px;
                     display: flex;
-                    flex-basis: 100%;
-                    flex-flow: row wrap;
                     justify-content: flex-start;
                     align-items: center;
-                    border-radius: 99999px;
-                    padding: 0 40px;
                     min-height: 50px;
 
                     @media (max-width: $sm_max) {
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-                        padding: 0 10px 0 20px;
+                        padding: 0 20px;
                         min-height: 60px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 10px;
+
+                        @media (max-width: $sm_max) {
+                            margin-bottom: 20px;
+                        }
                     }
 
                     &:hover {
@@ -256,117 +249,159 @@
                             background-color: transparent;
                         }
                     }
+                }
+            }
+        }
 
-                    .retails__icon {
-                        color: #ffffff;
+        .cities li {
+
+            span {
+                color: #ffffff;
+                cursor: pointer;
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                transition: transform 500ms ease;
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+
+                @media (max-width: $sm_max) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                &:hover, &:focus {
+                    transform: scale(1.05, 1.15);
+                }
+            }
+        }
+
+        .retails li {
+
+            .retails__lg {
+                display: flex;
+                flex-basis: 100%;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: center;
+
+                @media (max-width: $sm_max) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding-right: 10px;
+                }
+
+                .retails__icon {
+                    color: #ffffff;
+                    display: block;
+                    margin-right: 10px;
+
+                    @media (max-width: $sm_max) {
+                        display: none;
+                    }
+
+                    svg {
                         display: block;
-                        margin-right: 10px;
+                    }
+                }
 
-                        @media (max-width: $sm_max) {
-                            display: none;
-                        }
+                .retails__title {
+                    flex-basis: 332px;
+                    flex-grow: 0;
+                    flex-shrink: 0;
 
-                        svg {
-                            display: block;
-                        }
+                    @media (max-width: $sm_max) {
+                        flex-basis: auto;
+                        flex-shrink: 1;
                     }
 
-                    .retails__title {
-                        flex-basis: 332px;
-                        flex-grow: 0;
-                        flex-shrink: 0;
+                    span {
+                        color: #ffffff;
+                        font-family: "PF Din Text Cond Pro", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
 
                         @media (max-width: $sm_max) {
-                            flex-basis: auto;
-                            flex-shrink: 1;
-                        }
-
-                        span {
-                            color: #ffffff;
-                            font-family: "PF Din Text Cond Pro", sans-serif;
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-
-                            @media (max-width: $sm_max) {
-                                font-size: 14px;
-                                line-height: 17px;
-                            }
-                        }
-                    }
-
-                    .retails__address {
-
-                        span {
-                            color: #bdbdbd;
-                            font-family: "PF Din Text Cond Pro", sans-serif;
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-
-                            @media (max-width: $sm_max) {
-                                font-size: 14px;
-                                line-height: 17px;
-                            }
-                        }
-                    }
-
-                    .retails__link {
-                        display: flex;
-                        margin-left: auto;
-                        text-decoration: none;
-
-                        @media (max-width: $sm_max) {
-                            display: none;
-                        }
-
-                        &:hover span, &:focus span {
-                            transform: scale(1.05, 1.15);
-                        }
-
-                        span {
-                            color: #bdbdbd;
-                            text-transform: uppercase;
-                            transition: transform 500ms ease;
-                            font-family: "Bebas Neue", sans-serif;
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 20px;
+                            font-size: 14px;
+                            line-height: 17px;
                         }
                     }
                 }
 
-                .retails__sm {
-                    display: none;
-                    margin: 0 20px 0 auto;
+                .retails__address {
+
+                    span {
+                        color: #bdbdbd;
+                        font-family: "PF Din Text Cond Pro", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+
+                        @media (max-width: $sm_max) {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                    }
+                }
+
+                .retails__link {
+                    display: flex;
+                    margin-left: auto;
+                    text-decoration: none;
 
                     @media (max-width: $sm_max) {
-                        display: block;
+                        display: none;
                     }
 
-                    a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 99999px;
-                        background-color: rgba(255, 255, 255, 0.2);
-                        text-decoration: none;
-                        width: 40px;
-                        height: 40px;
+                    &:hover span, &:focus span {
+                        transform: scale(1.05, 1.15);
+                    }
 
-                        &:hover svg, &:focus svg {
-                            transform: scale(1.2);
-                        }
+                    span {
+                        color: #bdbdbd;
+                        text-transform: uppercase;
+                        transition: transform 500ms ease;
+                        font-family: "Bebas Neue", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                }
+            }
 
-                        svg {
-                            display: block;
-                            transition: transform 500ms ease;
-                            color: #ffffff;
-                        }
+            .retails__sm {
+                display: none;
+                margin: 0 0 0 auto;
+
+                @media (max-width: $sm_max) {
+                    display: block;
+                }
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 99999px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    text-decoration: none;
+                    width: 40px;
+                    height: 40px;
+
+                    &:hover svg, &:focus svg {
+                        transform: scale(1.2);
+                    }
+
+                    svg {
+                        display: block;
+                        transition: transform 500ms ease;
+                        color: #ffffff;
                     }
                 }
             }
         }
+
 
         .grid {
             padding: 0;

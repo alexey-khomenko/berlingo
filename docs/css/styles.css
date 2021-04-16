@@ -1419,8 +1419,8 @@ img {
 }
 .index-shops__main .tabs__head .button span {
   padding-top: 3px;
-  transition: transform 500ms ease;
   color: #ffffff;
+  transition: transform 500ms ease;
   text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
   font-style: normal;
@@ -1505,13 +1505,8 @@ img {
   }
 }
 .index-shops__main .tabs .retails-wrapper {
-  margin-top: 20px;
+  overflow: hidden;
   position: relative;
-}
-@media (max-width: 959px) {
-  .index-shops__main .tabs .retails-wrapper {
-    margin-top: 10px;
-  }
 }
 .index-shops__main .tabs .retails-wrapper::after {
   content: "";
@@ -1524,30 +1519,72 @@ img {
   transform: scale(1, -1);
   pointer-events: none;
 }
-@media (max-width: 959px) {
-  .index-shops__main .tabs .retails-wrapper::after {
-    height: 70px;
-  }
+.index-shops__main .tabs .retails-wrapper [data-hidden=on] {
+  display: none;
 }
-.index-shops__main .tabs .retails {
-  margin: 0;
-  padding: 0;
+.index-shops__main .tabs .retails-wrapper ul {
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 0;
+  margin: 20px 0 0;
   max-height: 400px;
 }
 @media (max-width: 959px) {
-  .index-shops__main .tabs .retails {
+  .index-shops__main .tabs .retails-wrapper ul {
+    margin: 10px 0 0;
     max-height: 360px;
   }
 }
-.index-shops__main .tabs .retails li {
+.index-shops__main .tabs .retails-wrapper ul li {
   margin: 0;
-  padding: 0;
+  padding: 0 40px;
+  border-radius: 99999px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  min-height: 50px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails-wrapper ul li {
+    padding: 0 20px;
+    min-height: 60px;
+  }
+}
+.index-shops__main .tabs .retails-wrapper ul li:last-child {
+  margin-bottom: 10px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails-wrapper ul li:last-child {
+    margin-bottom: 20px;
+  }
+}
+.index-shops__main .tabs .retails-wrapper ul li:hover {
+  background-color: #4f4f4f;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails-wrapper ul li:hover {
+    background-color: transparent;
+  }
+}
+.index-shops__main .tabs .cities li span {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  transition: transform 500ms ease;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .cities li span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.index-shops__main .tabs .cities li span:hover, .index-shops__main .tabs .cities li span:focus {
+  transform: scale(1.05, 1.15);
 }
 .index-shops__main .tabs .retails li .retails__lg {
   display: flex;
@@ -1555,25 +1592,13 @@ img {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 99999px;
-  padding: 0 40px;
-  min-height: 50px;
 }
 @media (max-width: 959px) {
   .index-shops__main .tabs .retails li .retails__lg {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 10px 0 20px;
-    min-height: 60px;
-  }
-}
-.index-shops__main .tabs .retails li .retails__lg:hover {
-  background-color: #4f4f4f;
-}
-@media (max-width: 959px) {
-  .index-shops__main .tabs .retails li .retails__lg:hover {
-    background-color: transparent;
+    padding-right: 10px;
   }
 }
 .index-shops__main .tabs .retails li .retails__lg .retails__icon {
@@ -1650,7 +1675,7 @@ img {
 }
 .index-shops__main .tabs .retails li .retails__sm {
   display: none;
-  margin: 0 20px 0 auto;
+  margin: 0 0 0 auto;
 }
 @media (max-width: 959px) {
   .index-shops__main .tabs .retails li .retails__sm {

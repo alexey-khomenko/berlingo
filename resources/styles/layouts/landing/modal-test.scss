@@ -1,20 +1,15 @@
 .modal_test {
-    max-width: 1160px;
-    height: 660px;
 
-    @media (max-width: $md_max) {
-        max-width: 940px;
-        height: 560px;
+    .title, .subtitle, .text {
+        display: block;
     }
 
-    @media (max-width: $sm_max) {
-        max-width: 320px;
-        height: auto;
+    .text {
+        position: absolute;
     }
-
-
 
     .button {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;

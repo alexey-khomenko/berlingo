@@ -1,10 +1,17 @@
 [data-modal-name="test_1"] {
 
+    .modal__body-0 {
+        height: 700px;
+        padding-top: 40px;
+    }
+
+    .modal__body-1, .modal__body-2 {
+        height: 660px;
+    }
+
     .back {
-        display: block;
-        pointer-events: none;
-        position: absolute;
-        z-index: 0;
+        top: -40px;
+        right: -120px;
     }
 
     .title {
@@ -21,9 +28,6 @@
     }
 
     .text {
-        display: block;
-        position: absolute;
-        z-index: 1;
         width: 300px;
         right: 80px;
         bottom: 102px;

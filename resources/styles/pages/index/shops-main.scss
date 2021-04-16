@@ -256,8 +256,9 @@
         .cities li {
 
             span {
-                color: #ffffff;
                 cursor: pointer;
+                padding-top: 3px;
+                color: #ffffff;
                 font-family: "PF Din Text Cond Pro", sans-serif;
                 transition: transform 500ms ease;
                 text-transform: uppercase;

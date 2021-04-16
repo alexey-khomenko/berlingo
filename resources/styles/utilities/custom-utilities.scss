@@ -24,6 +24,7 @@
 .back {
     display: block;
     position: absolute;
+    pointer-events: none;
     z-index: 0;
 }
 

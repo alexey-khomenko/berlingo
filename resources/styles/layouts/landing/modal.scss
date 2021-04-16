@@ -46,17 +46,45 @@
             z-index: 700;
             width: 100%;
             max-height: 100%;
-            background-color: #ffffff;
             overflow: auto;
             display: none;
-            border-radius: 40px;
+            max-width: 1160px;
+
+            @media (max-width: $md_max) {
+                max-width: 940px;
+            }
 
             @media (max-width: $sm_max) {
-                border-radius: 0;
+                max-width: 320px;
             }
 
             &.open {
                 display: block;
+            }
+
+            &__body-0 {
+                display: block;
+                position: relative;
+                overflow: hidden;
+            }
+
+            &__body-1 {
+                display: block;
+                position: relative;
+                background-color: #ffffff;
+                border-radius: 40px;
+                overflow: visible;
+
+                @media (max-width: $sm_max) {
+                    border-radius: 0;
+                }
+            }
+
+            &__body-2 {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
             }
 
             &__close {
@@ -90,6 +118,10 @@
                         height: 16px;
                     }
                 }
+            }
+
+            * {
+                box-sizing: border-box;
             }
         }
     }

@@ -81,18 +81,45 @@ img {
   z-index: 700;
   width: 100%;
   max-height: 100%;
-  background-color: #ffffff;
   overflow: auto;
   display: none;
-  border-radius: 40px;
+  max-width: 1160px;
+}
+@media (max-width: 1199px) {
+  .shadow .modal-wrapper .modal {
+    max-width: 940px;
+  }
 }
 @media (max-width: 959px) {
   .shadow .modal-wrapper .modal {
-    border-radius: 0;
+    max-width: 320px;
   }
 }
 .shadow .modal-wrapper .modal.open {
   display: block;
+}
+.shadow .modal-wrapper .modal__body-0 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.shadow .modal-wrapper .modal__body-1 {
+  display: block;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 40px;
+  overflow: visible;
+}
+@media (max-width: 959px) {
+  .shadow .modal-wrapper .modal__body-1 {
+    border-radius: 0;
+  }
+}
+.shadow .modal-wrapper .modal__body-2 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 .shadow .modal-wrapper .modal__close {
   position: absolute;
@@ -125,6 +152,9 @@ img {
     width: 16px;
     height: 16px;
   }
+}
+.shadow .modal-wrapper .modal * {
+  box-sizing: border-box;
 }
 
 .modal_auth {
@@ -161,23 +191,14 @@ img {
   }
 }
 
-.modal_test {
-  max-width: 1160px;
-  height: 660px;
+.modal_test .title, .modal_test .subtitle, .modal_test .text {
+  display: block;
 }
-@media (max-width: 1199px) {
-  .modal_test {
-    max-width: 940px;
-    height: 560px;
-  }
-}
-@media (max-width: 959px) {
-  .modal_test {
-    max-width: 320px;
-    height: auto;
-  }
+.modal_test .text {
+  position: absolute;
 }
 .modal_test .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,11 +231,16 @@ img {
   }
 }
 
+[data-modal-name=test_1] .modal__body-0 {
+  height: 700px;
+  padding-top: 40px;
+}
+[data-modal-name=test_1] .modal__body-1, [data-modal-name=test_1] .modal__body-2 {
+  height: 660px;
+}
 [data-modal-name=test_1] .back {
-  display: block;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
+  top: -40px;
+  right: -120px;
 }
 [data-modal-name=test_1] .title {
   color: #000000;
@@ -227,9 +253,6 @@ img {
   width: 300px;
 }
 [data-modal-name=test_1] .text {
-  display: block;
-  position: absolute;
-  z-index: 1;
   width: 300px;
   right: 80px;
   bottom: 102px;
@@ -247,11 +270,25 @@ img {
   width: 203px;
 }
 
+[data-modal-name=test_2] .modal__body-0,
+[data-modal-name=test_3] .modal__body-0,
+[data-modal-name=test_4] .modal__body-0,
+[data-modal-name=test_5] .modal__body-0 {
+  height: 660px;
+}
+[data-modal-name=test_2] .modal__body-1, [data-modal-name=test_2] .modal__body-2,
+[data-modal-name=test_3] .modal__body-1,
+[data-modal-name=test_3] .modal__body-2,
+[data-modal-name=test_4] .modal__body-1,
+[data-modal-name=test_4] .modal__body-2,
+[data-modal-name=test_5] .modal__body-1,
+[data-modal-name=test_5] .modal__body-2 {
+  height: 660px;
+}
 [data-modal-name=test_2] .title,
 [data-modal-name=test_3] .title,
 [data-modal-name=test_4] .title,
 [data-modal-name=test_5] .title {
-  display: block;
   color: #828282;
   text-transform: uppercase;
   font-family: "PF Din Text Cond Pro", sans-serif;
@@ -261,11 +298,10 @@ img {
   line-height: 22px;
   margin: 60px 80px 20px;
 }
-[data-modal-name=test_2] .text,
-[data-modal-name=test_3] .text,
-[data-modal-name=test_4] .text,
-[data-modal-name=test_5] .text {
-  display: block;
+[data-modal-name=test_2] .subtitle,
+[data-modal-name=test_3] .subtitle,
+[data-modal-name=test_4] .subtitle,
+[data-modal-name=test_5] .subtitle {
   color: #000000;
   font-family: "PF Din Text Cond Pro", sans-serif;
   font-style: normal;
@@ -295,41 +331,68 @@ img {
 [data-modal-name=test_3] .button,
 [data-modal-name=test_4] .button,
 [data-modal-name=test_5] .button {
+  margin: 0 80px 60px;
   background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
   color: #ffffff;
-  margin: 0 80px 60px;
   width: 176px;
 }
 
+[data-modal-name=test_6] .modal__body-0 {
+  height: 700px;
+  padding-top: 40px;
+}
+[data-modal-name=test_6] .modal__body-1, [data-modal-name=test_6] .modal__body-2 {
+  height: 660px;
+}
 [data-modal-name=test_6] .back {
-  display: block;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
+  top: -40px;
+  right: -180px;
 }
 [data-modal-name=test_6] .title {
-  display: block;
+  color: #000000;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  margin: 60px 100px 20px;
+  width: 560px;
 }
 [data-modal-name=test_6] .subtitle {
-  display: block;
+  color: #000000;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 100px 40px;
+  width: 560px;
 }
 [data-modal-name=test_6] .text {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  width: 160px;
-  right: 80px;
+  width: 260px;
+  right: 100px;
   bottom: 100px;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
 }
 [data-modal-name=test_6] .pens {
-  margin: 0 80px 41px;
+  margin: 0 100px 51px;
+  width: 500px;
+  min-height: 240px;
 }
 [data-modal-name=test_6] .buttons {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 80px 40px;
+  margin: 0 100px 60px;
+}
+[data-modal-name=test_6] .buttons .button:not(:last-of-type) {
+  margin-right: 20px;
 }
 [data-modal-name=test_6] .buttons .button_shops {
   color: #ffffff;
@@ -341,9 +404,6 @@ img {
   background-color: #ffffff;
   border: 2px solid #000000;
   width: 237px;
-}
-[data-modal-name=test_6] .buttons .button:not(:last-of-type) {
-  margin-right: 20px;
 }
 
 .index-header {
@@ -1568,8 +1628,9 @@ img {
   }
 }
 .index-shops__main .tabs .cities li span {
-  color: #ffffff;
   cursor: pointer;
+  padding-top: 3px;
+  color: #ffffff;
   font-family: "PF Din Text Cond Pro", sans-serif;
   transition: transform 500ms ease;
   text-transform: uppercase;
@@ -2158,6 +2219,7 @@ img {
 .back {
   display: block;
   position: absolute;
+  pointer-events: none;
   z-index: 0;
 }
 

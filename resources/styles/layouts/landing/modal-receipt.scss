@@ -1,0 +1,14 @@
+.modal_receipt {
+    max-width: 1160px;
+    height: 602px;
+
+    @media (max-width: $md_max) {
+        max-width: 940px;
+        height: 517px;
+    }
+
+    @media (max-width: $sm_max) {
+        max-width: 320px;
+        height: auto;
+    }
+}

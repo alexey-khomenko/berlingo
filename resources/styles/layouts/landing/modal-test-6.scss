@@ -1,0 +1,59 @@
+[data-modal-name="test_6"] {
+
+    .back {
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .subtitle {
+        display: block;
+    }
+
+    .text {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 160px;
+        right: 80px;
+        bottom: 100px;
+    }
+
+    .pens {
+        margin: 0 80px 41px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 80px 40px;
+
+        .button {
+
+            &_shops {
+                color: #ffffff;
+                background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+
+                width: 206px;
+            }
+
+            &_prizes {
+                color: #000000;
+                background-color: #ffffff;
+                border: 2px solid #000000;
+                width: 237px;
+            }
+
+            &:not(:last-of-type) {
+                margin-right: 20px;
+            }
+        }
+    }
+}

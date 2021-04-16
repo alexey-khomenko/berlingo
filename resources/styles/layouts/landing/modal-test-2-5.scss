@@ -1,0 +1,54 @@
+[data-modal-name="test_2"],
+[data-modal-name="test_3"],
+[data-modal-name="test_4"],
+[data-modal-name="test_5"] {
+
+    .title {
+        display: block;
+        color: #828282;
+        text-transform: uppercase;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 60px 80px 20px;
+    }
+
+    .text {
+        display: block;
+        color: #000000;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        margin: 0 80px 44px;
+    }
+
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 80px 78px;
+
+        input {
+            //display: none;
+        }
+
+        label {
+            img {
+                width: 170px;
+                height: auto;
+            }
+        }
+    }
+
+    .button {
+        background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
+        color: #ffffff;
+        margin: 0 80px 60px;
+        width: 176px;
+    }
+}

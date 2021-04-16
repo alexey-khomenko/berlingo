@@ -1,0 +1,48 @@
+[data-modal-name="test_1"] {
+
+    .back {
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .title {
+        color:#000000;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 43px;
+        margin: 123px 80px 40px;
+        width: 300px;
+
+
+    }
+
+    .text {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 300px;
+        right: 80px;
+        bottom: 102px;
+        color: #ffffff;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+
+
+    }
+
+    .button {
+        margin: 0 80px 145px;
+        background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+        color: #ffffff;
+        width: 203px;
+
+
+    }
+}

@@ -2,9 +2,12 @@ section(class="modal modal_auth", data-modal-name="success", data-modal-importan
     include modal--close
 
 
-    div(class="modal__body")
+    div(style="height:80px")
 
 
-    div(class="modal__foot")
-        a(href="#", data-modal-open="register")
-            | Регистрация
+    div(class="text")
+        | Успех! Твой личный кабинет создан. Чтобы войти в него, перейди по ссылке в письме, отправленном тебе на e-mail.
+
+    div()
+        a(href="#", data-modal-close)
+            | Хорошо

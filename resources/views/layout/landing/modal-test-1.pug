@@ -1,2 +1,18 @@
 section(class="modal modal_test", data-modal-name="test_1", data-modal-important="off")
     include modal--close
+
+    div(class="back")
+        img(alt="", src="images/modal-test-1-lg.png", class="image_lg")
+        img(alt="", src="images/modal-test-1-md.png", class="image_md")
+        img(alt="", src="images/modal-test-1-sm.png", class="image_sm")
+
+    div(class="title")
+        | Давай узнаем, какая ручка Berlingo подходит именно тебе!
+
+    div(class="text")
+        | Я подготовил для тебя необычный тест. Просто выбирай картинки, которые тебе нравятся, а я подберу ручки,
+        | которые подчеркнут твою индивидуальность лучше всего! Погнали?
+
+    a(href="#", class="button", data-modal-open="test_2")
+        span
+            | Начать тест

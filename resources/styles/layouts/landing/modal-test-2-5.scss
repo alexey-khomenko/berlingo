@@ -5,21 +5,46 @@
 
     .modal__body-0 {
         height: 660px;
-    }
 
-    .modal__body-1, .modal__body-2 {
-        height: 660px;
+        @media (max-width: $md_max) {
+            height: 560px;
+        }
+
+        @media (max-width: $sm_max) {
+            height: 615px;
+        }
     }
 
     .title {
         color: #828282;
+        position: relative;
         text-transform: uppercase;
         font-family: "PF Din Text Cond Pro", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
-        margin: 60px 80px 20px;
+        margin: 60px 100px 20px;
+
+        @media (max-width: $md_max) {
+            margin: 60px 80px 20px;
+        }
+
+        @media (max-width: $sm_max) {
+            margin: 60px 20px 20px;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: -20px;
+                left: -20px;
+                right: -20px;
+                height: 1px;
+                background-color: #000000;
+            }
+        }
     }
 
     .subtitle {
@@ -27,9 +52,21 @@
         font-family: "PF Din Text Cond Pro", sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 30px;
-        line-height: 36px;
-        margin: 0 80px 44px;
+        font-size: 36px;
+        line-height: 43px;
+        margin: 0 100px 60px;
+
+        @media (max-width: $md_max) {
+            font-size: 30px;
+            line-height: 36px;
+            margin: 0 80px 40px;
+        }
+
+        @media (max-width: $sm_max) {
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0 20px 40px;
+        }
     }
 
     form {
@@ -37,26 +74,54 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 0 80px 78px;
+        margin: 0 100px 105px;
+        height: 210px;
+
+        @media (max-width: $md_max) {
+            margin: 0 80px 72px;
+            height: 170px;
+        }
+
+        @media (max-width: $sm_max) {
+            margin: 0 20px 40px;
+            height: 274px;
+        }
 
         input {
-            //display: none;
+            display: none;
         }
 
         label {
+            // todo
+
             img {
-                width: 170px;
+                width: 210px;
                 height: auto;
+
+                @media (max-width: $md_max) {
+                    width: 170px;
+                }
+
+                @media (max-width: $sm_max) {
+                    width: 130px;
+                }
             }
         }
     }
 
     .button {
-        margin: 0 80px 60px;
+        margin: 0 100px 60px;
         background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
         color: #ffffff;
         width: 176px;
 
+        @media (max-width: $md_max) {
+            margin: 0 80px 60px;
+        }
 
+        @media (max-width: $sm_max) {
+            margin: 0 20px 40px;
+            width: 119px;
+        }
     }
 }

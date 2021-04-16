@@ -1,14 +1,17 @@
 .modal_auth {
-    max-width: 1160px;
-    height: 702px;
 
-    @media (max-width: $md_max) {
-        max-width: 940px;
-        height: 597px;
+    .modal__body-0, .modal__body-1, .modal__body-2 {
+        height: 702px;
+
+        @media (max-width: $md_max) {
+            height: 597px;
+        }
+
+        @media (max-width: $sm_max) {
+            height: auto;
+        }
     }
 
-    @media (max-width: $sm_max) {
-        max-width: 320px;
-        height: auto;
-    }
+
+
 }

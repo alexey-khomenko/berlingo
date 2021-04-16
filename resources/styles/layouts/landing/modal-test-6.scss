@@ -3,19 +3,23 @@
     .modal__body-0 {
         height: 700px;
         padding-top: 40px;
-    }
 
-    .modal__body-1, .modal__body-2 {
-        height: 660px;
+        @media (max-width: $md_max) {
+            height: 600px;
+        }
+
+
     }
 
     .back {
         top: -40px;
         right: -180px;
+
+
     }
 
     .title {
-        color:#000000;
+        color: #000000;
         font-family: "PF Din Text Cond Pro", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -50,12 +54,98 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 29px;
+
+
     }
 
     .pens {
+        display: block;
+        overflow: visible;
+        position: relative;
+        border: 1px solid #000000;
+        border-radius: 20px;
         margin: 0 100px 51px;
         width: 500px;
-        min-height: 240px;
+
+
+
+        &__button {
+            display: block;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            color: #000;
+            transform: translate(44px, -50%);
+            text-decoration: none;
+            width: 16px;
+            height: 32px;
+
+
+
+            &:hover svg, &:focus svg {
+                transform: scale(1.2);
+            }
+
+            svg {
+                transition: transform 500ms ease;
+            }
+        }
+
+        .pen {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 240px;
+
+
+
+            &[data-hidden="on"] {
+                display: none;
+            }
+
+            &__image {
+                width: 240px;
+                object-fit: contain;
+                flex-shrink: 0;
+
+
+            }
+
+            &__texts {
+                flex-shrink: 1;
+                display: block;
+                overflow: auto;
+                color: #000000;
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                margin: 0 20px;
+                padding-right: 20px;
+                max-height: 200px;
+
+
+            }
+
+            &__title {
+                display: block;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 10px;
+
+
+            }
+
+            &__text {
+                display: block;
+                font-size: 14px;
+                line-height: 17px;
+
+
+            }
+        }
     }
 
     .buttons {
@@ -65,16 +155,22 @@
         align-items: center;
         margin: 0 100px 60px;
 
+
+
         .button {
 
             &:not(:last-of-type) {
                 margin-right: 20px;
+
+
             }
 
             &_shops {
                 color: #ffffff;
-                background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+                background: linear-gradient(180deg, #ff9c47 0%, #e600c6 100%);
                 width: 206px;
+
+
             }
 
             &_prizes {
@@ -82,6 +178,8 @@
                 background-color: #ffffff;
                 border: 2px solid #000000;
                 width: 237px;
+
+
             }
         }
     }

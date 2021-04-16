@@ -22,7 +22,27 @@ section(class="modal modal_test", data-modal-name="test_6", data-modal-important
                     | Я подобрал для тебя ручки, которые подойдут именно тебе и подчеркнут твою индивидуальность лучше всех!
 
                 div(class="pens")
-
+                    div(class="pen", data-pen="0", data-hidden="off")
+                        img(alt="", src="images/0_content-modal-pens.png", class="pen__image")
+                        div(class="pen__texts")
+                            div(class="pen__title")
+                                | Color Zone
+                            div(class="pen__text")
+                                | Эффектная шариковая ручка Berlingo Color Zone с клипом является частью одноименной
+                                | яркой серии. Прорезиненное покрытие корпуса и утолщение в зоне захвата ручки
+                                | обеспечивают высокий уровень комфорта при ее использовании.
+                    div(class="pen", data-pen="1", data-hidden="on")
+                        img(alt="", src="images/0_content-modal-pens.png", class="pen__image")
+                        div(class="pen__texts")
+                            div(class="pen__title")
+                                | Color Zone 2
+                            div(class="pen__text")
+                                | Эффектная шариковая ручка Berlingo Color Zone с клипом является частью одноименной
+                                | яркой серии. Прорезиненное покрытие корпуса и утолщение в зоне захвата ручки
+                                | обеспечивают высокий уровень комфорта при ее использовании.
+                    a(href="#", class="pens__button", data-pens-toggler)
+                        svg(width="16", height="32", viewBox="0 0 16 32", xmlns="http://www.w3.org/2000/svg")
+                            path(d="M0.375854 31.6749L0.377468 31.6765C0.851276 32.1284 1.59387 32.1037 2.03862 31.6221L15.679 16.8468C16.1148 16.3743 16.1059 15.6337 15.658 15.1727L15.5894 15.1026L2.03862 0.379276C1.59387 -0.103996 0.850467 -0.128738 0.375853 0.32402L0.374238 0.324844C-0.102798 0.780077 -0.127013 1.54457 0.320158 2.03032L13.188 15.999L0.320967 29.9694C-0.126205 30.4551 -0.10199 31.2204 0.375854 31.6749Z", fill="currentColor")
 
                 div(class="buttons")
                     a(href="#", class="button button_shops", data-anchor="shops")

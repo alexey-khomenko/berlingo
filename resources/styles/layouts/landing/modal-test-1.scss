@@ -3,15 +3,19 @@
     .modal__body-0 {
         height: 700px;
         padding-top: 40px;
-    }
 
-    .modal__body-1, .modal__body-2 {
-        height: 660px;
+        @media (max-width: $md_max) {
+            height: 600px;
+        }
+
+
     }
 
     .back {
         top: -40px;
         right: -120px;
+
+
     }
 
     .title {
@@ -19,8 +23,8 @@
         font-family: "PF Din Text Cond Pro", sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 36px;
-        line-height: 43px;
+        font-size: 48px;
+        line-height: 58px;
         margin: 123px 80px 40px;
         width: 300px;
 

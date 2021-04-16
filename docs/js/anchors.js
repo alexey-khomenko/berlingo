@@ -9,7 +9,6 @@ document.addEventListener('click', function (e) {
         window.misc.header.classList.remove('open');
     }
 
-    // todo
     const modalIsOpen = !!document.querySelector('.modal.open');
 
     if (modalIsOpen) {

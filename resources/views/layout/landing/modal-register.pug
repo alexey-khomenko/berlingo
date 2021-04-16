@@ -1,9 +1,12 @@
 section(class="modal modal_auth", data-modal-name="register", data-modal-important="off")
-    include modal--close
 
+    div(class="modal__body-0")
+        div(class="modal__body-1")
 
-    div(style="height:200px")
+            div(class="modal__body-2")
+                include modal--close
 
-        div()
-        a(href="#", data-modal-open="login")
-            | Вход
+                div(style="height:200px")
+
+                a(href="#", data-modal-open="login")
+                    | Вход

@@ -165,10 +165,6 @@
                 height: auto;
             }
 
-            &[data-hidden="on"] {
-                display: none;
-            }
-
             &__image {
                 width: 240px;
                 object-fit: contain;

@@ -509,6 +509,26 @@ img {
 [data-modal-name=test_5] form input {
   display: none;
 }
+[data-modal-name=test_2] form input:not(:checked) + label [data-selected=off],
+[data-modal-name=test_2] form input:checked + label [data-selected=on],
+[data-modal-name=test_3] form input:not(:checked) + label [data-selected=off],
+[data-modal-name=test_3] form input:checked + label [data-selected=on],
+[data-modal-name=test_4] form input:not(:checked) + label [data-selected=off],
+[data-modal-name=test_4] form input:checked + label [data-selected=on],
+[data-modal-name=test_5] form input:not(:checked) + label [data-selected=off],
+[data-modal-name=test_5] form input:checked + label [data-selected=on] {
+  display: block;
+}
+[data-modal-name=test_2] form input:checked + label [data-selected=off],
+[data-modal-name=test_2] form input:not(:checked) + label [data-selected=on],
+[data-modal-name=test_3] form input:checked + label [data-selected=off],
+[data-modal-name=test_3] form input:not(:checked) + label [data-selected=on],
+[data-modal-name=test_4] form input:checked + label [data-selected=off],
+[data-modal-name=test_4] form input:not(:checked) + label [data-selected=on],
+[data-modal-name=test_5] form input:checked + label [data-selected=off],
+[data-modal-name=test_5] form input:not(:checked) + label [data-selected=on] {
+  display: none;
+}
 [data-modal-name=test_2] form label,
 [data-modal-name=test_3] form label,
 [data-modal-name=test_4] form label,
@@ -530,6 +550,7 @@ img {
 [data-modal-name=test_3] form label img,
 [data-modal-name=test_4] form label img,
 [data-modal-name=test_5] form label img {
+  cursor: pointer;
   -o-object-fit: contain;
      object-fit: contain;
   width: 210px;
@@ -552,12 +573,6 @@ img {
     width: 130px;
     height: 130px;
   }
-}
-[data-modal-name=test_2] form label img[data-hidden=on],
-[data-modal-name=test_3] form label img[data-hidden=on],
-[data-modal-name=test_4] form label img[data-hidden=on],
-[data-modal-name=test_5] form label img[data-hidden=on] {
-  display: none;
 }
 [data-modal-name=test_2] .button,
 [data-modal-name=test_3] .button,
@@ -758,9 +773,6 @@ img {
     flex-direction: column;
     height: auto;
   }
-}
-[data-modal-name=test_6] .pens .pen[data-hidden=on] {
-  display: none;
 }
 [data-modal-name=test_6] .pens .pen__image {
   width: 240px;
@@ -1949,10 +1961,7 @@ img {
     font-size: 14px;
   }
 }
-.index-shops__main .tabs__body[data-hidden=on] {
-  display: none;
-}
-.index-shops__main .tabs__body[data-hidden=off] {
+.index-shops__main .tabs__body {
   display: block;
 }
 .index-shops__main .tabs form {
@@ -2034,9 +2043,6 @@ img {
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
   transform: scale(1, -1);
   pointer-events: none;
-}
-.index-shops__main .tabs .retails-wrapper [data-hidden=on] {
-  display: none;
 }
 .index-shops__main .tabs .retails-wrapper ul {
   display: block;
@@ -2699,6 +2705,10 @@ img {
 }
 .main_rel {
   position: relative;
+}
+
+[data-hidden=on]:not(.index-top__back) {
+  display: none !important;
 }
 
 .image_lg, .image_md, .image_sm {

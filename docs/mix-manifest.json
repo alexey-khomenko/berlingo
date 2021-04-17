@@ -72,6 +72,7 @@
     "/images/index-top-back-3-sm.png": "/images/index-top-back-3-sm.png",
     "/images/modal-test-1-lg.png": "/images/modal-test-1-lg.png",
     "/images/modal-test-1-md.png": "/images/modal-test-1-md.png",
+    "/images/modal-test-1-sm.png": "/images/modal-test-1-sm.png",
     "/images/modal-test-2-1-selected.png": "/images/modal-test-2-1-selected.png",
     "/images/modal-test-2-1.png": "/images/modal-test-2-1.png",
     "/images/modal-test-2-2-selected.png": "/images/modal-test-2-2-selected.png",
@@ -106,6 +107,7 @@
     "/images/modal-test-5-4.png": "/images/modal-test-5-4.png",
     "/images/modal-test-6-lg.png": "/images/modal-test-6-lg.png",
     "/images/modal-test-6-md.png": "/images/modal-test-6-md.png",
+    "/images/modal-test-6-sm.png": "/images/modal-test-6-sm.png",
     "/favicons/favicon.png": "/favicons/favicon.png",
     "/js/anchors.js": "/js/anchors.js",
     "/js/menu.js": "/js/menu.js",
@@ -117,7 +119,5 @@
     "/account.html": "/account.html",
     "/index.html": "/index.html",
     "/pens.html": "/pens.html",
-    "/winners.html": "/winners.html",
-    "/images/modal-test-1-sm.png": "/images/modal-test-1-sm.png",
-    "/images/modal-test-6-sm.png": "/images/modal-test-6-sm.png"
+    "/winners.html": "/winners.html"
 }

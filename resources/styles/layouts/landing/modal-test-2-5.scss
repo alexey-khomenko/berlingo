@@ -83,6 +83,16 @@
             display: none;
         }
 
+        input:not(:checked) + label [data-selected="off"],
+        input:checked + label [data-selected="on"] {
+            display: block;
+        }
+
+        input:checked + label [data-selected="off"],
+        input:not(:checked) + label [data-selected="on"] {
+            display: none;
+        }
+
         label {
             display: block;
 
@@ -93,6 +103,7 @@
             }
 
             img {
+                cursor: pointer;
                 object-fit: contain;
                 width: 210px;
                 height: 210px;
@@ -105,10 +116,6 @@
                 @media (max-width: $sm_max) {
                     width: 130px;
                     height: 130px;
-                }
-
-                &[data-hidden="on"] {
-                    display: none;
                 }
             }
         }

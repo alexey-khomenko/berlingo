@@ -774,23 +774,28 @@ img {
     height: auto;
   }
 }
-[data-modal-name=test_6] .pens .pen__image {
-  width: 240px;
-  -o-object-fit: contain;
-     object-fit: contain;
+[data-modal-name=test_6] .pens .pen__link {
   flex-shrink: 0;
+  width: 240px;
 }
 @media (max-width: 1199px) {
-  [data-modal-name=test_6] .pens .pen__image {
+  [data-modal-name=test_6] .pens .pen__link {
+    height: 200px;
     width: 200px;
   }
 }
 @media (max-width: 959px) {
-  [data-modal-name=test_6] .pens .pen__image {
+  [data-modal-name=test_6] .pens .pen__link {
     width: auto;
-    height: 200px;
+    max-width: 100%;
     margin-bottom: 20px;
   }
+}
+[data-modal-name=test_6] .pens .pen__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 [data-modal-name=test_6] .pens .pen__texts {
   flex-shrink: 1;

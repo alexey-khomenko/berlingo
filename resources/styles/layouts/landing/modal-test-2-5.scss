@@ -84,7 +84,7 @@
 
         @media (max-width: $sm_max) {
             margin: 0 20px 40px;
-            height: 274px;
+            height: 280px;
         }
 
         input {
@@ -92,18 +92,31 @@
         }
 
         label {
-            // todo
+            display: block;
+
+            &:nth-of-type(3), &:nth-of-type(4) {
+                @media (max-width: $sm_max) {
+                    margin-top: auto;
+                }
+            }
 
             img {
+                object-fit: contain;
                 width: 210px;
-                height: auto;
+                height: 210px;
 
                 @media (max-width: $md_max) {
                     width: 170px;
+                    height: 170px;
                 }
 
                 @media (max-width: $sm_max) {
                     width: 130px;
+                    height: 130px;
+                }
+
+                &[data-hidden="on"] {
+                    display: none;
                 }
             }
         }

@@ -401,7 +401,7 @@ img {
 [data-modal-name=test_4] form,
 [data-modal-name=test_5] form {
     margin: 0 20px 40px;
-    height: 274px;
+    height: 280px;
   }
 }
 [data-modal-name=test_2] form input,
@@ -410,12 +410,31 @@ img {
 [data-modal-name=test_5] form input {
   display: none;
 }
+[data-modal-name=test_2] form label,
+[data-modal-name=test_3] form label,
+[data-modal-name=test_4] form label,
+[data-modal-name=test_5] form label {
+  display: block;
+}
+@media (max-width: 959px) {
+  [data-modal-name=test_2] form label:nth-of-type(3), [data-modal-name=test_2] form label:nth-of-type(4),
+[data-modal-name=test_3] form label:nth-of-type(3),
+[data-modal-name=test_3] form label:nth-of-type(4),
+[data-modal-name=test_4] form label:nth-of-type(3),
+[data-modal-name=test_4] form label:nth-of-type(4),
+[data-modal-name=test_5] form label:nth-of-type(3),
+[data-modal-name=test_5] form label:nth-of-type(4) {
+    margin-top: auto;
+  }
+}
 [data-modal-name=test_2] form label img,
 [data-modal-name=test_3] form label img,
 [data-modal-name=test_4] form label img,
 [data-modal-name=test_5] form label img {
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 210px;
-  height: auto;
+  height: 210px;
 }
 @media (max-width: 1199px) {
   [data-modal-name=test_2] form label img,
@@ -423,6 +442,7 @@ img {
 [data-modal-name=test_4] form label img,
 [data-modal-name=test_5] form label img {
     width: 170px;
+    height: 170px;
   }
 }
 @media (max-width: 959px) {
@@ -431,7 +451,14 @@ img {
 [data-modal-name=test_4] form label img,
 [data-modal-name=test_5] form label img {
     width: 130px;
+    height: 130px;
   }
+}
+[data-modal-name=test_2] form label img[data-hidden=on],
+[data-modal-name=test_3] form label img[data-hidden=on],
+[data-modal-name=test_4] form label img[data-hidden=on],
+[data-modal-name=test_5] form label img[data-hidden=on] {
+  display: none;
 }
 [data-modal-name=test_2] .button,
 [data-modal-name=test_3] .button,

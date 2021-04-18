@@ -12,6 +12,213 @@
         }
     }
 
+    .title {
+        display: block;
+        position: relative;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        margin: 80px 100px 20px;
 
+        @media (max-width: $md_max) {
+            font-size: 36px;
+            line-height: 43px;
+            margin: 60px 80px 20px;
+        }
 
+        @media (max-width: $sm_max) {
+            font-size: 24px;
+            line-height: 29px;
+            margin: 60px 20px 20px;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: -20px;
+                left: -20px;
+                right: -20px;
+                height: 1px;
+                background-color: #000000;
+            }
+        }
+    }
+
+    .subtitle {
+        display: block;
+        color: #000000;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 100px 60px;
+        width: 460px;
+
+        @media (max-width: $md_max) {
+            margin: 0 80px 40px;
+            width: auto;
+        }
+
+        @media (max-width: $sm_max) {
+            margin: 0 20px 30px;
+        }
+    }
+
+    .form {
+        margin: 0 100px 80px;
+
+        @media (max-width: $md_max) {
+            margin: 0 80px 40px;
+        }
+
+        @media (max-width: $sm_max) {
+            margin: 0 20px 40px;
+        }
+
+        &__inputs {
+            margin: 0 0 40px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            @media (max-width: $md_max) {
+                margin: 0 0 30px;
+            }
+
+            @media (max-width: $sm_max) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &__input {
+            margin: 0 40px 0 0;
+            width: 460px;
+
+            @media (max-width: $md_max) {
+                margin: 0 20px 0 0;
+                width: 380px;
+            }
+
+            @media (max-width: $sm_max) {
+                margin: 0 0 20px 0;
+                width: 100%;
+            }
+
+            input {
+                border-radius: 99999px;
+                border: 1px solid #828282;
+                color: #828282;
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                padding: 0 39px;
+                width: 100%;
+                height: 60px;
+
+                &::placeholder {
+                    opacity: 1;
+                }
+
+                &:focus::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &__file {
+            margin: 0;
+            position: relative;
+            cursor: pointer;
+            color: #000000;
+            border: 2px solid #000000;
+            background-color: #ffffff;
+            height: 60px !important;
+            width: 252px;
+
+            @media (max-width: $sm_max) {
+                width: 173px;
+            }
+
+            &::after {
+                content: attr(data-text);
+                position: absolute;
+                transform: translate(20px, -50%);
+                left: 100%;
+                top: 50%;
+                color: #828282;
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                width: 150px;
+
+                @media (max-width: $md_max) {
+                    width: 78px;
+                }
+            }
+
+            input {
+                display: none;
+            }
+        }
+
+        &__checkbox {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 40px;
+            padding-left: 60px;
+            margin: 0 0 40px;
+
+            @media (max-width: $sm_max) {
+                height: 52px;
+            }
+
+            span {
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+
+                @media (max-width: $sm_max) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+
+            a {
+                color: #000000;
+                display: inline;
+                text-decoration: underline;
+
+                &:hover, &:focus {
+                    color: #828282;
+                }
+            }
+        }
+
+        &__button {
+            margin: 0;
+            cursor: pointer;
+            color: #ffffff;
+            background: linear-gradient(180deg, #ff9c47 0%, #e600c6 100%);
+            border: none;
+            width: 276px;
+
+            @media (max-width: $sm_max) {
+                width: 189px;
+            }
+        }
+    }
 }

@@ -6,4 +6,40 @@ section(class="modal modal_receipt", data-modal-name="receipt", data-modal-impor
             div(class="modal__body-2")
                 include modal--close
 
-                div(style="height:200px")
+                div(class="title")
+                    | Зарегистрируй чек
+
+                div(class="subtitle")
+                    | После регистрации чека, он поступит на модерирование. Статус модерации чека ты сможешь отследить
+                    | в личном кабинете
+
+                form(class="form")
+
+                    div(class="form__inputs")
+
+                        label(class="form__input")
+                            input(type="text", name="receipt-shop", maxlength="200", placeholder="Укажи магазин покупки")
+
+                        label(class="button form__file", data-text="только JPG, JPEG, PNG до 20Мб")
+                            input(type="file", name="receipt-file")
+                            span
+                                | Загрузи фото Чека
+
+                    //- todo file
+
+                    input(type="checkbox", name="receipt-agree", id="receipt-agree", data-hidden="on")
+                    label(class="form__checkbox", for="receipt-agree")
+                        span
+                            | Я согласен с
+                            |
+                            a(href="#", download)
+                                | политикой обработки персональных данных
+                            |
+                            | и
+                            |
+                            a(href="#", download)
+                                | условиями акции
+
+                    button(type="submit", class="button form__button")
+                        span
+                            | Зарегистрировать чек

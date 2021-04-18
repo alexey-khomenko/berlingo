@@ -759,6 +759,7 @@ img {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  transition: opacity 1s ease;
   overflow: hidden;
   border-radius: 20px;
   height: 240px;
@@ -773,6 +774,13 @@ img {
     flex-direction: column;
     height: auto;
   }
+}
+[data-modal-name=test_6] .pens .pen[data-hidden=on] {
+  opacity: 0;
+  height: 0;
+}
+[data-modal-name=test_6] .pens .pen[data-hidden=off] {
+  opacity: 1;
 }
 [data-modal-name=test_6] .pens .pen__link {
   flex-shrink: 0;
@@ -2078,14 +2086,6 @@ img {
     min-height: 60px;
   }
 }
-.index-shops__main .tabs .retails-wrapper ul li:last-child {
-  margin-bottom: 10px;
-}
-@media (max-width: 959px) {
-  .index-shops__main .tabs .retails-wrapper ul li:last-child {
-    margin-bottom: 20px;
-  }
-}
 .index-shops__main .tabs .retails-wrapper ul li:hover {
   background-color: #4f4f4f;
 }
@@ -2113,6 +2113,14 @@ img {
 }
 .index-shops__main .tabs .cities li span:hover, .index-shops__main .tabs .cities li span:focus {
   transform: scale(1.05, 1.15);
+}
+.index-shops__main .tabs .retails li:last-child {
+  margin-bottom: 10px;
+}
+@media (max-width: 959px) {
+  .index-shops__main .tabs .retails li:last-child {
+    margin-bottom: 20px;
+  }
 }
 .index-shops__main .tabs .retails li .retails__lg {
   display: flex;
@@ -2712,7 +2720,7 @@ img {
   position: relative;
 }
 
-[data-hidden=on]:not(.index-top__back) {
+[data-hidden=on]:not([data-slider]) {
   display: none !important;
 }
 

@@ -3,6 +3,10 @@ document.addEventListener('click', function (e) {
 
     if (!modal) return true;
 
+    const disabled = e.target.dataset.disabled === 'on' || e.target.closest('[data-disabled]')?.dataset.disabled === 'on';
+
+    if (disabled) return true;
+
     const header = document.querySelector('.index-header');
     const menuIsOpen = header.classList.contains('open');
 
@@ -22,7 +26,7 @@ document.addEventListener('click', function (e) {
 
     if (modal.dataset.modalImportant === 'on') return true;
 
-    modalClose();
+    window.misc.modalClose();
 });
 
 document.addEventListener('click', function (e) {
@@ -30,10 +34,10 @@ document.addEventListener('click', function (e) {
 
     if (!close) return true;
 
-    modalClose();
+    window.misc.modalClose();
 });
 
-function modalClose() {
+window.misc.modalClose = function () {
     const [shadow, wrapper, modal] = getModalElements();
 
     wrapper.classList.remove('open');
@@ -42,7 +46,7 @@ function modalClose() {
         modal.classList.remove('open');
         shadow.classList.remove('open');
     }, 600);
-}
+};
 
 function modalOpen(t) {
     const [shadow, wrapper, modal] = getModalElements();

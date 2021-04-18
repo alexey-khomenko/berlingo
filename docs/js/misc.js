@@ -4,11 +4,11 @@ window.misc = {
 };
 
 document.addEventListener('click', function (e) {
-    if (e.target.href === '#' || e.target.closest(`[href="#"]`)) e.preventDefault();
+    if (e.target.closest(`[href="#"]`)) e.preventDefault();
 });
 
 document.addEventListener('click', function (e) {
-    const link = e.target.href ? e.target : e.target.closest('[href]');
+    const link = e.target.closest('[href]');
 
     if (!link) return true;
 

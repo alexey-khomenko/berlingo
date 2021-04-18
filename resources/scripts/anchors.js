@@ -12,7 +12,7 @@ document.addEventListener('click', function (e) {
     const modalIsOpen = !!document.querySelector('.modal.open');
 
     if (modalIsOpen) {
-        modalClose();
+        window.misc.modalClose();
     }
 
     setTimeout(() => {

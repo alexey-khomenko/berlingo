@@ -224,14 +224,6 @@
                         min-height: 60px;
                     }
 
-                    &:last-child {
-                        margin-bottom: 10px;
-
-                        @media (max-width: $sm_max) {
-                            margin-bottom: 20px;
-                        }
-                    }
-
                     &:hover {
                         background-color: #4f4f4f;
 
@@ -268,6 +260,14 @@
         }
 
         .retails li {
+
+            &:last-child {
+                margin-bottom: 10px;
+
+                @media (max-width: $sm_max) {
+                    margin-bottom: 20px;
+                }
+            }
 
             .retails__lg {
                 display: flex;

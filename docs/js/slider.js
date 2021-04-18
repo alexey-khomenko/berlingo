@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll('[data-slider]');
+const slides = document.querySelectorAll('.index-top__back[data-slider]');
 
 if (slides.length) {
     let oldNumber = 0;

@@ -152,6 +152,7 @@
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
+            transition: opacity 1s ease;
             overflow: hidden;
             border-radius: 20px;
             height: 240px;
@@ -163,6 +164,15 @@
             @media (max-width: $sm_max) {
                 flex-direction: column;
                 height: auto;
+            }
+
+            &[data-hidden="on"] {
+                opacity: 0;
+                height: 0;
+            }
+
+            &[data-hidden="off"] {
+                opacity: 1;
             }
 
             &__link {

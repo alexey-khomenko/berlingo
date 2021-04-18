@@ -7,6 +7,7 @@ mix
     .copyDirectory('resources/images/*.*', 'docs/images')
     .copyDirectory('resources/favicons/*.*', 'docs/favicons')
     .copyDirectory('resources/scripts/*.*', 'docs/js')
+    .js('resources/scripts/app.js', 'js/scripts.js')
     .sass('resources/styles/app.scss', 'css/styles.css')
     .pug('resources/views/pages/*.pug', 'docs', {
         excludePath: 'resources/views/pages',

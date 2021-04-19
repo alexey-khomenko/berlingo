@@ -251,7 +251,7 @@
                 }
             }
 
-            input {
+            input, select {
                 border-radius: 99999px;
                 border: 1px solid #828282;
                 color: #828282;
@@ -272,6 +272,91 @@
                     opacity: 0;
                 }
             }
+
+            select {
+                cursor: pointer;
+                background-color: #ffffff;
+                appearance: none;
+            }
+
+            &_select {
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    right: 40px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                    color: #000000;
+
+                    @media (max-width: $md_max) {
+                        right: 20px;
+                    }
+                }
+            }
         }
+
+        &__checkbox {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 40px;
+            margin: 0 0 40px;
+
+            @media (max-width: $sm_max) {
+                margin-top: -10px;
+                height: 52px;
+            }
+
+            span {
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+
+                @media (max-width: $sm_max) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+
+            a {
+                color: #000000;
+                display: inline;
+                text-decoration: underline;
+
+                &:hover, &:focus {
+                    color: #828282;
+                }
+            }
+        }
+
+        &__check {
+            display: block;
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 99999px;
+            border: 1px solid #000000;
+
+            svg {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                width: 14px;
+                height: 10px;
+            }
+        }
+    }
+
+    .form__inputs + .form__inputs {
+        margin-top: -20px;
     }
 }

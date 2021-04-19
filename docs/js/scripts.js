@@ -88,6 +88,7 @@ document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('su
   e.preventDefault();
   var email = document.querySelector("[name=\"login-email\"]").value.trim();
   var password = document.querySelector("[name=\"login-password\"]").value.trim();
+  if (email.length < 4 || password.length < 4) return true;
   console.log(email, password); // todo ajax
 
   document.querySelector("[name=\"login-email\"]").value = '';
@@ -96,7 +97,29 @@ document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('su
 });
 document.querySelector("[data-modal-name=\"register\"] .form").addEventListener('submit', function (e) {
   e.preventDefault();
+  var checkbox = document.querySelector("#register-agree");
+  if (!checkbox.checked) return false;
+  var email = document.querySelector("[name=\"register-email\"]").value.trim();
+  var phone = document.querySelector("[name=\"register-phone\"]").value.trim();
+  var password = document.querySelector("[name=\"register-password\"]").value.trim();
+  var city = document.querySelector("[name=\"register-city\"]").value.trim();
+  if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 1) return true;
+  console.log(email, phone, password, city); // todo ajax
+
+  document.querySelector("[name=\"register-email\"]").value = '';
+  document.querySelector("[name=\"register-phone\"]").value = '';
+  document.querySelector("[name=\"register-password\"]").value = '';
+  document.querySelector("[name=\"register-city\"]").value = '';
+  window.misc.modalOpen('success');
 });
+document.querySelector("[data-modal-name=\"register\"] #register-agree").addEventListener('change', svgColor);
+svgColor();
+
+function svgColor() {
+  var input = document.querySelector("[data-modal-name=\"register\"] #register-agree");
+  var svg = document.querySelector("[data-modal-name=\"register\"] .form__check svg");
+  svg.style.color = input.checked ? '#000000' : 'transparent';
+}
 
 /***/ }),
 
@@ -175,7 +198,7 @@ document.addEventListener('click', function (e) {
   }
 
   setTimeout(function () {
-    modalOpen(modal);
+    window.misc.modalOpen(modal);
   }, menuIsOpen ? 700 : 10);
 });
 document.addEventListener('click', function (e) {
@@ -209,7 +232,7 @@ window.misc.modalClose = function () {
   }, 600);
 };
 
-function modalOpen(t) {
+window.misc.modalOpen = function (t) {
   var _getModalElements5 = getModalElements(),
       _getModalElements6 = _slicedToArray(_getModalElements5, 3),
       shadow = _getModalElements6[0],
@@ -233,7 +256,7 @@ function modalOpen(t) {
   setTimeout(function () {
     wrapper.classList.add('open');
   }, timeout);
-}
+};
 
 function getModalElements() {
   return [document.querySelector('.shadow'), document.querySelector('.modal-wrapper'), document.querySelector('.modal.open')];

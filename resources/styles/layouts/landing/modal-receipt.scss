@@ -229,7 +229,6 @@
                 }
 
                 svg {
-                    display: block;
                     transition: transform 500ms ease;
                     color: #000000;
                 }
@@ -285,7 +284,6 @@
 
             svg {
                 position: absolute;
-                display: block;
                 transform: translate(-50%, -50%);
                 top: 50%;
                 left: 50%;

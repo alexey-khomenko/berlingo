@@ -15,7 +15,7 @@ document.addEventListener('click', function (e) {
     }
 
     setTimeout(() => {
-        modalOpen(modal);
+        window.misc.modalOpen(modal);
     }, menuIsOpen ? 700 : 10);
 });
 
@@ -48,7 +48,7 @@ window.misc.modalClose = function () {
     }, 600);
 };
 
-function modalOpen(t) {
+window.misc.modalOpen = function(t) {
     const [shadow, wrapper, modal] = getModalElements();
     const target = document.querySelector(`[data-modal-name="${t}"]`);
 

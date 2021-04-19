@@ -34,6 +34,11 @@ button::-moz-focus-inner {
 
 img {
   display: block;
+  border: none;
+}
+
+svg {
+  display: block;
 }
 
 .shadow {
@@ -139,7 +144,6 @@ img {
   transform: scale(1.2);
 }
 .shadow .modal-wrapper .modal__close svg {
-  display: block;
   transition: transform 500ms ease;
   color: #000000;
   width: 24px;
@@ -436,7 +440,7 @@ img {
     margin-bottom: 20px;
   }
 }
-.modal_auth .form__input input {
+.modal_auth .form__input input, .modal_auth .form__input select {
   border-radius: 99999px;
   border: 1px solid #828282;
   color: #828282;
@@ -449,23 +453,103 @@ img {
   width: 100%;
   height: 60px;
 }
-.modal_auth .form__input input::-moz-placeholder {
+.modal_auth .form__input input::-moz-placeholder, .modal_auth .form__input select::-moz-placeholder {
   opacity: 1;
 }
-.modal_auth .form__input input:-ms-input-placeholder {
+.modal_auth .form__input input:-ms-input-placeholder, .modal_auth .form__input select:-ms-input-placeholder {
   opacity: 1;
 }
-.modal_auth .form__input input::placeholder {
+.modal_auth .form__input input::placeholder, .modal_auth .form__input select::placeholder {
   opacity: 1;
 }
-.modal_auth .form__input input:focus::-moz-placeholder {
+.modal_auth .form__input input:focus::-moz-placeholder, .modal_auth .form__input select:focus::-moz-placeholder {
   opacity: 0;
 }
-.modal_auth .form__input input:focus:-ms-input-placeholder {
+.modal_auth .form__input input:focus:-ms-input-placeholder, .modal_auth .form__input select:focus:-ms-input-placeholder {
   opacity: 0;
 }
-.modal_auth .form__input input:focus::placeholder {
+.modal_auth .form__input input:focus::placeholder, .modal_auth .form__input select:focus::placeholder {
   opacity: 0;
+}
+.modal_auth .form__input select {
+  cursor: pointer;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.modal_auth .form__input_select {
+  position: relative;
+}
+.modal_auth .form__input_select svg {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000000;
+}
+@media (max-width: 1199px) {
+  .modal_auth .form__input_select svg {
+    right: 20px;
+  }
+}
+.modal_auth .form__checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+  margin: 0 0 40px;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__checkbox {
+    margin-top: -10px;
+    height: 52px;
+  }
+}
+.modal_auth .form__checkbox span {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__checkbox span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.modal_auth .form__checkbox a {
+  color: #000000;
+  display: inline;
+  text-decoration: underline;
+}
+.modal_auth .form__checkbox a:hover, .modal_auth .form__checkbox a:focus {
+  color: #828282;
+}
+.modal_auth .form__check {
+  display: block;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 99999px;
+  border: 1px solid #000000;
+}
+.modal_auth .form__check svg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 10px;
+}
+.modal_auth .form__inputs + .form__inputs {
+  margin-top: -20px;
 }
 
 .modal_receipt .modal__body-0, .modal_receipt .modal__body-1, .modal_receipt .modal__body-2 {
@@ -713,7 +797,6 @@ img {
   transform: scale(1.2);
 }
 .modal_receipt .form__file-selected a svg {
-  display: block;
   transition: transform 500ms ease;
   color: #000000;
 }
@@ -764,7 +847,6 @@ img {
 }
 .modal_receipt .form__check svg {
   position: absolute;
-  display: block;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -2153,7 +2235,6 @@ img {
   position: absolute;
   top: 100%;
   right: 50%;
-  display: block;
   transform: translateX(19px);
   width: 160px;
   height: auto;
@@ -2596,7 +2677,6 @@ img {
   opacity: 0;
 }
 .index-shops__main .tabs form svg {
-  display: block;
   color: #ffffff;
   pointer-events: none;
   position: absolute;
@@ -2801,7 +2881,6 @@ img {
   transform: scale(1.2);
 }
 .index-shops__main .tabs .retails li .retails__sm a svg {
-  display: block;
   transition: transform 500ms ease;
   color: #ffffff;
 }
@@ -3120,7 +3199,6 @@ img {
   transform: scale(1.2);
 }
 .index-bottom__main .element_socials .link svg {
-  display: block;
   transition: transform 500ms ease;
   color: #000000;
 }

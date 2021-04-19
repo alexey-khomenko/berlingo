@@ -1,14 +1,15 @@
 .winners-header__back {
     right: 50%;
-    top: -230px;
-    transform: translateX(156px);
+    top: -397px;
+    transform: translateX(220px);
 
     @media (max-width: $md_max) {
-        top: -160px;
-        transform: translateX(112px);
+        top: -407px;
+        transform: translateX(123px);
     }
 
     @media (max-width: $sm_max) {
-        transform: translateX(230px);
+        top: -153px;
+        transform: translateX(175px);
     }
 }

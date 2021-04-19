@@ -3456,8 +3456,8 @@ svg {
 
 .account-header__back {
   right: 50%;
-  top: -230px;
-  transform: translateX(156px);
+  top: -290px;
+  transform: translateX(-35px);
 }
 @media (max-width: 1199px) {
   .account-header__back {
@@ -3591,6 +3591,336 @@ svg {
 }
 .account-header__main .content {
   position: relative;
+}
+
+.account-marathon {
+  height: 700px;
+}
+@media (max-width: 1199px) {
+  .account-marathon {
+    height: 570px;
+  }
+}
+@media (max-width: 959px) {
+  .account-marathon {
+    height: 664px;
+  }
+}
+
+.account-marathon__back {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.account-marathon__main {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.account-marathon__main .title {
+  display: block;
+  position: absolute;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  top: 212px;
+  left: 100px;
+  width: 460px;
+}
+@media (max-width: 1199px) {
+  .account-marathon__main .title {
+    font-size: 36px;
+    line-height: 43px;
+    top: 180px;
+    left: 80px;
+    width: 380px;
+  }
+}
+@media (max-width: 959px) {
+  .account-marathon__main .title {
+    font-size: 24px;
+    line-height: 29px;
+    top: 94px;
+    left: 0;
+    width: 280px;
+  }
+}
+.account-marathon__main .button {
+  display: flex;
+  position: absolute;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  background-color: #ffffff;
+  text-decoration: none;
+  top: 468px;
+  left: 100px;
+  width: 209px;
+  height: 80px;
+}
+@media (max-width: 1199px) {
+  .account-marathon__main .button {
+    top: 368px;
+    left: 80px;
+  }
+}
+@media (max-width: 959px) {
+  .account-marathon__main .button {
+    top: 287px;
+    left: 0;
+    width: 143px;
+    height: 60px;
+  }
+}
+.account-marathon__main .button:hover span, .account-marathon__main .button:focus span {
+  transform: scale(1.05, 1.15);
+}
+.account-marathon__main .button span {
+  padding-top: 3px;
+  transition: transform 500ms ease;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .account-marathon__main .button span {
+    font-size: 14px;
+  }
+}
+
+.account-bottom {
+  height: 418px;
+}
+@media (max-width: 1199px) {
+  .account-bottom {
+    height: 324px;
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom {
+    height: 407px;
+  }
+}
+
+.account-bottom__back {
+  left: 50%;
+  top: 176px;
+  transform: translateX(-113px);
+}
+@media (max-width: 1199px) {
+  .account-bottom__back {
+    top: 86px;
+    transform: translateX(-63px);
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom__back {
+    top: 89px;
+    transform: translateX(79px);
+  }
+}
+
+.account-bottom__main {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.account-bottom__main .element {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 370px;
+}
+@media (max-width: 1199px) {
+  .account-bottom__main .element {
+    width: 300px;
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element {
+    width: 280px;
+  }
+}
+.account-bottom__main .element_text {
+  right: 0;
+  display: block;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  top: 169px;
+}
+@media (max-width: 1199px) {
+  .account-bottom__main .element_text {
+    font-size: 18px;
+    line-height: 22px;
+    top: 102px;
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_text {
+    font-size: 16px;
+    line-height: 19px;
+    top: 248px;
+  }
+}
+.account-bottom__main .element_title {
+  left: 0;
+  display: block;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  top: 169px;
+}
+@media (max-width: 1199px) {
+  .account-bottom__main .element_title {
+    width: 376px;
+    font-size: 24px;
+    line-height: 29px;
+    top: 102px;
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_title {
+    width: 280px;
+    font-size: 18px;
+    line-height: 22px;
+    top: 70px;
+  }
+}
+.account-bottom__main .element_button {
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+  text-decoration: none;
+  top: 278px;
+  width: 368px;
+  height: 80px;
+}
+@media (max-width: 1199px) {
+  .account-bottom__main .element_button {
+    top: 204px;
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_button {
+    top: 139px;
+    width: 126px;
+    height: 60px;
+  }
+}
+.account-bottom__main .element_button:hover span, .account-bottom__main .element_button:focus span {
+  transform: scale(1.05, 1.15);
+}
+.account-bottom__main .element_button span {
+  padding-top: 3px;
+  transition: transform 500ms ease;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_button span {
+    font-size: 14px;
+  }
+}
+.account-bottom__main .element_button span:nth-child(1) {
+  display: block;
+}
+.account-bottom__main .element_button span:nth-child(2) {
+  display: none;
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_button span:nth-child(1) {
+    display: none;
+  }
+  .account-bottom__main .element_button span:nth-child(2) {
+    display: block;
+  }
+}
+.account-bottom__main .element_socials {
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: 278px;
+}
+@media (max-width: 1199px) {
+  .account-bottom__main .element_socials {
+    top: 204px;
+  }
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_socials {
+    top: 317px;
+  }
+}
+.account-bottom__main .element_socials .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  background-color: #ffffff;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_socials .link {
+    width: 60px;
+    height: 60px;
+  }
+}
+.account-bottom__main .element_socials .link:not(:last-of-type) {
+  margin-right: 20px;
+}
+.account-bottom__main .element_socials .link_vk svg {
+  width: 22px;
+  height: 12px;
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_socials .link_vk svg {
+    width: 18px;
+    height: 10px;
+  }
+}
+.account-bottom__main .element_socials .link_instagram svg {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 959px) {
+  .account-bottom__main .element_socials .link_instagram svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.account-bottom__main .element_socials .link:hover svg, .account-bottom__main .element_socials .link:focus svg {
+  transform: scale(1.2);
+}
+.account-bottom__main .element_socials .link svg {
+  transition: transform 500ms ease;
+  color: #000000;
 }
 
 .account-footer {
@@ -4219,18 +4549,19 @@ svg {
 
 .winners-header__back {
   right: 50%;
-  top: -230px;
-  transform: translateX(156px);
+  top: -397px;
+  transform: translateX(220px);
 }
 @media (max-width: 1199px) {
   .winners-header__back {
-    top: -160px;
-    transform: translateX(112px);
+    top: -407px;
+    transform: translateX(123px);
   }
 }
 @media (max-width: 959px) {
   .winners-header__back {
-    transform: translateX(230px);
+    top: -153px;
+    transform: translateX(175px);
   }
 }
 
@@ -4378,24 +4709,6 @@ svg {
   right: 0;
   height: 1px;
   background-color: #ffffff;
-}
-
-.winners-footer__back {
-  left: 50%;
-  top: -398px;
-  transform: translateX(0);
-}
-@media (max-width: 1199px) {
-  .winners-footer__back {
-    top: -304px;
-    transform: translateX(0);
-  }
-}
-@media (max-width: 959px) {
-  .winners-footer__back {
-    top: -232px;
-    transform: translateX(-320px);
-  }
 }
 
 .winners-footer__main {

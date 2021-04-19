@@ -198,7 +198,216 @@ img {
 }
 @media (max-width: 959px) {
   .modal_auth .modal__body-0, .modal_auth .modal__body-1, .modal_auth .modal__body-2 {
+    min-height: 480px;
     height: auto;
+  }
+}
+.modal_auth .titles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 80px 100px 40px;
+}
+@media (max-width: 1199px) {
+  .modal_auth .titles {
+    font-size: 36px;
+    line-height: 43px;
+    margin: 60px 80px 20px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .titles {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 60px 20px 20px;
+  }
+  .modal_auth .titles::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #000000;
+  }
+}
+.modal_auth .titles a {
+  color: #000000;
+  position: relative;
+  text-decoration: none;
+}
+.modal_auth .titles a:hover, .modal_auth .titles a:focus {
+  color: #828282;
+}
+.modal_auth .titles a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 3px dashed currentColor;
+  bottom: 6px;
+}
+@media (max-width: 959px) {
+  .modal_auth .titles a:after {
+    border-width: 2px;
+    bottom: 3px;
+  }
+}
+.modal_auth .titles .title {
+  color: #ff327c;
+}
+.modal_auth .titles .center {
+  color: #000000;
+  margin: 0 8px;
+}
+@media (max-width: 959px) {
+  .modal_auth .titles .center {
+    margin: 0 6px;
+  }
+}
+.modal_auth .subtitle {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 100px 60px;
+}
+@media (max-width: 1199px) {
+  .modal_auth .subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 80px 40px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .subtitle {
+    margin: 0 20px 40px;
+  }
+}
+.modal_auth .button {
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+  border: none;
+}
+.modal_auth[data-modal-name=login] .button {
+  margin: 0;
+  width: 162px;
+}
+@media (max-width: 959px) {
+  .modal_auth[data-modal-name=login] .button {
+    width: 109px;
+  }
+}
+.modal_auth[data-modal-name=register] .button {
+  margin: 0;
+  width: 264px;
+}
+@media (max-width: 959px) {
+  .modal_auth[data-modal-name=register] .button {
+    width: 181px;
+  }
+}
+.modal_auth[data-modal-name=success] .button {
+  margin: 0 100px 80px;
+  width: 173px;
+}
+@media (max-width: 1199px) {
+  .modal_auth[data-modal-name=success] .button {
+    margin: 0 80px 60px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth[data-modal-name=success] .button {
+    margin: 0 20px 40px;
+    width: 118px;
+  }
+}
+.modal_auth .subtitles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #000000;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 100px 60px;
+}
+@media (max-width: 1199px) {
+  .modal_auth .subtitles {
+    margin: 0 80px 40px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .subtitles {
+    margin: 0 20px 40px;
+  }
+}
+.modal_auth .subtitles__left, .modal_auth .subtitles__right {
+  font-size: 18px;
+  line-height: 22px;
+  width: 460px;
+}
+@media (max-width: 1199px) {
+  .modal_auth .subtitles__left, .modal_auth .subtitles__right {
+    width: 380px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .subtitles__left, .modal_auth .subtitles__right {
+    width: auto;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .subtitles__left {
+    margin-bottom: 20px;
+  }
+}
+.modal_auth .subtitles__right a {
+  color: #000000;
+  position: relative;
+  text-decoration: none;
+}
+.modal_auth .subtitles__right a:hover, .modal_auth .subtitles__right a:focus {
+  color: #828282;
+}
+.modal_auth .subtitles__right a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 2px dashed currentColor;
+  bottom: 0;
+}
+@media (max-width: 959px) {
+  .modal_auth .subtitles__right a:after {
+    border-width: 1px;
+  }
+}
+.modal_auth .form {
+  margin: 0 50px 80px 100px;
+}
+@media (max-width: 1199px) {
+  .modal_auth .form {
+    margin: 0 80px 40px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .form {
+    margin: 0 20px 40px;
   }
 }
 

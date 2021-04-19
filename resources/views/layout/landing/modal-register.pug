@@ -6,7 +6,30 @@ section(class="modal modal_auth", data-modal-name="register", data-modal-importa
             div(class="modal__body-2")
                 include modal--close
 
-                div(style="height:200px")
+                div(class="titles")
+                    a(href="#", data-modal-open="login")
+                        | Авторизация
+                    span(class="center")
+                        | или
+                    span(class="title")
+                        | регистрация
 
-                a(href="#", data-modal-open="login")
-                    | Вход
+                div(class="subtitles")
+                    div(class="subtitles__left")
+                        | Пожалуйста, зарегистрируйся, чтобы войти в личный кабинет и зарегистрировать чек
+                    div(class="subtitles__right")
+                        | Уже зарегистрирован?
+                        |
+                        a(href="#", data-modal-open="login")
+                            | Войди
+                        |
+                        | в личный кабинет
+
+
+                form(class="form")
+
+
+
+                    button(type="submit", class="button")
+                        span
+                            | Зарегистрироваться

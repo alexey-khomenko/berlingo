@@ -184,7 +184,7 @@ document.addEventListener('click', function (e) {
 });
 setTimeout(function () {
   document.querySelector('header').style.visibility = 'visible';
-}, 300);
+}, 500);
 
 /***/ }),
 

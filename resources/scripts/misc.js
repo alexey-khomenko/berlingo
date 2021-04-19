@@ -17,4 +17,4 @@ document.addEventListener('click', function (e) {
 
 setTimeout(() => {
     document.querySelector('header').style.visibility = 'visible';
-}, 300);
+}, 500);

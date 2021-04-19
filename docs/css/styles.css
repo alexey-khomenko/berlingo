@@ -3461,13 +3461,14 @@ svg {
 }
 @media (max-width: 1199px) {
   .account-header__back {
-    top: -160px;
-    transform: translateX(112px);
+    top: -267px;
+    transform: translateX(35px);
   }
 }
 @media (max-width: 959px) {
   .account-header__back {
-    transform: translateX(230px);
+    top: -113px;
+    transform: translateX(126px);
   }
 }
 

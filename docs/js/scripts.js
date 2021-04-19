@@ -182,6 +182,7 @@ document.addEventListener('click', function (e) {
     return link.blur();
   }, 700);
 });
+document.querySelector('body').style.visibility = 'visible';
 
 /***/ }),
 

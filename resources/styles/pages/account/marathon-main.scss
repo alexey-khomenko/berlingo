@@ -3,8 +3,6 @@
     left: 50%;
     transform: translateX(-50%);
 
-    // todo
-
     .title {
         display: block;
         position: absolute;
@@ -15,14 +13,14 @@
         font-weight: 400;
         font-size: 48px;
         line-height: 58px;
-        top: 212px;
+        top: 281px;
         left: 100px;
         width: 460px;
 
         @media (max-width: $md_max) {
             font-size: 36px;
             line-height: 43px;
-            top: 180px;
+            top: 210px;
             left: 80px;
             width: 380px;
         }
@@ -30,7 +28,7 @@
         @media (max-width: $sm_max) {
             font-size: 24px;
             line-height: 29px;
-            top: 94px;
+            top: 170px;
             left: 0;
             width: 280px;
         }
@@ -45,7 +43,7 @@
         border-radius: 99999px;
         background-color: #ffffff;
         text-decoration: none;
-        top: 468px;
+        top: 440px;
         left: 100px;
         width: 209px;
         height: 80px;
@@ -56,7 +54,7 @@
         }
 
         @media (max-width: $sm_max) {
-            top: 287px;
+            top: 270px;
             left: 0;
             width: 143px;
             height: 60px;

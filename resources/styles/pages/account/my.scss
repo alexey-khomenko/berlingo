@@ -1,0 +1,12 @@
+.account-my {
+    display: none;
+    height: 780px;
+
+    @media (max-width: $md_max) {
+        height: 580px;
+    }
+
+    @media (max-width: $sm_max) {
+        height: 590px;
+    }
+}

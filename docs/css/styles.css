@@ -3593,6 +3593,550 @@ svg {
   position: relative;
 }
 
+.account-top {
+  height: 392px;
+}
+@media (max-width: 1199px) {
+  .account-top {
+    height: 318px;
+  }
+}
+@media (max-width: 959px) {
+  .account-top {
+    height: 309px;
+  }
+}
+
+.account-top__back {
+  left: 50%;
+  top: -20px;
+  transform: translateX(180px);
+}
+@media (max-width: 1199px) {
+  .account-top__back {
+    top: -20px;
+    transform: translateX(206px);
+  }
+}
+@media (max-width: 959px) {
+  .account-top__back {
+    top: 120px;
+    transform: translateX(10px);
+  }
+}
+
+.account-top__main {
+  padding-top: 80px;
+  margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .account-top__main {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 959px) {
+  .account-top__main {
+    padding-top: 40px;
+  }
+}
+.account-top__main .title {
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72px;
+  margin-bottom: 60px;
+}
+@media (max-width: 1199px) {
+  .account-top__main .title {
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 959px) {
+  .account-top__main .title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.account-top__main .buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.account-top__main .buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 99999px;
+  text-decoration: none;
+  height: 80px;
+}
+@media (max-width: 959px) {
+  .account-top__main .buttons .button {
+    height: 60px;
+  }
+}
+.account-top__main .buttons .button:hover span, .account-top__main .buttons .button:focus span {
+  transform: scale(1.05, 1.15);
+}
+.account-top__main .buttons .button span {
+  padding-top: 3px;
+  transition: transform 500ms ease;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .account-top__main .buttons .button span {
+    font-size: 14px;
+  }
+}
+.account-top__main .buttons .button_receipt {
+  background-color: #ffffff;
+  margin: 0 20px 0 0;
+  width: 368px;
+}
+@media (max-width: 959px) {
+  .account-top__main .buttons .button_receipt {
+    margin: 0 0 20px 0;
+    width: 254px;
+  }
+}
+.account-top__main .buttons .button_receipt span {
+  color: #000000;
+}
+.account-top__main .buttons .button_exit {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  width: 165px;
+}
+@media (max-width: 959px) {
+  .account-top__main .buttons .button_exit {
+    width: 112px;
+  }
+}
+.account-top__main .buttons .button_exit span {
+  color: #ffffff;
+}
+
+.account-receipts {
+  display: none;
+  height: 780px;
+}
+@media (max-width: 1199px) {
+  .account-receipts {
+    height: 580px;
+  }
+}
+@media (max-width: 959px) {
+  .account-receipts {
+    height: 590px;
+  }
+}
+
+.index-prizes {
+  display: none;
+  height: 1086px;
+}
+@media (max-width: 1199px) {
+  .index-prizes {
+    height: 999px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes {
+    height: 1945px;
+  }
+}
+
+.index-prizes__back {
+  right: 50%;
+  top: 11px;
+  transform: translateX(639px);
+}
+@media (max-width: 1199px) {
+  .index-prizes__back {
+    top: -9px;
+    transform: translateX(576px);
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__back {
+    top: 20px;
+    transform: translateX(386px);
+  }
+}
+
+.index-prizes__main {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 563px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main {
+    top: 500px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main {
+    top: 993px;
+  }
+}
+.index-prizes__main .content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  height: 926px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .content {
+    height: 839px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .content {
+    height: 1865px;
+  }
+}
+.index-prizes__main .card {
+  display: block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 40px;
+}
+@media (max-width: 959px) {
+  .index-prizes__main .card {
+    border-radius: 20px;
+  }
+}
+.index-prizes__main .card_primary {
+  flex-basis: 100%;
+  min-height: 488px;
+  margin: 0 0 40px 0;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .card_primary {
+    min-height: 443px;
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .card_primary {
+    min-height: 828px;
+  }
+}
+.index-prizes__main .card_week {
+  flex-basis: 760px;
+  min-height: 398px;
+  margin: 0 40px 0 0;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .card_week {
+    flex-basis: 620px;
+    min-height: 376px;
+    margin: 0 20px 0 0;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .card_week {
+    flex-basis: 100%;
+    min-height: 661px;
+    margin: 0 0 20px 0;
+  }
+}
+.index-prizes__main .card_day {
+  flex-basis: 360px;
+  min-height: 398px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .card_day {
+    flex-basis: 300px;
+    min-height: 376px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .card_day {
+    flex-basis: 100%;
+    min-height: 336px;
+  }
+}
+.index-prizes__main .text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.index-prizes__main .text.title_primary {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125;
+  font-size: 48px;
+  top: 87px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .text.title_primary {
+    font-size: 36px;
+    top: 80px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .text.title_primary {
+    font-size: 24px;
+    top: 53px;
+  }
+}
+.index-prizes__main .text.title_primary svg {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(19px);
+  width: 160px;
+  height: auto;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .text.title_primary svg {
+    transform: translateX(11px);
+    width: 114px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .text.title_primary svg {
+    transform: translateX(5px);
+    width: 73px;
+  }
+}
+.index-prizes__main .text.title_secondary {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125;
+  font-size: 30px;
+  top: 77px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .text.title_secondary {
+    font-size: 28px;
+    top: 76px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .text.title_secondary {
+    font-size: 24px;
+    top: 56px;
+  }
+}
+.index-prizes__main .text.subtitle_secondary {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125;
+  font-size: 18px;
+  top: 126px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .text.subtitle_secondary {
+    top: 124px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .text.subtitle_secondary {
+    top: 104px;
+  }
+}
+.index-prizes__main .images {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 59px;
+}
+@media (max-width: 959px) {
+  .index-prizes__main .images {
+    bottom: 39px;
+  }
+}
+.index-prizes__main .images img {
+  width: auto;
+}
+.index-prizes__main .images_primary {
+  width: 1040px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .images_primary {
+    width: 860px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .images_primary {
+    width: 180px;
+    margin-left: -20px;
+  }
+}
+.index-prizes__main .images_primary img {
+  height: 270px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .images_primary img {
+    height: 240px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .images_primary img {
+    height: 200px;
+  }
+  .index-prizes__main .images_primary img:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+}
+.index-prizes__main .images_week {
+  width: 640px;
+}
+@media (max-width: 1199px) {
+  .index-prizes__main .images_week {
+    width: 540px;
+  }
+}
+@media (max-width: 959px) {
+  .index-prizes__main .images_week {
+    width: 140px;
+  }
+}
+.index-prizes__main .images_week img {
+  height: 140px;
+}
+@media (max-width: 959px) {
+  .index-prizes__main .images_week img:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}
+.index-prizes__main .images_day {
+  width: 140px;
+}
+.index-prizes__main .images_day img {
+  height: 140px;
+}
+
+.account-balls {
+  display: none;
+  height: 780px;
+}
+@media (max-width: 1199px) {
+  .account-balls {
+    height: 580px;
+  }
+}
+@media (max-width: 959px) {
+  .account-balls {
+    height: 590px;
+  }
+}
+
+.account-balls__back {
+  right: 50%;
+  top: -40px;
+  transform: translateX(1128px);
+}
+@media (max-width: 1199px) {
+  .account-balls__back {
+    top: -12px;
+    transform: translateX(839px);
+  }
+}
+@media (max-width: 959px) {
+  .account-balls__back {
+    top: 280px;
+    transform: translateX(320px);
+  }
+}
+
+.account-balls__main {
+  position: relative;
+}
+.account-balls__main .title {
+  display: block;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+}
+.account-balls__main .balls {
+  transform: translateY(-50%);
+  position: absolute;
+  display: block;
+  left: 0;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  top: 138px;
+}
+.account-balls__main .text {
+  transform: translateY(-50%);
+  position: absolute;
+  display: block;
+  left: 0;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  top: 138px;
+}
+.account-my {
+  display: none;
+  height: 780px;
+}
+@media (max-width: 1199px) {
+  .account-my {
+    height: 580px;
+  }
+}
+@media (max-width: 959px) {
+  .account-my {
+    height: 590px;
+  }
+}
+
+.account-my__back {
+  right: 50%;
+  top: -40px;
+  transform: translateX(1128px);
+}
+@media (max-width: 1199px) {
+  .account-my__back {
+    top: -12px;
+    transform: translateX(839px);
+  }
+}
+@media (max-width: 959px) {
+  .account-my__back {
+    top: 280px;
+    transform: translateX(320px);
+  }
+}
+
 .account-marathon {
   height: 700px;
 }
@@ -3628,7 +4172,7 @@ svg {
   font-weight: 400;
   font-size: 48px;
   line-height: 58px;
-  top: 212px;
+  top: 281px;
   left: 100px;
   width: 460px;
 }
@@ -3636,7 +4180,7 @@ svg {
   .account-marathon__main .title {
     font-size: 36px;
     line-height: 43px;
-    top: 180px;
+    top: 210px;
     left: 80px;
     width: 380px;
   }
@@ -3645,7 +4189,7 @@ svg {
   .account-marathon__main .title {
     font-size: 24px;
     line-height: 29px;
-    top: 94px;
+    top: 170px;
     left: 0;
     width: 280px;
   }
@@ -3659,7 +4203,7 @@ svg {
   border-radius: 99999px;
   background-color: #ffffff;
   text-decoration: none;
-  top: 468px;
+  top: 440px;
   left: 100px;
   width: 209px;
   height: 80px;
@@ -3672,7 +4216,7 @@ svg {
 }
 @media (max-width: 959px) {
   .account-marathon__main .button {
-    top: 287px;
+    top: 270px;
     left: 0;
     width: 143px;
     height: 60px;

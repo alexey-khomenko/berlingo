@@ -1,0 +1,65 @@
+.account-balls__main {
+    position: relative;
+
+    .title {
+        display: block;
+        color: #ffffff;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+
+        @media (max-width: $md_max) {
+
+        }
+
+        @media (max-width: $sm_max) {
+
+        }
+    }
+
+    .balls {
+        transform: translateY(-50%);
+        position: absolute;
+        display: block;
+        left: 0;
+        color: #ffffff;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        top: 138px;
+
+        @media (max-width: $md_max) {
+
+        }
+
+        @media (max-width: $sm_max) {
+
+        }
+    }
+
+    .text {
+        transform: translateY(-50%);
+        position: absolute;
+        display: block;
+        left: 0;
+        color: #ffffff;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        top: 138px;
+
+        @media (max-width: $md_max) {
+
+        }
+
+        @media (max-width: $sm_max) {
+
+        }
+    }
+}

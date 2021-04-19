@@ -15,4 +15,6 @@ document.addEventListener('click', function (e) {
     setTimeout(() => link.blur(), 700);
 });
 
-document.querySelector('body').style.visibility = 'visible';
+setTimeout(() => {
+    document.querySelector('header').style.visibility = 'visible';
+}, 300);

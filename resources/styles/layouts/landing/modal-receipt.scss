@@ -69,7 +69,7 @@
     }
 
     .form {
-        margin: 0 100px 80px;
+        margin: 0 50px 80px 100px;
 
         @media (max-width: $md_max) {
             margin: 0 80px 40px;
@@ -171,13 +171,77 @@
             }
         }
 
+        &__file-selected {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 99999px;
+            border: 2px solid #000000;
+            background-color: #ffffff;
+            width: 496px;
+
+            @media (max-width: $md_max) {
+                width: 380px;
+            }
+
+            @media (max-width: $sm_max) {
+                width: 100%;
+            }
+
+            img {
+                flex-shrink: 0;
+                object-fit: cover;
+                width: 98px;
+                height: 56px;
+
+                @media (max-width: $sm_max) {
+                    width: 58px;
+                }
+            }
+
+            span {
+                max-height: 56px;
+                margin: 0 20px;
+                overflow: hidden;
+                font-family: "PF Din Text Cond Pro", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            a {
+                flex-shrink: 0;
+                margin-left: auto;
+                margin-right: 38px;
+                text-decoration: none;
+                width: 16px;
+                height: 16px;
+
+                @media (max-width: $md_max) {
+                    margin-right: 20px;
+                }
+
+                &:hover svg, &:focus svg {
+                    transform: scale(1.2);
+                }
+
+                svg {
+                    display: block;
+                    transition: transform 500ms ease;
+                    color: #000000;
+                }
+            }
+        }
+
         &__checkbox {
             display: flex;
             flex-flow: row nowrap;
             justify-content: flex-start;
             align-items: center;
             height: 40px;
-            padding-left: 60px;
             margin: 0 0 40px;
 
             @media (max-width: $sm_max) {
@@ -205,6 +269,28 @@
                 &:hover, &:focus {
                     color: #828282;
                 }
+            }
+        }
+
+        &__check {
+            display: block;
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 99999px;
+            border: 1px solid #000000;
+
+            svg {
+                position: absolute;
+                display: block;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                width: 14px;
+                height: 10px;
             }
         }
 

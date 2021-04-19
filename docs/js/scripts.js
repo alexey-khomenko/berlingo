@@ -237,7 +237,19 @@ function getModalElements() {
 
 document.querySelector("[data-modal-name=\"receipt\"] .form").addEventListener('submit', function (e) {
   e.preventDefault();
+  var checkbox = document.querySelector("#receipt-agree");
+  if (!checkbox.checked) return false;
+  var shop = document.querySelector("[name=\"receipt-shop\"]").value.trim();
+  console.log(shop);
 });
+document.querySelector("[data-modal-name=\"receipt\"] #receipt-agree").addEventListener('change', svgColor);
+svgColor();
+
+function svgColor() {
+  var input = document.querySelector("[data-modal-name=\"receipt\"] #receipt-agree");
+  var svg = document.querySelector("[data-modal-name=\"receipt\"] .form__check svg");
+  svg.style.color = input.checked ? '#000000' : 'transparent';
+}
 
 /***/ }),
 

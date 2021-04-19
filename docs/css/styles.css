@@ -398,7 +398,7 @@ img {
   }
 }
 .modal_auth .form {
-  margin: 0 50px 80px 100px;
+  margin: 0 100px 100px;
 }
 @media (max-width: 1199px) {
   .modal_auth .form {
@@ -409,6 +409,63 @@ img {
   .modal_auth .form {
     margin: 0 20px 40px;
   }
+}
+.modal_auth .form__inputs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 40px;
+}
+.modal_auth .form__input {
+  display: block;
+  width: 460px;
+}
+@media (max-width: 1199px) {
+  .modal_auth .form__input {
+    width: 380px;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input {
+    width: 100%;
+  }
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.modal_auth .form__input input {
+  border-radius: 99999px;
+  border: 1px solid #828282;
+  color: #828282;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 0 39px;
+  width: 100%;
+  height: 60px;
+}
+.modal_auth .form__input input::-moz-placeholder {
+  opacity: 1;
+}
+.modal_auth .form__input input:-ms-input-placeholder {
+  opacity: 1;
+}
+.modal_auth .form__input input::placeholder {
+  opacity: 1;
+}
+.modal_auth .form__input input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.modal_auth .form__input input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.modal_auth .form__input input:focus::placeholder {
+  opacity: 0;
 }
 
 .modal_receipt .modal__body-0, .modal_receipt .modal__body-1, .modal_receipt .modal__body-2 {

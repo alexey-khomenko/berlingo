@@ -86,6 +86,13 @@ __webpack_require__.r(__webpack_exports__);
 
 document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('submit', function (e) {
   e.preventDefault();
+  var email = document.querySelector("[name=\"login-email\"]").value.trim();
+  var password = document.querySelector("[name=\"login-password\"]").value.trim();
+  console.log(email, password); // todo ajax
+
+  document.querySelector("[name=\"login-email\"]").value = '';
+  document.querySelector("[name=\"login-password\"]").value = '';
+  location.reload();
 });
 document.querySelector("[data-modal-name=\"register\"] .form").addEventListener('submit', function (e) {
   e.preventDefault();

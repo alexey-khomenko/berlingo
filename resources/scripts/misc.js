@@ -1,6 +1,6 @@
 window.misc = {
     mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-    header: document.querySelector('.index-header'),
+    header: document.querySelector('header') ,
 };
 
 document.addEventListener('click', function (e) {

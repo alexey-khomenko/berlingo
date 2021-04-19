@@ -7,7 +7,7 @@ document.addEventListener('click', function (e) {
 
     if (disabled) return true;
 
-    const header = document.querySelector('.index-header');
+    const header = document.querySelector('header');
     const menuIsOpen = header.classList.contains('open');
 
     if (menuIsOpen) {

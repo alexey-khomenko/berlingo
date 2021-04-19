@@ -47,7 +47,9 @@ document.addEventListener('change', function (e) {
     }
 });
 
-document.querySelector(`[data-modal-open="test_6"]`).addEventListener('click', function () {
+document.addEventListener('click', function (e) {
+    if (!e.target.closest(`[data-modal-open="test_6"]`)) return true;
+
     setTimeout(() => {
         testSum = 0;
 
@@ -63,7 +65,9 @@ document.querySelector(`[data-modal-open="test_6"]`).addEventListener('click', f
     }, 10);
 });
 
-document.querySelector(`[data-modal-open="test_1"]`).addEventListener('click', function () {
+document.addEventListener('click', function (e) {
+    if (!e.target.closest(`[data-modal-open="test_1"]`)) return true;
+
     const results = document.querySelectorAll(`[data-modal-name="test_6"] [data-result]`);
 
     for (let result of results) {

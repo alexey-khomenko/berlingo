@@ -27,13 +27,33 @@ document.addEventListener('click', function (e) {
   setTimeout(function () {
     var target = document.querySelector(".index-".concat(anchor, "__main"));
     var wrapper = document.querySelector('.wrapper-outer');
-    wrapper.scrollTo(0, getY(target));
 
-    function getY(elem) {
-      return elem.getBoundingClientRect().top + pageYOffset - 5;
+    if (target) {
+      wrapper.scrollTo(0, getY(target));
+    } else {
+      document.querySelector('.content__logo').click();
+      localStorage.setItem('anchor', anchor);
     }
   }, menuIsOpen || modalIsOpen ? 700 : 10);
 });
+{
+  var anchor = localStorage.getItem('anchor');
+
+  if (anchor) {
+    var target = document.querySelector(".index-".concat(anchor, "__main"));
+    var wrapper = document.querySelector('.wrapper-outer');
+
+    if (target) {
+      wrapper.scrollTo(0, getY(target));
+    }
+
+    localStorage.removeItem('anchor');
+  }
+}
+
+function getY(elem) {
+  return elem.getBoundingClientRect().top + pageYOffset - 5;
+}
 
 /***/ }),
 
@@ -150,7 +170,7 @@ document.addEventListener('click', function (e) {
 
 window.misc = {
   mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-  header: document.querySelector('.index-header')
+  header: document.querySelector('header')
 };
 document.addEventListener('click', function (e) {
   if (e.target.closest("[href=\"#\"]")) e.preventDefault();
@@ -190,7 +210,7 @@ document.addEventListener('click', function (e) {
   if (!modal) return true;
   var disabled = e.target.dataset.disabled === 'on' || ((_e$target$closest2 = e.target.closest('[data-disabled]')) === null || _e$target$closest2 === void 0 ? void 0 : _e$target$closest2.dataset.disabled) === 'on';
   if (disabled) return true;
-  var header = document.querySelector('.index-header');
+  var header = document.querySelector('header');
   var menuIsOpen = header.classList.contains('open');
 
   if (menuIsOpen) {
@@ -328,138 +348,141 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 var shopsForm = document.querySelector('[data-form-shops]');
-var shopsInput = shopsForm.querySelector("[name=\"search\"]");
-var shopsCities = document.querySelector('.retails-wrapper .cities');
-var shopsRetails = document.querySelector('.retails-wrapper .retails');
-shopsForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-});
-shopsInput.addEventListener('focus', shopsInputListener);
-shopsInput.addEventListener('input', shopsInputListener);
-shopsInput.addEventListener('paste', shopsInputListener);
-document.addEventListener('click', function (e) {
-  if (e.target.closest('.cities') || e.target.closest('[data-form-shops]')) return true;
-  shopsCities.dataset.hidden = 'on';
-});
-document.addEventListener('click', function (e) {
-  if (!e.target.closest('[data-city]') || e.target.tagName === 'LI') return true;
-  shopsInput.value = e.target.textContent.trim();
-  shopsCities.dataset.hidden = 'on'; // todo ajax
 
-  var results = [{
-    title: 'Гипермаркет «Анвар»',
-    address: 'г. Актобе, ул. Нокина, д. 35',
-    link: '#'
-  }, {
-    title: '«Мега Анвар»',
-    address: 'г. Актобе, ул. Маметова, д. 4',
-    link: '#'
-  }, {
-    title: '«Школьник»',
-    address: 'г. Алексин, ул. Мира, д. 18',
-    link: '#'
-  }, {
-    title: '«Книги»',
-    address: 'г. Алексин, ул. Мира, д. 18/11',
-    link: '#'
-  }, {
-    title: '«Арт-Изо»',
-    address: 'г. Архангельск, пер. Троицкий, д.18',
-    link: '#'
-  }, {
-    title: '«Арт-Изо»',
-    address: 'г. Архангельск, пер. Троицкий, д.18',
-    link: '#'
-  }, {
-    title: 'Гипермаркет «Анвар»',
-    address: 'г. Актобе, ул. Нокина, д. 35',
-    link: '#'
-  }, {
-    title: '«Мега Анвар»',
-    address: 'г. Актобе, ул. Маметова, д. 4',
-    link: '#'
-  }, {
-    title: '«Школьник»',
-    address: 'г. Алексин, ул. Мира, д. 18',
-    link: '#'
-  }, {
-    title: '«Книги»',
-    address: 'г. Алексин, ул. Мира, д. 18/11',
-    link: '#'
-  }, {
-    title: '«Арт-Изо»',
-    address: 'г. Архангельск, пер. Троицкий, д.18',
-    link: '#'
-  }, {
-    title: '«Арт-Изо»',
-    address: 'г. Архангельск, пер. Троицкий, д.18',
-    link: '#'
-  }, {
-    title: 'Гипермаркет «Анвар»',
-    address: 'г. Актобе, ул. Нокина, д. 35',
-    link: '#'
-  }, {
-    title: '«Мега Анвар»',
-    address: 'г. Актобе, ул. Маметова, д. 4',
-    link: '#'
-  }, {
-    title: '«Школьник»',
-    address: 'г. Алексин, ул. Мира, д. 18',
-    link: '#'
-  }, {
-    title: '«Книги»',
-    address: 'г. Алексин, ул. Мира, д. 18/11',
-    link: '#'
-  }, {
-    title: '«Арт-Изо»',
-    address: 'г. Архангельск, пер. Троицкий, д.18',
-    link: '#'
-  }, {
-    title: '«Арт-Изо»',
-    address: 'г. Архангельск, пер. Троицкий, д.18',
-    link: '#'
-  }];
-  var origin = document.querySelector('.retail-origin li');
-  shopsRetails.innerHTML = '';
+if (shopsForm) {
+  var shopsInputListener = function shopsInputListener(e) {
+    shopsCities.dataset.hidden = 'off';
+    shopsRetails.dataset.hidden = 'on';
+    var value = e.target.value.trim().toLowerCase();
+    var cities = shopsCities.querySelectorAll('li');
 
-  for (var _i = 0, _results = results; _i < _results.length; _i++) {
-    var result = _results[_i];
-    var li = origin.cloneNode(true);
-    li.querySelector('.retails__title').innerHTML = "<span>".concat(result.title, "</span>");
-    li.querySelector('.retails__address').innerHTML = "<span>".concat(result.address, "</span>");
-    li.querySelector('.retails__link').href = result.link;
-    li.querySelector('.retails__sm a').href = result.link;
-    shopsRetails.append(li);
-  }
+    var _iterator = _createForOfIteratorHelper(cities),
+        _step;
 
-  shopsRetails.dataset.hidden = 'off';
-});
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var city = _step.value;
+        var cityName = city.querySelector('span').textContent.toLowerCase();
 
-function shopsInputListener(e) {
-  shopsCities.dataset.hidden = 'off';
-  shopsRetails.dataset.hidden = 'on';
-  var value = e.target.value.trim().toLowerCase();
-  var cities = shopsCities.querySelectorAll('li');
-
-  var _iterator = _createForOfIteratorHelper(cities),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var city = _step.value;
-      var cityName = city.querySelector('span').textContent.toLowerCase();
-
-      if (cityName.indexOf(value) === -1 && value.length > 0) {
-        city.dataset.hidden = 'on';
-      } else {
-        city.dataset.hidden = 'off';
+        if (cityName.indexOf(value) === -1 && value.length > 0) {
+          city.dataset.hidden = 'on';
+        } else {
+          city.dataset.hidden = 'off';
+        }
       }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
     }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
+  };
+
+  var shopsInput = shopsForm.querySelector("[name=\"search\"]");
+  var shopsCities = document.querySelector('.retails-wrapper .cities');
+  var shopsRetails = document.querySelector('.retails-wrapper .retails');
+  shopsForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+  });
+  shopsInput.addEventListener('focus', shopsInputListener);
+  shopsInput.addEventListener('input', shopsInputListener);
+  shopsInput.addEventListener('paste', shopsInputListener);
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.cities') || e.target.closest('[data-form-shops]')) return true;
+    shopsCities.dataset.hidden = 'on';
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('[data-city]') || e.target.tagName === 'LI') return true;
+    shopsInput.value = e.target.textContent.trim();
+    shopsCities.dataset.hidden = 'on'; // todo ajax
+
+    var results = [{
+      title: 'Гипермаркет «Анвар»',
+      address: 'г. Актобе, ул. Нокина, д. 35',
+      link: '#'
+    }, {
+      title: '«Мега Анвар»',
+      address: 'г. Актобе, ул. Маметова, д. 4',
+      link: '#'
+    }, {
+      title: '«Школьник»',
+      address: 'г. Алексин, ул. Мира, д. 18',
+      link: '#'
+    }, {
+      title: '«Книги»',
+      address: 'г. Алексин, ул. Мира, д. 18/11',
+      link: '#'
+    }, {
+      title: '«Арт-Изо»',
+      address: 'г. Архангельск, пер. Троицкий, д.18',
+      link: '#'
+    }, {
+      title: '«Арт-Изо»',
+      address: 'г. Архангельск, пер. Троицкий, д.18',
+      link: '#'
+    }, {
+      title: 'Гипермаркет «Анвар»',
+      address: 'г. Актобе, ул. Нокина, д. 35',
+      link: '#'
+    }, {
+      title: '«Мега Анвар»',
+      address: 'г. Актобе, ул. Маметова, д. 4',
+      link: '#'
+    }, {
+      title: '«Школьник»',
+      address: 'г. Алексин, ул. Мира, д. 18',
+      link: '#'
+    }, {
+      title: '«Книги»',
+      address: 'г. Алексин, ул. Мира, д. 18/11',
+      link: '#'
+    }, {
+      title: '«Арт-Изо»',
+      address: 'г. Архангельск, пер. Троицкий, д.18',
+      link: '#'
+    }, {
+      title: '«Арт-Изо»',
+      address: 'г. Архангельск, пер. Троицкий, д.18',
+      link: '#'
+    }, {
+      title: 'Гипермаркет «Анвар»',
+      address: 'г. Актобе, ул. Нокина, д. 35',
+      link: '#'
+    }, {
+      title: '«Мега Анвар»',
+      address: 'г. Актобе, ул. Маметова, д. 4',
+      link: '#'
+    }, {
+      title: '«Школьник»',
+      address: 'г. Алексин, ул. Мира, д. 18',
+      link: '#'
+    }, {
+      title: '«Книги»',
+      address: 'г. Алексин, ул. Мира, д. 18/11',
+      link: '#'
+    }, {
+      title: '«Арт-Изо»',
+      address: 'г. Архангельск, пер. Троицкий, д.18',
+      link: '#'
+    }, {
+      title: '«Арт-Изо»',
+      address: 'г. Архангельск, пер. Троицкий, д.18',
+      link: '#'
+    }];
+    var origin = document.querySelector('.retail-origin li');
+    shopsRetails.innerHTML = '';
+
+    for (var _i = 0, _results = results; _i < _results.length; _i++) {
+      var result = _results[_i];
+      var li = origin.cloneNode(true);
+      li.querySelector('.retails__title').innerHTML = "<span>".concat(result.title, "</span>");
+      li.querySelector('.retails__address').innerHTML = "<span>".concat(result.address, "</span>");
+      li.querySelector('.retails__link').href = result.link;
+      li.querySelector('.retails__sm a').href = result.link;
+      shopsRetails.append(li);
+    }
+
+    shopsRetails.dataset.hidden = 'off';
+  });
 }
 
 /***/ }),
@@ -577,7 +600,8 @@ document.addEventListener('change', function (e) {
     }
   }
 });
-document.querySelector("[data-modal-open=\"test_6\"]").addEventListener('click', function () {
+document.addEventListener('click', function (e) {
+  if (!e.target.closest("[data-modal-open=\"test_6\"]")) return true;
   setTimeout(function () {
     testSum = 0;
     document.querySelector("[data-modal-name=\"test_2\"] form").reset();
@@ -590,7 +614,8 @@ document.querySelector("[data-modal-open=\"test_6\"]").addEventListener('click',
     document.querySelector("[data-modal-open=\"test_6\"]").dataset.disabled = 'on';
   }, 10);
 });
-document.querySelector("[data-modal-open=\"test_1\"]").addEventListener('click', function () {
+document.addEventListener('click', function (e) {
+  if (!e.target.closest("[data-modal-open=\"test_1\"]")) return true;
   var results = document.querySelectorAll("[data-modal-name=\"test_6\"] [data-result]");
 
   var _iterator2 = _createForOfIteratorHelper(results),

@@ -3728,20 +3728,100 @@ svg {
 }
 
 .account-receipts {
-  display: none;
-  height: 780px;
+  height: auto;
+}
+
+.account-receipts__main {
+  margin: 0 auto 23px;
 }
 @media (max-width: 1199px) {
-  .account-receipts {
-    height: 580px;
+  .account-receipts__main {
+    margin-bottom: 20px;
+  }
+}
+.account-receipts__main .title {
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 60px;
+}
+@media (max-width: 1199px) {
+  .account-receipts__main .title {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 959px) {
-  .account-receipts {
-    height: 590px;
+  .account-receipts__main .title {
+    font-size: 24px;
+    line-height: 29px;
   }
 }
-
+.account-receipts__main .receipts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: -20px;
+  padding: 0;
+}
+@media (max-width: 1199px) {
+  .account-receipts__main .receipts {
+    margin: -10px;
+  }
+}
+.account-receipts__main .receipts .receipt {
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 260px;
+  margin: 20px;
+}
+@media (max-width: 1199px) {
+  .account-receipts__main .receipts .receipt {
+    width: 220px;
+    margin: 10px;
+  }
+}
+@media (max-width: 959px) {
+  .account-receipts__main .receipts .receipt {
+    width: 280px;
+  }
+}
+.account-receipts__main .receipts .receipt__status {
+  position: absolute;
+}
+.account-receipts__main .receipts .receipt__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+  width: 258px;
+  height: 199px;
+}
+@media (max-width: 1199px) {
+  .account-receipts__main .receipts .receipt__image {
+    width: 218px;
+    height: 179px;
+  }
+}
+@media (max-width: 959px) {
+  .account-receipts__main .receipts .receipt__image {
+    width: 278px;
+    height: 179px;
+  }
+}
 .index-prizes {
   display: none;
   height: 1086px;

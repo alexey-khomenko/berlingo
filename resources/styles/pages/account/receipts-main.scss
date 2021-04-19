@@ -1,3 +1,99 @@
 .account-receipts__main {
+    margin: 0 auto 23px;
 
+    @media (max-width: $md_max) {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        color: #ffffff;
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 60px;
+
+        @media (max-width: $md_max) {
+            font-size: 36px;
+            line-height: 43px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: $sm_max) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+
+    .receipts {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: -20px;
+        padding: 0;
+
+        @media (max-width: $md_max) {
+            margin: -10px;
+        }
+
+        .receipt {
+            padding: 0;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+            color: #ffffff;
+            font-family: "PF Din Text Cond Pro", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 260px;
+            min-height: 100px; // todo
+            margin: 20px;
+
+            @media (max-width: $md_max) {
+                width: 220px;
+                margin: 10px;
+            }
+
+            @media (max-width: $sm_max) {
+                width: 280px;
+            }
+
+            &__status {
+                position: absolute;
+
+
+
+            }
+
+            &__image {
+                object-fit: cover;
+                margin-bottom: 20px;
+                width: 258px;
+                height: 199px;
+
+                @media (max-width: $md_max) {
+                    width: 218px;
+                    height: 179px;
+                }
+
+                @media (max-width: $sm_max) {
+                    width: 278px;
+                    height: 179px;
+                }
+            }
+
+            &__city {
+
+            }
+
+            &__date {
+
+            }
+        }
+    }
 }

@@ -121,7 +121,7 @@ document.addEventListener('click', function (e) {
   if (e.target.closest("[href=\"#\"]")) e.preventDefault();
 });
 document.addEventListener('click', function (e) {
-  var link = e.target.closest('[href]');
+  var link = e.target.closest('[href]') || e.target.closest('button');
   if (!link) return true;
   setTimeout(function () {
     return link.blur();
@@ -240,8 +240,29 @@ document.querySelector("[data-modal-name=\"receipt\"] .form").addEventListener('
   var checkbox = document.querySelector("#receipt-agree");
   if (!checkbox.checked) return false;
   var shop = document.querySelector("[name=\"receipt-shop\"]").value.trim();
-  console.log(shop);
+  var files = document.querySelector("[name=\"receipt-file\"]").files;
+  if (files.length === 0) return true;
+  console.log(shop, files[0]); // todo ajax
+
+  window.misc.modalClose();
+  resetFile();
 });
+document.querySelector("[ name=\"receipt-file\"]").addEventListener('change', function () {
+  if (!this.files[0]) return true;
+  var types = ['image/png', 'image/jpg', 'image/jpeg'];
+  var title = this.files[0].name;
+  var type = this.files[0].type;
+  if (types.indexOf(type) === -1) return true;
+  document.querySelector('.form__file-selected span').textContent = title;
+  var fr = new FileReader();
+  fr.addEventListener('load', function () {
+    document.querySelector('.form__file-selected img').src = fr.result;
+  }, false);
+  fr.readAsDataURL(this.files[0]);
+  document.querySelector('.form__file-selected').dataset.hidden = 'off';
+  document.querySelector('.form__file').dataset.hidden = 'on';
+});
+document.querySelector("[data-receipt-shop-reset]").addEventListener('click', resetFile);
 document.querySelector("[data-modal-name=\"receipt\"] #receipt-agree").addEventListener('change', svgColor);
 svgColor();
 
@@ -249,6 +270,12 @@ function svgColor() {
   var input = document.querySelector("[data-modal-name=\"receipt\"] #receipt-agree");
   var svg = document.querySelector("[data-modal-name=\"receipt\"] .form__check svg");
   svg.style.color = input.checked ? '#000000' : 'transparent';
+}
+
+function resetFile() {
+  document.querySelector('.form__file').dataset.hidden = 'off';
+  document.querySelector('.form__file-selected').dataset.hidden = 'on';
+  document.querySelector("[name=\"receipt-file\"]").value = [];
 }
 
 /***/ }),

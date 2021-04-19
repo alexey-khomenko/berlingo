@@ -8,7 +8,7 @@ document.addEventListener('click', function (e) {
 });
 
 document.addEventListener('click', function (e) {
-    const link = e.target.closest('[href]');
+    const link = e.target.closest('[href]') || e.target.closest('button');
 
     if (!link) return true;
 

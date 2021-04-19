@@ -6,16 +6,44 @@ document.querySelector(`[data-modal-name="receipt"] .form`).addEventListener('su
     if (!checkbox.checked) return false;
 
     const shop = document.querySelector(`[name="receipt-shop"]`).value.trim();
+    const files = document.querySelector(`[name="receipt-file"]`).files;
 
-    console.log(shop);
+    if (files.length === 0) return true;
 
+    console.log(shop, files[0]);
 
+    // todo ajax
 
+    window.misc.modalClose();
+    resetFile();
 });
 
+document.querySelector(`[ name="receipt-file"]`).addEventListener('change', function () {
 
+    if (!this.files[0]) return true;
 
+    const types = ['image/png', 'image/jpg', 'image/jpeg'];
 
+    const title = this.files[0].name;
+    const type = this.files[0].type;
+
+    if (types.indexOf(type) === -1) return true;
+
+    document.querySelector('.form__file-selected span').textContent = title;
+
+    const fr = new FileReader();
+
+    fr.addEventListener('load', function () {
+        document.querySelector('.form__file-selected img').src = fr.result;
+    }, false);
+
+    fr.readAsDataURL(this.files[0]);
+
+    document.querySelector('.form__file-selected').dataset.hidden = 'off';
+    document.querySelector('.form__file').dataset.hidden = 'on';
+});
+
+document.querySelector(`[data-receipt-shop-reset]`).addEventListener('click', resetFile);
 
 document.querySelector(`[data-modal-name="receipt"] #receipt-agree`).addEventListener('change', svgColor);
 
@@ -26,4 +54,11 @@ function svgColor() {
     const svg = document.querySelector(`[data-modal-name="receipt"] .form__check svg`);
 
     svg.style.color = input.checked ? '#000000' : 'transparent';
+}
+
+function resetFile() {
+    document.querySelector('.form__file').dataset.hidden = 'off';
+    document.querySelector('.form__file-selected').dataset.hidden = 'on';
+
+    document.querySelector(`[name="receipt-file"]`).value = [];
 }

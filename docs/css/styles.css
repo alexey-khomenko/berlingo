@@ -3023,6 +3023,10 @@ img {
   position: relative;
 }
 
+* {
+  visibility: visible;
+}
+
 [data-hidden=on]:not([data-slider]) {
   display: none !important;
 }

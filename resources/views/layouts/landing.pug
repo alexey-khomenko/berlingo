@@ -6,9 +6,11 @@ html(lang="ru")
         meta(name="viewport", content="initial-scale=1.0, width=device-width")
         link(href="js/scripts.js", rel="preload", as="script")
         include ../partials/layouts/favicons
-        link(rel="stylesheet", href="css/styles.css")
         title
             block title
+        style
+            | * {visibility: hidden;}
+        link(rel="stylesheet", href="css/styles.css")
     body
         div(class="wrapper-outer")
             div(class="wrapper-inner")

@@ -1833,7 +1833,7 @@ svg {
 @media (max-width: 959px) {
   .index-top__back {
     top: 280px;
-    transform: translateX(290px);
+    transform: translateX(320px);
   }
 }
 .index-top__back[data-hidden=on] {
@@ -1841,6 +1841,14 @@ svg {
 }
 .index-top__back[data-hidden=off] {
   opacity: 1;
+}
+.index-top__back img {
+  width: auto;
+}
+@media (max-width: 959px) {
+  .index-top__back img {
+    height: 290px;
+  }
 }
 
 .index-top__main {

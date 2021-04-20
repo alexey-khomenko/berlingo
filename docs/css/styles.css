@@ -4362,37 +4362,91 @@ svg {
 }
 
 .account-my {
-  height: 780px;
+  height: auto;
+}
+
+.account-my__main {
+  margin: 0 auto;
+  padding-bottom: 60px;
 }
 @media (max-width: 1199px) {
-  .account-my {
-    height: 580px;
+  .account-my__main {
+    padding-bottom: 40px;
   }
 }
 @media (max-width: 959px) {
-  .account-my {
-    height: 590px;
+  .account-my__main {
+    padding-bottom: 20px;
   }
 }
-
-.account-my__back {
-  right: 50%;
-  top: -40px;
-  transform: translateX(1128px);
+.account-my__main .titles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
 }
-@media (max-width: 1199px) {
-  .account-my__back {
-    top: -12px;
-    transform: translateX(839px);
-  }
+.account-my__main .titles .title {
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+}
+.account-my__main .titles .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+  border-radius: 99999px;
+  height: 80px;
+  width: 252px;
 }
 @media (max-width: 959px) {
-  .account-my__back {
-    top: 280px;
-    transform: translateX(320px);
+  .account-my__main .titles .button {
+    height: 60px;
+    width: 172px;
   }
 }
-
+.account-my__main .titles .button:hover span, .account-my__main .titles .button:focus span {
+  transform: scale(1.05, 1.15);
+}
+.account-my__main .titles .button span {
+  padding-top: 3px;
+  transition: transform 500ms ease;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+}
+@media (max-width: 959px) {
+  .account-my__main .titles .button span {
+    font-size: 14px;
+  }
+}
+.account-my__main .prizes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0;
+  margin: -20px;
+}
+.account-my__main .prizes * {
+  box-sizing: border-box;
+}
+.account-my__main .prizes .prize {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 20px;
+}
 .account-marathon {
   height: 700px;
 }

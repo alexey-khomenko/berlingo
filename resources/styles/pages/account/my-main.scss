@@ -1,3 +1,110 @@
 .account-my__main {
+    margin: 0 auto;
+    padding-bottom: 60px;
 
+    @media (max-width: $md_max) {
+        padding-bottom: 40px;
+    }
+
+    @media (max-width: $sm_max) {
+        padding-bottom: 20px;
+    }
+
+    .titles {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+
+        .title {
+            color: #ffffff;
+            font-family: "PF Din Text Cond Pro", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 58px;
+
+            @media (max-width: $md_max) {
+
+            }
+
+            @media (max-width: $sm_max) {
+
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+            border-radius: 99999px;
+            height: 80px;
+            width: 252px;
+
+            @media (max-width: $sm_max) {
+                height: 60px;
+                width: 172px;
+            }
+
+            &:hover span, &:focus span {
+                transform: scale(1.05, 1.15);
+            }
+
+            span {
+                padding-top: 3px;
+                transition: transform 500ms ease;
+                text-transform: uppercase;
+                color: #ffffff;
+                font-family: "Bebas Neue", sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                letter-spacing: 0.01em;
+                font-size: 20px;
+
+                @media (max-width: $sm_max) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .prizes {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 0;
+        margin: -20px;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .prize {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin: 20px;
+
+            &__image {
+
+            }
+
+            &__texts {
+
+            }
+
+            &__title {
+
+            }
+
+            &__text {
+
+            }
+        }
+    }
 }

@@ -28,7 +28,7 @@ document.querySelector(`[data-modal-name="register"] .form`).addEventListener('s
     const password = document.querySelector(`[name="register-password"]`).value.trim();
     const city = document.querySelector(`[name="register-city"]`).value.trim();
 
-    if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 1) return true;
+    if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 2) return true;
 
     console.log(email, phone, password, city);
 
@@ -51,4 +51,54 @@ function svgColor() {
     const svg = document.querySelector(`[data-modal-name="register"] .form__check svg`);
 
     svg.style.color = input.checked ? '#000000' : 'transparent';
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
+const regForm = document.querySelector('[data-modal-name="register"] .form');
+
+if (regForm) {
+    const cityInput = regForm.querySelector(`[name="register-city"]`);
+    const citiesList = document.querySelector('.form__input_select .cities');
+
+    cityInput.addEventListener('focus', cityInputListener);
+    cityInput.addEventListener('input', cityInputListener);
+    cityInput.addEventListener('paste', cityInputListener);
+
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('.cities') || e.target.closest('[name="register-city"]')) return true;
+
+        citiesList.dataset.hidden = 'on';
+    });
+
+    document.querySelector('.form__input_select').addEventListener('click', function (e) {
+       e.preventDefault();
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('[data-city]') || e.target.tagName === 'LI') return true;
+
+        cityInput.value = e.target.textContent.trim();
+
+        citiesList.dataset.hidden = 'on';
+    });
+
+    function cityInputListener(e) {
+        citiesList.dataset.hidden = 'off';
+
+        const value = e.target.value.trim().toLowerCase();
+
+        const cities = citiesList.querySelectorAll('li');
+
+        for (let city of cities) {
+            const cityName = city.querySelector('span').textContent.toLowerCase();
+
+            if (cityName.indexOf(value) === -1 && value.length > 0) {
+                city.dataset.hidden = 'on';
+            }
+            else {
+                city.dataset.hidden = 'off';
+            }
+        }
+    }
 }

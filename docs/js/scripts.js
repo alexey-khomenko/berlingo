@@ -104,6 +104,12 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /***/ (() => {
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('submit', function (e) {
   e.preventDefault();
   var email = document.querySelector("[name=\"login-email\"]").value.trim();
@@ -123,7 +129,7 @@ document.querySelector("[data-modal-name=\"register\"] .form").addEventListener(
   var phone = document.querySelector("[name=\"register-phone\"]").value.trim();
   var password = document.querySelector("[name=\"register-password\"]").value.trim();
   var city = document.querySelector("[name=\"register-city\"]").value.trim();
-  if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 1) return true;
+  if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 2) return true;
   console.log(email, phone, password, city); // todo ajax
 
   document.querySelector("[name=\"register-email\"]").value = '';
@@ -139,6 +145,55 @@ function svgColor() {
   var input = document.querySelector("[data-modal-name=\"register\"] #register-agree");
   var svg = document.querySelector("[data-modal-name=\"register\"] .form__check svg");
   svg.style.color = input.checked ? '#000000' : 'transparent';
+} //----------------------------------------------------------------------------------------------------------------------
+
+
+var regForm = document.querySelector('[data-modal-name="register"] .form');
+
+if (regForm) {
+  var cityInputListener = function cityInputListener(e) {
+    citiesList.dataset.hidden = 'off';
+    var value = e.target.value.trim().toLowerCase();
+    var cities = citiesList.querySelectorAll('li');
+
+    var _iterator = _createForOfIteratorHelper(cities),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var city = _step.value;
+        var cityName = city.querySelector('span').textContent.toLowerCase();
+
+        if (cityName.indexOf(value) === -1 && value.length > 0) {
+          city.dataset.hidden = 'on';
+        } else {
+          city.dataset.hidden = 'off';
+        }
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  };
+
+  var cityInput = regForm.querySelector("[name=\"register-city\"]");
+  var citiesList = document.querySelector('.form__input_select .cities');
+  cityInput.addEventListener('focus', cityInputListener);
+  cityInput.addEventListener('input', cityInputListener);
+  cityInput.addEventListener('paste', cityInputListener);
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.cities') || e.target.closest('[name="register-city"]')) return true;
+    citiesList.dataset.hidden = 'on';
+  });
+  document.querySelector('.form__input_select').addEventListener('click', function (e) {
+    e.preventDefault();
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('[data-city]') || e.target.tagName === 'LI') return true;
+    cityInput.value = e.target.textContent.trim();
+    citiesList.dataset.hidden = 'on';
+  });
 }
 
 /***/ }),

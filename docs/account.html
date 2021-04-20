@@ -230,19 +230,30 @@
                       <svg width="18" height="10" viewBox="0 0 18 10" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.1205 7.20295e-07L0 1.25667L9 10L9.612 9.365L18 1.25667L16.878 0L9 7.615L1.1205 7.20295e-07Z" fill="currentColor"></path>
                       </svg>
-                      <select name="register-city">
-                        <option value="" selected disabled>Выбери свой город *</option>
+                      <input type="text" name="register-city" maxlength="200" placeholder="Выбери свой город *">
+                      <ul class="cities" data-hidden="off">
                         <!-- города-->
-                        <option value="Абакан">Абаза</option>
-                        <option value="Абакан">Абаза</option>
-                        <option value="Абдулино">Абдулино</option>
-                        <option value="Абинск">Абинск</option>
-                        <option value="Агидель">Агидель</option>
-                        <option value="Агрыз">Агрыз</option>
-                        <option value="Адыгейск">Адыгейск</option>
-                        <option value="Азнакаево">Азнакаево</option>
-                        <option value="Азов">Азов</option>
-                      </select>
+                        <li data-city><span>Абаза</span></li>
+                        <li data-city><span>Абакан</span></li>
+                        <li data-city><span>Абдулино</span></li>
+                        <li data-city><span>Абинск</span></li>
+                        <li data-city><span>Агидель</span></li>
+                        <li data-city><span>Агрыз</span></li>
+                        <li data-city><span>Адыгейск</span></li>
+                        <li data-city><span>Азнакаево</span></li>
+                        <li data-city><span>Азов</span></li>
+                        <li data-city><span>Ак-Довурак</span></li>
+                        <li data-city><span>Аксай</span></li>
+                        <li data-city><span>Алагир</span></li>
+                        <li data-city><span>Алапаевск</span></li>
+                        <li data-city><span>Алатырь</span></li>
+                        <li data-city><span>Алдан</span></li>
+                        <li data-city><span>Алейск</span></li>
+                        <li data-city><span>Александров</span></li>
+                        <li data-city><span>Александровск</span></li>
+                        <li data-city><span>Александровск-Сахалинский</span></li>
+                        <li data-city><span>Алексеевка</span></li>
+                      </ul>
                     </label>
                   </div>
                   <input type="checkbox" name="receipt-agree" id="register-agree" data-hidden="on">

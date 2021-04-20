@@ -440,7 +440,7 @@ svg {
     margin-bottom: 20px;
   }
 }
-.modal_auth .form__input input, .modal_auth .form__input select {
+.modal_auth .form__input input {
   border-radius: 99999px;
   border: 1px solid #828282;
   color: #828282;
@@ -453,33 +453,32 @@ svg {
   width: 100%;
   height: 60px;
 }
-.modal_auth .form__input input::-moz-placeholder, .modal_auth .form__input select::-moz-placeholder {
+.modal_auth .form__input input::-moz-placeholder {
   opacity: 1;
 }
-.modal_auth .form__input input:-ms-input-placeholder, .modal_auth .form__input select:-ms-input-placeholder {
+.modal_auth .form__input input:-ms-input-placeholder {
   opacity: 1;
 }
-.modal_auth .form__input input::placeholder, .modal_auth .form__input select::placeholder {
+.modal_auth .form__input input::placeholder {
   opacity: 1;
 }
-.modal_auth .form__input input:focus::-moz-placeholder, .modal_auth .form__input select:focus::-moz-placeholder {
+.modal_auth .form__input input:focus::-moz-placeholder {
   opacity: 0;
 }
-.modal_auth .form__input input:focus:-ms-input-placeholder, .modal_auth .form__input select:focus:-ms-input-placeholder {
+.modal_auth .form__input input:focus:-ms-input-placeholder {
   opacity: 0;
 }
-.modal_auth .form__input input:focus::placeholder, .modal_auth .form__input select:focus::placeholder {
+.modal_auth .form__input input:focus::placeholder {
   opacity: 0;
-}
-.modal_auth .form__input select {
-  cursor: pointer;
-  background-color: #ffffff;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 .modal_auth .form__input_select {
   position: relative;
+  height: 60px;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input_select {
+    height: auto;
+  }
 }
 .modal_auth .form__input_select svg {
   position: absolute;
@@ -493,6 +492,80 @@ svg {
   .modal_auth .form__input_select svg {
     right: 20px;
   }
+}
+.modal_auth .form__input_select .cities {
+  display: block;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  position: absolute;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  max-height: 198px;
+  margin: 2px 0 0;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input_select .cities {
+    position: relative;
+    box-shadow: 0 0 1px black;
+    border-radius: 0;
+    min-height: 200px;
+    margin-top: 6px;
+  }
+}
+.modal_auth .form__input_select .cities li {
+  margin: 0;
+  padding: 0 40px;
+  border-radius: 99999px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 50px;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input_select .cities li {
+    padding: 0 20px;
+  }
+}
+.modal_auth .form__input_select .cities li:hover {
+  background-color: #4f4f4f;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input_select .cities li:hover {
+    background-color: transparent;
+  }
+}
+.modal_auth .form__input_select .cities li:hover span {
+  color: #ffffff;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input_select .cities li:hover span {
+    color: #000000;
+  }
+}
+.modal_auth .form__input_select .cities li span {
+  cursor: pointer;
+  padding-top: 3px;
+  color: #000000;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  transition: transform 500ms ease;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 959px) {
+  .modal_auth .form__input_select .cities li span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.modal_auth .form__input_select .cities li span:hover, .modal_auth .form__input_select .cities li span:focus {
+  transform: scale(1.05, 1.15);
 }
 .modal_auth .form__checkbox {
   display: flex;
@@ -3787,6 +3860,7 @@ svg {
   font-style: normal;
   font-weight: 400;
   width: 260px;
+  min-height: 100px;
   margin: 20px;
 }
 @media (max-width: 1199px) {

@@ -1,4 +1,4 @@
-document.querySelector(`[data-modal-name="login"] .form`).addEventListener('submit', function (e) {
+document.querySelector(`[data-modal-name="login"] .form`).addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const email = document.querySelector(`[name="login-email"]`).value.trim();
@@ -6,9 +6,15 @@ document.querySelector(`[data-modal-name="login"] .form`).addEventListener('subm
 
     if (email.length < 4 || password.length < 4) return true;
 
-    console.log(email, password);
+    let data = new FormData();
+    data.append('email', email);
+    data.append('password', password);
+    const response = await fetch('/ajax/login_ajax.php', {method: 'POST', body: data});
+    const results = await response.json();
 
-    // todo ajax
+    console.log(results);
+
+    if (results.status !== '+') return true;
 
     document.querySelector(`[name="login-email"]`).value = '';
     document.querySelector(`[name="login-password"]`).value = '';
@@ -16,7 +22,7 @@ document.querySelector(`[data-modal-name="login"] .form`).addEventListener('subm
     location.reload();
 });
 
-document.querySelector(`[data-modal-name="register"] .form`).addEventListener('submit', function (e) {
+document.querySelector(`[data-modal-name="register"] .form`).addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const checkbox = document.querySelector(`#register-agree`);
@@ -32,7 +38,17 @@ document.querySelector(`[data-modal-name="register"] .form`).addEventListener('s
 
     console.log(email, phone, password, city);
 
-    // todo ajax
+    let data = new FormData();
+    data.append('email', email);
+    data.append('phone', phone);
+    data.append('password', password);
+    data.append('city', city);
+    const response = await fetch('/ajax/register_ajax.php', {method: 'POST', body: data});
+    const results = await response.json();
+
+    console.log(results);
+
+    if (results.status !== '+') return true;
 
     document.querySelector(`[name="register-email"]`).value = '';
     document.querySelector(`[name="register-phone"]`).value = '';

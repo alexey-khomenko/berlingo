@@ -94,7 +94,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _receipt__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./receipt */ "./resources/scripts/receipt.js");
 /* harmony import */ var _receipt__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_receipt__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./auth */ "./resources/scripts/auth.js");
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_auth__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -112,42 +111,163 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************!*\
   !*** ./resources/scripts/auth.js ***!
   \***********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('submit', function (e) {
-  e.preventDefault();
-  var email = document.querySelector("[name=\"login-email\"]").value.trim();
-  var password = document.querySelector("[name=\"login-password\"]").value.trim();
-  if (email.length < 4 || password.length < 4) return true;
-  console.log(email, password); // todo ajax
 
-  document.querySelector("[name=\"login-email\"]").value = '';
-  document.querySelector("[name=\"login-password\"]").value = '';
-  location.reload();
-});
-document.querySelector("[data-modal-name=\"register\"] .form").addEventListener('submit', function (e) {
-  e.preventDefault();
-  var checkbox = document.querySelector("#register-agree");
-  if (!checkbox.checked) return false;
-  var email = document.querySelector("[name=\"register-email\"]").value.trim();
-  var phone = document.querySelector("[name=\"register-phone\"]").value.trim();
-  var password = document.querySelector("[name=\"register-password\"]").value.trim();
-  var city = document.querySelector("[name=\"register-city\"]").value.trim();
-  if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 2) return true;
-  console.log(email, phone, password, city); // todo ajax
 
-  document.querySelector("[name=\"register-email\"]").value = '';
-  document.querySelector("[name=\"register-phone\"]").value = '';
-  document.querySelector("[name=\"register-password\"]").value = '';
-  document.querySelector("[name=\"register-city\"]").value = '';
-  window.misc.modalOpen('success');
-});
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('submit', /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
+    var email, password, data, response, results;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            e.preventDefault();
+            email = document.querySelector("[name=\"login-email\"]").value.trim();
+            password = document.querySelector("[name=\"login-password\"]").value.trim();
+
+            if (!(email.length < 4 || password.length < 4)) {
+              _context.next = 5;
+              break;
+            }
+
+            return _context.abrupt("return", true);
+
+          case 5:
+            data = new FormData();
+            data.append('email', email);
+            data.append('password', password);
+            _context.next = 10;
+            return fetch('/ajax/login_ajax.php', {
+              method: 'POST',
+              body: data
+            });
+
+          case 10:
+            response = _context.sent;
+            _context.next = 13;
+            return response.json();
+
+          case 13:
+            results = _context.sent;
+            console.log(results);
+
+            if (!(results.status !== '+')) {
+              _context.next = 17;
+              break;
+            }
+
+            return _context.abrupt("return", true);
+
+          case 17:
+            document.querySelector("[name=\"login-email\"]").value = '';
+            document.querySelector("[name=\"login-password\"]").value = '';
+            location.reload();
+
+          case 20:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}());
+document.querySelector("[data-modal-name=\"register\"] .form").addEventListener('submit', /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(e) {
+    var checkbox, email, phone, password, city, data, response, results;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            e.preventDefault();
+            checkbox = document.querySelector("#register-agree");
+
+            if (checkbox.checked) {
+              _context2.next = 4;
+              break;
+            }
+
+            return _context2.abrupt("return", false);
+
+          case 4:
+            email = document.querySelector("[name=\"register-email\"]").value.trim();
+            phone = document.querySelector("[name=\"register-phone\"]").value.trim();
+            password = document.querySelector("[name=\"register-password\"]").value.trim();
+            city = document.querySelector("[name=\"register-city\"]").value.trim();
+
+            if (!(email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 2)) {
+              _context2.next = 10;
+              break;
+            }
+
+            return _context2.abrupt("return", true);
+
+          case 10:
+            console.log(email, phone, password, city);
+            data = new FormData();
+            data.append('email', email);
+            data.append('phone', phone);
+            data.append('password', password);
+            data.append('city', city);
+            _context2.next = 18;
+            return fetch('/ajax/register_ajax.php', {
+              method: 'POST',
+              body: data
+            });
+
+          case 18:
+            response = _context2.sent;
+            _context2.next = 21;
+            return response.json();
+
+          case 21:
+            results = _context2.sent;
+            console.log(results);
+
+            if (!(results.status !== '+')) {
+              _context2.next = 25;
+              break;
+            }
+
+            return _context2.abrupt("return", true);
+
+          case 25:
+            document.querySelector("[name=\"register-email\"]").value = '';
+            document.querySelector("[name=\"register-phone\"]").value = '';
+            document.querySelector("[name=\"register-password\"]").value = '';
+            document.querySelector("[name=\"register-city\"]").value = '';
+            window.misc.modalOpen('success');
+
+          case 30:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function (_x2) {
+    return _ref2.apply(this, arguments);
+  };
+}());
 document.querySelector("[data-modal-name=\"register\"] #register-agree").addEventListener('change', svgColor);
 svgColor();
 

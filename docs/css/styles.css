@@ -3693,7 +3693,7 @@ svg {
 }
 @media (max-width: 959px) {
   .account-top__back {
-    top: 120px;
+    top: 58px;
     transform: translateX(10px);
   }
 }
@@ -3860,12 +3860,13 @@ svg {
   font-style: normal;
   font-weight: 400;
   width: 260px;
-  min-height: 100px;
+  min-height: 314px;
   margin: 20px;
 }
 @media (max-width: 1199px) {
   .account-receipts__main .receipts .receipt {
     width: 220px;
+    min-height: 294px;
     margin: 10px;
   }
 }
@@ -3876,6 +3877,34 @@ svg {
 }
 .account-receipts__main .receipts .receipt__status {
   position: absolute;
+  top: 17px;
+  left: 19px;
+  border-radius: 99999px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 7px 16px 6px;
+  max-width: 100%;
+}
+@media (max-width: 1199px) {
+  .account-receipts__main .receipts .receipt__status {
+    max-width: 124px;
+  }
+}
+@media (max-width: 959px) {
+  .account-receipts__main .receipts .receipt__status {
+    max-width: 100%;
+  }
+}
+.account-receipts__main .receipts .receipt__status[data-status=accepted] {
+  background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
+}
+.account-receipts__main .receipts .receipt__status[data-status=error] {
+  background: linear-gradient(180deg, #ff9c47 0%, #e600c6 100%);
+}
+.account-receipts__main .receipts .receipt__status[data-status=processing] {
+  background: linear-gradient(180deg, #00a2f6 0%, #c153ff 100%);
 }
 .account-receipts__main .receipts .receipt__image {
   -o-object-fit: cover;
@@ -3896,8 +3925,13 @@ svg {
     height: 179px;
   }
 }
+.account-receipts__main .receipts .receipt__city, .account-receipts__main .receipts .receipt__date {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 39px 10px;
+}
+
 .index-prizes {
-  display: none;
   height: 1086px;
 }
 @media (max-width: 1199px) {
@@ -4188,7 +4222,6 @@ svg {
 }
 
 .account-balls {
-  display: none;
   height: 780px;
 }
 @media (max-width: 1199px) {
@@ -4259,7 +4292,6 @@ svg {
   top: 138px;
 }
 .account-my {
-  display: none;
   height: 780px;
 }
 @media (max-width: 1199px) {

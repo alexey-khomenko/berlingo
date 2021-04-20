@@ -51,11 +51,12 @@
             font-style: normal;
             font-weight: 400;
             width: 260px;
-            min-height: 100px; // todo
+            min-height: 314px;
             margin: 20px;
 
             @media (max-width: $md_max) {
                 width: 220px;
+                min-height: 294px;
                 margin: 10px;
             }
 
@@ -65,9 +66,35 @@
 
             &__status {
                 position: absolute;
+                top: 17px;
+                left: 19px;
+                border-radius: 99999px;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 14px;
+                line-height: 17px;
+                padding: 7px 16px 6px;
+                max-width: 100%;
 
+                @media (max-width: $md_max) {
+                    max-width: 124px;
+                }
 
+                @media (max-width: $sm_max) {
+                    max-width: 100%;
+                }
 
+                &[data-status="accepted"] {
+                    background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
+                }
+
+                &[data-status="error"] {
+                    background: linear-gradient(180deg, #ff9c47 0%, #e600c6 100%);
+                }
+
+                &[data-status="processing"] {
+                    background: linear-gradient(180deg, #00a2f6 0%, #c153ff 100%);
+                }
             }
 
             &__image {
@@ -87,12 +114,10 @@
                 }
             }
 
-            &__city {
-
-            }
-
-            &__date {
-
+            &__city, &__date {
+                font-size: 18px;
+                line-height: 22px;
+                margin: 0 39px 10px;
             }
         }
     }

@@ -3931,70 +3931,68 @@ svg {
   margin: 0 39px 10px;
 }
 
-.index-prizes {
-  height: 1086px;
+.account-prizes {
+  height: 1080px;
 }
 @media (max-width: 1199px) {
-  .index-prizes {
-    height: 999px;
+  .account-prizes {
+    height: 961px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes {
-    height: 1945px;
+  .account-prizes {
+    height: 1930px;
   }
 }
 
-.index-prizes__back {
+.account-prizes__back {
   right: 50%;
-  top: 11px;
+  top: 0;
   transform: translateX(639px);
 }
 @media (max-width: 1199px) {
-  .index-prizes__back {
-    top: -9px;
+  .account-prizes__back {
     transform: translateX(576px);
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__back {
-    top: 20px;
+  .account-prizes__back {
     transform: translateX(386px);
   }
 }
 
-.index-prizes__main {
+.account-prizes__main {
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 563px;
+  top: 540px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main {
-    top: 500px;
+  .account-prizes__main {
+    top: 480px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main {
-    top: 993px;
+  .account-prizes__main {
+    top: 972px;
   }
 }
-.index-prizes__main .content {
+.account-prizes__main .content {
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
   height: 926px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .content {
+  .account-prizes__main .content {
     height: 839px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .content {
+  .account-prizes__main .content {
     height: 1865px;
   }
 }
-.index-prizes__main .card {
+.account-prizes__main .card {
   display: block;
   position: relative;
   background: rgba(0, 0, 0, 0.6);
@@ -4003,62 +4001,62 @@ svg {
   border-radius: 40px;
 }
 @media (max-width: 959px) {
-  .index-prizes__main .card {
+  .account-prizes__main .card {
     border-radius: 20px;
   }
 }
-.index-prizes__main .card_primary {
+.account-prizes__main .card_primary {
   flex-basis: 100%;
   min-height: 488px;
   margin: 0 0 40px 0;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .card_primary {
+  .account-prizes__main .card_primary {
     min-height: 443px;
     margin: 0 0 20px 0;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .card_primary {
+  .account-prizes__main .card_primary {
     min-height: 828px;
   }
 }
-.index-prizes__main .card_week {
+.account-prizes__main .card_week {
   flex-basis: 760px;
   min-height: 398px;
   margin: 0 40px 0 0;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .card_week {
+  .account-prizes__main .card_week {
     flex-basis: 620px;
     min-height: 376px;
     margin: 0 20px 0 0;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .card_week {
+  .account-prizes__main .card_week {
     flex-basis: 100%;
     min-height: 661px;
     margin: 0 0 20px 0;
   }
 }
-.index-prizes__main .card_day {
+.account-prizes__main .card_day {
   flex-basis: 360px;
   min-height: 398px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .card_day {
+  .account-prizes__main .card_day {
     flex-basis: 300px;
     min-height: 376px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .card_day {
+  .account-prizes__main .card_day {
     flex-basis: 100%;
     min-height: 336px;
   }
 }
-.index-prizes__main .text {
+.account-prizes__main .text {
   display: block;
   position: absolute;
   left: 50%;
@@ -4067,7 +4065,7 @@ svg {
   text-align: center;
   color: #ffffff;
 }
-.index-prizes__main .text.title_primary {
+.account-prizes__main .text.title_primary {
   font-family: "PF Din Text Cond Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -4076,18 +4074,18 @@ svg {
   top: 87px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .text.title_primary {
+  .account-prizes__main .text.title_primary {
     font-size: 36px;
     top: 80px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .text.title_primary {
+  .account-prizes__main .text.title_primary {
     font-size: 24px;
     top: 53px;
   }
 }
-.index-prizes__main .text.title_primary svg {
+.account-prizes__main .text.title_primary svg {
   position: absolute;
   top: 100%;
   right: 50%;
@@ -4096,18 +4094,18 @@ svg {
   height: auto;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .text.title_primary svg {
+  .account-prizes__main .text.title_primary svg {
     transform: translateX(11px);
     width: 114px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .text.title_primary svg {
+  .account-prizes__main .text.title_primary svg {
     transform: translateX(5px);
     width: 73px;
   }
 }
-.index-prizes__main .text.title_secondary {
+.account-prizes__main .text.title_secondary {
   font-family: "PF Din Text Cond Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -4116,18 +4114,18 @@ svg {
   top: 77px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .text.title_secondary {
+  .account-prizes__main .text.title_secondary {
     font-size: 28px;
     top: 76px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .text.title_secondary {
+  .account-prizes__main .text.title_secondary {
     font-size: 24px;
     top: 56px;
   }
 }
-.index-prizes__main .text.subtitle_secondary {
+.account-prizes__main .text.subtitle_secondary {
   font-family: "PF Din Text Cond Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -4136,16 +4134,16 @@ svg {
   top: 126px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .text.subtitle_secondary {
+  .account-prizes__main .text.subtitle_secondary {
     top: 124px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .text.subtitle_secondary {
+  .account-prizes__main .text.subtitle_secondary {
     top: 104px;
   }
 }
-.index-prizes__main .images {
+.account-prizes__main .images {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -4156,100 +4154,100 @@ svg {
   bottom: 59px;
 }
 @media (max-width: 959px) {
-  .index-prizes__main .images {
+  .account-prizes__main .images {
     bottom: 39px;
   }
 }
-.index-prizes__main .images img {
+.account-prizes__main .images img {
   width: auto;
 }
-.index-prizes__main .images_primary {
+.account-prizes__main .images_primary {
   width: 1040px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .images_primary {
+  .account-prizes__main .images_primary {
     width: 860px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .images_primary {
+  .account-prizes__main .images_primary {
     width: 180px;
     margin-left: -20px;
   }
 }
-.index-prizes__main .images_primary img {
+.account-prizes__main .images_primary img {
   height: 270px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .images_primary img {
+  .account-prizes__main .images_primary img {
     height: 240px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .images_primary img {
+  .account-prizes__main .images_primary img {
     height: 200px;
   }
-  .index-prizes__main .images_primary img:not(:last-of-type) {
+  .account-prizes__main .images_primary img:not(:last-of-type) {
     margin-bottom: 40px;
   }
 }
-.index-prizes__main .images_week {
+.account-prizes__main .images_week {
   width: 640px;
 }
 @media (max-width: 1199px) {
-  .index-prizes__main .images_week {
+  .account-prizes__main .images_week {
     width: 540px;
   }
 }
 @media (max-width: 959px) {
-  .index-prizes__main .images_week {
+  .account-prizes__main .images_week {
     width: 140px;
   }
 }
-.index-prizes__main .images_week img {
+.account-prizes__main .images_week img {
   height: 140px;
 }
 @media (max-width: 959px) {
-  .index-prizes__main .images_week img:not(:last-of-type) {
+  .account-prizes__main .images_week img:not(:last-of-type) {
     margin-bottom: 25px;
   }
 }
-.index-prizes__main .images_day {
+.account-prizes__main .images_day {
   width: 140px;
 }
-.index-prizes__main .images_day img {
+.account-prizes__main .images_day img {
   height: 140px;
 }
 
 .account-balls {
-  height: 780px;
+  height: 565px;
 }
 @media (max-width: 1199px) {
   .account-balls {
-    height: 580px;
+    height: 451px;
   }
 }
 @media (max-width: 959px) {
   .account-balls {
-    height: 590px;
+    height: 504px;
   }
 }
 
 .account-balls__back {
   right: 50%;
-  top: -40px;
-  transform: translateX(1128px);
+  top: 111px;
+  transform: translateX(-221px);
 }
 @media (max-width: 1199px) {
   .account-balls__back {
-    top: -12px;
-    transform: translateX(839px);
+    top: 101px;
+    transform: translateX(-171px);
   }
 }
 @media (max-width: 959px) {
   .account-balls__back {
-    top: 280px;
-    transform: translateX(320px);
+    top: 103px;
+    transform: translateX(140px);
   }
 }
 

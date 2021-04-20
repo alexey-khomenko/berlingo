@@ -1,11 +1,11 @@
 .account-balls {
-    height: 780px;
+    height: 565px;
 
     @media (max-width: $md_max) {
-        height: 580px;
+        height: 451px;
     }
 
     @media (max-width: $sm_max) {
-        height: 590px;
+        height: 504px;
     }
 }

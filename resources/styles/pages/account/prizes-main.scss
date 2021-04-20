@@ -1,14 +1,14 @@
-.index-prizes__main {
+.account-prizes__main {
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 563px;
+    top: 540px;
 
     @media (max-width: $md_max) {
-        top: 500px;
+        top: 480px;
     }
 
     @media (max-width: $sm_max) {
-        top: 993px;
+        top: 972px;
     }
 
     .content {

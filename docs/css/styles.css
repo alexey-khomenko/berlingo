@@ -4275,6 +4275,7 @@ svg {
   font-weight: 400;
   font-size: 48px;
   line-height: 58px;
+  padding-top: 10px;
 }
 @media (max-width: 1199px) {
   .account-balls__main .title {
@@ -4286,6 +4287,7 @@ svg {
   .account-balls__main .title {
     font-size: 24px;
     line-height: 29px;
+    padding-top: 20px;
   }
 }
 .account-balls__main .balls-number, .account-balls__main .balls-text, .account-balls__main .text {
@@ -4342,14 +4344,14 @@ svg {
   font-size: 30px;
   line-height: 36px;
   width: 560px;
-  transform: translate(-180px, -34px);
+  transform: translate(-180px, -30px);
 }
 @media (max-width: 1199px) {
   .account-balls__main .text {
     font-size: 24px;
     line-height: 29px;
     width: 540px;
-    transform: translate(-69px, -6px);
+    transform: translate(-69px, -2px);
   }
 }
 @media (max-width: 959px) {
@@ -4394,6 +4396,20 @@ svg {
   font-size: 48px;
   line-height: 58px;
 }
+@media (max-width: 1199px) {
+  .account-my__main .titles .title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+@media (max-width: 959px) {
+  .account-my__main .titles .title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+  }
+}
 .account-my__main .titles .button {
   display: flex;
   justify-content: center;
@@ -4437,6 +4453,11 @@ svg {
   padding: 0;
   margin: -20px;
 }
+@media (max-width: 1199px) {
+  .account-my__main .prizes {
+    margin: -10px;
+  }
+}
 .account-my__main .prizes * {
   box-sizing: border-box;
 }
@@ -4444,9 +4465,76 @@ svg {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
   margin: 20px;
+  width: 560px;
+  min-height: 280px;
 }
+@media (max-width: 1199px) {
+  .account-my__main .prizes .prize {
+    margin: 10px;
+    width: 460px;
+    min-height: 290px;
+  }
+}
+@media (max-width: 959px) {
+  .account-my__main .prizes .prize {
+    border-radius: 20px;
+  }
+}
+.account-my__main .prizes .prize__image {
+  height: 160px;
+  width: 160px;
+  margin: 59px 80px 59px 59px;
+}
+@media (max-width: 1199px) {
+  .account-my__main .prizes .prize__image {
+    height: 135px;
+    width: 135px;
+    margin: 79px 45px 79px 59px;
+  }
+}
+@media (max-width: 959px) {
+  .account-my__main .prizes .prize__image {
+    height: 160px;
+    width: 160px;
+    margin: 39px auto 30px;
+  }
+}
+.account-my__main .prizes .prize__image img {
+  height: 100%;
+  width: auto;
+}
+.account-my__main .prizes .prize__texts {
+  color: #ffffff;
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 220px;
+}
+@media (max-width: 1199px) {
+  .account-my__main .prizes .prize__texts {
+    width: 180px;
+  }
+}
+@media (max-width: 959px) {
+  .account-my__main .prizes .prize__texts {
+    width: 200px;
+    margin: 0 auto 39px;
+  }
+}
+.account-my__main .prizes .prize__title {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+}
+.account-my__main .prizes .prize__text {
+  font-size: 16px;
+  line-height: 19px;
+}
+
 .account-marathon {
   height: 700px;
 }

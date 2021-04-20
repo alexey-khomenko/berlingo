@@ -16,7 +16,7 @@ document.addEventListener('click', function (e) {
     }
 
     setTimeout(() => {
-        const target = document.querySelector(`.index-${anchor}__main`);
+        const target = document.querySelector(`.index-${anchor}__main`) || document.querySelector(`.account-${anchor}__main`);
         const wrapper = document.querySelector('.wrapper-outer');
 
         if (target) {

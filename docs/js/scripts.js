@@ -36,7 +36,7 @@ document.addEventListener('click', function (e) {
   }
 
   setTimeout(function () {
-    var target = document.querySelector(".index-".concat(anchor, "__main"));
+    var target = document.querySelector(".index-".concat(anchor, "__main")) || document.querySelector(".account-".concat(anchor, "__main"));
     var wrapper = document.querySelector('.wrapper-outer');
 
     if (target) {

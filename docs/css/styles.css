@@ -5682,7 +5682,7 @@ svg {
 }
 @media (max-width: 959px) {
   .winners-top {
-    height: 130px;
+    height: 129px;
   }
 }
 
@@ -5705,8 +5705,8 @@ svg {
 }
 
 .winners-top__main {
-  padding-top: 80px;
   margin: 0 auto;
+  padding-top: 80px;
 }
 @media (max-width: 1199px) {
   .winners-top__main {
@@ -5725,98 +5725,17 @@ svg {
   font-weight: 400;
   font-size: 60px;
   line-height: 72px;
-  margin-bottom: 60px;
 }
 @media (max-width: 1199px) {
   .winners-top__main .title {
     font-size: 48px;
     line-height: 58px;
-    margin-bottom: 40px;
   }
 }
 @media (max-width: 959px) {
   .winners-top__main .title {
     font-size: 24px;
     line-height: 29px;
-  }
-}
-.winners-top__main .buttons {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.winners-top__main .buttons .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 99999px;
-  text-decoration: none;
-  height: 80px;
-}
-@media (max-width: 959px) {
-  .winners-top__main .buttons .button {
-    height: 60px;
-  }
-}
-.winners-top__main .buttons .button:hover span, .winners-top__main .buttons .button:focus span {
-  transform: scale(1.05, 1.15);
-}
-.winners-top__main .buttons .button span {
-  padding-top: 3px;
-  transition: transform 500ms ease;
-  text-transform: uppercase;
-  font-family: "Bebas Neue", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-size: 20px;
-}
-@media (max-width: 959px) {
-  .winners-top__main .buttons .button span {
-    font-size: 14px;
-  }
-}
-.winners-top__main .buttons .button_receipt {
-  background-color: #ffffff;
-  margin: 0 20px 0 0;
-  width: 368px;
-}
-@media (max-width: 959px) {
-  .winners-top__main .buttons .button_receipt {
-    margin: 0 0 20px 0;
-    width: 254px;
-  }
-}
-.winners-top__main .buttons .button_receipt span {
-  color: #000000;
-}
-.winners-top__main .buttons .button_exit {
-  background-color: #000000;
-  border: 2px solid #ffffff;
-  width: 165px;
-}
-@media (max-width: 959px) {
-  .winners-top__main .buttons .button_exit {
-    width: 112px;
-  }
-}
-.winners-top__main .buttons .button_exit span {
-  color: #ffffff;
-}
-
-.winners-top {
-  height: 392px;
-}
-@media (max-width: 1199px) {
-  .winners-top {
-    height: 318px;
-  }
-}
-@media (max-width: 959px) {
-  .winners-top {
-    height: 309px;
   }
 }
 

@@ -5,11 +5,13 @@ document.addEventListener('click', function (e) {
 
     if ((e.target.dataset.selected ?? e.target.closest('[data-tab-open]')?.dataset.selected) === 'on') return true;
 
-    const oldTabNumber = document.querySelector(`[data-tab-open][data-selected="on"]`).dataset.tabOpen;
+    const tabs = e.target.closest('.tabs');
 
-    document.querySelector(`[data-tab-open="${oldTabNumber}"]`).dataset.selected = 'off';
-    document.querySelector(`[data-tab-body="${oldTabNumber}"]`).dataset.hidden = 'on';
+    const oldTabNumber = tabs.querySelector(`[data-tab-open][data-selected="on"]`).dataset.tabOpen;
 
-    document.querySelector(`[data-tab-open="${newTabNumber}"]`).dataset.selected = 'on';
-    document.querySelector(`[data-tab-body="${newTabNumber}"]`).dataset.hidden = 'off';
+    tabs.querySelector(`[data-tab-open="${oldTabNumber}"]`).dataset.selected = 'off';
+    tabs.querySelector(`[data-tab-body="${oldTabNumber}"]`).dataset.hidden = 'on';
+
+    tabs.querySelector(`[data-tab-open="${newTabNumber}"]`).dataset.selected = 'on';
+    tabs.querySelector(`[data-tab-body="${newTabNumber}"]`).dataset.hidden = 'off';
 });

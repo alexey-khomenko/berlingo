@@ -1692,6 +1692,17 @@ svg {
 }
 .index-header .content nav .link_user {
   display: flex;
+  margin-right: 0 !important;
+}
+@media (max-width: 1199px) {
+  .index-header .content nav .link_user {
+    margin-right: 40px !important;
+  }
+}
+@media (max-width: 959px) {
+  .index-header .content nav .link_user {
+    margin-right: 20px !important;
+  }
 }
 .index-header .content nav .link_user svg {
   width: 17px;
@@ -3480,6 +3491,17 @@ svg {
 }
 .account-header .content nav .link_user {
   display: flex;
+  margin-right: 0 !important;
+}
+@media (max-width: 1199px) {
+  .account-header .content nav .link_user {
+    margin-right: 40px !important;
+  }
+}
+@media (max-width: 959px) {
+  .account-header .content nav .link_user {
+    margin-right: 20px !important;
+  }
 }
 .account-header .content nav .link_user svg {
   width: 17px;
@@ -5061,6 +5083,17 @@ svg {
 }
 .pens-header .content nav .link_user {
   display: flex;
+  margin-right: 0 !important;
+}
+@media (max-width: 1199px) {
+  .pens-header .content nav .link_user {
+    margin-right: 40px !important;
+  }
+}
+@media (max-width: 959px) {
+  .pens-header .content nav .link_user {
+    margin-right: 20px !important;
+  }
 }
 .pens-header .content nav .link_user svg {
   width: 17px;
@@ -5442,6 +5475,17 @@ svg {
 }
 .winners-header .content nav .link_user {
   display: flex;
+  margin-right: 0 !important;
+}
+@media (max-width: 1199px) {
+  .winners-header .content nav .link_user {
+    margin-right: 40px !important;
+  }
+}
+@media (max-width: 959px) {
+  .winners-header .content nav .link_user {
+    margin-right: 20px !important;
+  }
 }
 .winners-header .content nav .link_user svg {
   width: 17px;
@@ -5629,28 +5673,28 @@ svg {
 }
 
 .winners-top {
-  height: 392px;
+  height: 252px;
 }
 @media (max-width: 1199px) {
   .winners-top {
-    height: 318px;
+    height: 198px;
   }
 }
 @media (max-width: 959px) {
   .winners-top {
-    height: 309px;
+    height: 130px;
   }
 }
 
 .winners-top__back {
   left: 50%;
   top: -20px;
-  transform: translateX(180px);
+  transform: translateX(280px);
 }
 @media (max-width: 1199px) {
   .winners-top__back {
     top: -20px;
-    transform: translateX(206px);
+    transform: translateX(290px);
   }
 }
 @media (max-width: 959px) {

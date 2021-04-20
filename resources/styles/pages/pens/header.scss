@@ -85,6 +85,15 @@
 
                 &_user {
                     display: flex;
+                    margin-right: 0 !important;
+
+                    @media (max-width: $md_max) {
+                        margin-right: 40px !important;
+                    }
+
+                    @media (max-width: $sm_max) {
+                        margin-right: 20px !important;
+                    }
 
                     svg {
                         width: 17px;

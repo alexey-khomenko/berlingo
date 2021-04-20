@@ -4252,7 +4252,18 @@ svg {
 }
 
 .account-balls__main {
-  position: relative;
+  margin: 0 auto;
+  height: 565px;
+}
+@media (max-width: 1199px) {
+  .account-balls__main {
+    height: 451px;
+  }
+}
+@media (max-width: 959px) {
+  .account-balls__main {
+    height: 504px;
+  }
 }
 .account-balls__main .title {
   display: block;
@@ -4263,32 +4274,80 @@ svg {
   font-size: 48px;
   line-height: 58px;
 }
-.account-balls__main .balls {
-  transform: translateY(-50%);
+@media (max-width: 1199px) {
+  .account-balls__main .title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+@media (max-width: 959px) {
+  .account-balls__main .title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.account-balls__main .balls-number, .account-balls__main .balls-text, .account-balls__main .text {
+  top: 50%;
+  left: 50%;
   position: absolute;
   display: block;
-  left: 0;
   color: #ffffff;
   font-family: "PF Din Text Cond Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+.account-balls__main .balls-number {
+  font-size: 120px;
+  line-height: 144px;
+  width: 160px;
+  transform: translate(-480px, -96px);
+}
+@media (max-width: 1199px) {
+  .account-balls__main .balls-number {
+    font-size: 90px;
+    line-height: 108px;
+    width: 119px;
+    transform: translate(-380px, -55px);
+  }
+}
+.account-balls__main .balls-text {
+  text-align: center;
   font-size: 48px;
   line-height: 58px;
-  top: 138px;
+  width: 160px;
+  transform: translate(-480px, 20px);
+}
+@media (max-width: 1199px) {
+  .account-balls__main .balls-text {
+    font-size: 36px;
+    line-height: 43px;
+    width: 119px;
+    transform: translate(-380px, 32px);
+  }
 }
 .account-balls__main .text {
-  transform: translateY(-50%);
-  position: absolute;
-  display: block;
-  left: 0;
-  color: #ffffff;
-  font-family: "PF Din Text Cond Pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 58px;
-  top: 138px;
+  font-size: 30px;
+  line-height: 36px;
+  width: 560px;
+  transform: translate(-180px, -40px);
 }
+@media (max-width: 1199px) {
+  .account-balls__main .text {
+    font-size: 24px;
+    line-height: 29px;
+    width: 540px;
+    transform: translate(-69px, -15px);
+  }
+}
+@media (max-width: 959px) {
+  .account-balls__main .text {
+    font-size: 18px;
+    line-height: 22px;
+    width: 280px;
+    transform: translate(-140px, 144px);
+  }
+}
+
 .account-my {
   height: 780px;
 }

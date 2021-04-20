@@ -413,13 +413,13 @@ function resetFile() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -434,12 +434,12 @@ if (shopsForm) {
     var value = e.target.value.trim().toLowerCase();
     var cities = shopsCities.querySelectorAll('li');
 
-    var _iterator = _createForOfIteratorHelper(cities),
-        _step;
+    var _iterator2 = _createForOfIteratorHelper(cities),
+        _step2;
 
     try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var city = _step.value;
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var city = _step2.value;
         var cityName = city.querySelector('span').textContent.toLowerCase();
 
         if (cityName.indexOf(value) === -1 && value.length > 0) {
@@ -449,9 +449,9 @@ if (shopsForm) {
         }
       }
     } catch (err) {
-      _iterator.e(err);
+      _iterator2.e(err);
     } finally {
-      _iterator.f();
+      _iterator2.f();
     }
   };
 
@@ -470,7 +470,7 @@ if (shopsForm) {
   });
   document.addEventListener('click', /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
-      var data, response, results, origin, _i, _results, result, li;
+      var data, response, results, origin, _iterator, _step, result, li;
 
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
@@ -487,104 +487,135 @@ if (shopsForm) {
               shopsInput.value = e.target.textContent.trim();
               shopsCities.dataset.hidden = 'on';
               data = new FormData();
-              data.append('action', action);
+              data.append('city', shopsInput.value);
               _context.next = 8;
-              return fetch('/login/', {
+              return fetch('/ajax/retail_stores.php', {
                 method: 'POST',
                 body: data
               });
 
             case 8:
               response = _context.sent;
-              results = [{
-                title: 'Гипермаркет «Анвар»',
-                address: 'г. Актобе, ул. Нокина, д. 35',
-                link: '#'
-              }, {
-                title: '«Мега Анвар»',
-                address: 'г. Актобе, ул. Маметова, д. 4',
-                link: '#'
-              }, {
-                title: '«Школьник»',
-                address: 'г. Алексин, ул. Мира, д. 18',
-                link: '#'
-              }, {
-                title: '«Книги»',
-                address: 'г. Алексин, ул. Мира, д. 18/11',
-                link: '#'
-              }, {
-                title: '«Арт-Изо»',
-                address: 'г. Архангельск, пер. Троицкий, д.18',
-                link: '#'
-              }, {
-                title: '«Арт-Изо»',
-                address: 'г. Архангельск, пер. Троицкий, д.18',
-                link: '#'
-              }, {
-                title: 'Гипермаркет «Анвар»',
-                address: 'г. Актобе, ул. Нокина, д. 35',
-                link: '#'
-              }, {
-                title: '«Мега Анвар»',
-                address: 'г. Актобе, ул. Маметова, д. 4',
-                link: '#'
-              }, {
-                title: '«Школьник»',
-                address: 'г. Алексин, ул. Мира, д. 18',
-                link: '#'
-              }, {
-                title: '«Книги»',
-                address: 'г. Алексин, ул. Мира, д. 18/11',
-                link: '#'
-              }, {
-                title: '«Арт-Изо»',
-                address: 'г. Архангельск, пер. Троицкий, д.18',
-                link: '#'
-              }, {
-                title: '«Арт-Изо»',
-                address: 'г. Архангельск, пер. Троицкий, д.18',
-                link: '#'
-              }, {
-                title: 'Гипермаркет «Анвар»',
-                address: 'г. Актобе, ул. Нокина, д. 35',
-                link: '#'
-              }, {
-                title: '«Мега Анвар»',
-                address: 'г. Актобе, ул. Маметова, д. 4',
-                link: '#'
-              }, {
-                title: '«Школьник»',
-                address: 'г. Алексин, ул. Мира, д. 18',
-                link: '#'
-              }, {
-                title: '«Книги»',
-                address: 'г. Алексин, ул. Мира, д. 18/11',
-                link: '#'
-              }, {
-                title: '«Арт-Изо»',
-                address: 'г. Архангельск, пер. Троицкий, д.18',
-                link: '#'
-              }, {
-                title: '«Арт-Изо»',
-                address: 'г. Архангельск, пер. Троицкий, д.18',
-                link: '#'
-              }];
+              _context.next = 11;
+              return response.json();
+
+            case 11:
+              results = _context.sent;
+              // const results = [
+              //     {
+              //         title: 'Гипермаркет «Анвар»',
+              //         address: 'г. Актобе, ул. Нокина, д. 35',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Мега Анвар»',
+              //         address: 'г. Актобе, ул. Маметова, д. 4',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Школьник»',
+              //         address: 'г. Алексин, ул. Мира, д. 18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Книги»',
+              //         address: 'г. Алексин, ул. Мира, д. 18/11',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Арт-Изо»',
+              //         address: 'г. Архангельск, пер. Троицкий, д.18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Арт-Изо»',
+              //         address: 'г. Архангельск, пер. Троицкий, д.18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: 'Гипермаркет «Анвар»',
+              //         address: 'г. Актобе, ул. Нокина, д. 35',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Мега Анвар»',
+              //         address: 'г. Актобе, ул. Маметова, д. 4',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Школьник»',
+              //         address: 'г. Алексин, ул. Мира, д. 18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Книги»',
+              //         address: 'г. Алексин, ул. Мира, д. 18/11',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Арт-Изо»',
+              //         address: 'г. Архангельск, пер. Троицкий, д.18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Арт-Изо»',
+              //         address: 'г. Архангельск, пер. Троицкий, д.18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: 'Гипермаркет «Анвар»',
+              //         address: 'г. Актобе, ул. Нокина, д. 35',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Мега Анвар»',
+              //         address: 'г. Актобе, ул. Маметова, д. 4',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Школьник»',
+              //         address: 'г. Алексин, ул. Мира, д. 18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Книги»',
+              //         address: 'г. Алексин, ул. Мира, д. 18/11',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Арт-Изо»',
+              //         address: 'г. Архангельск, пер. Троицкий, д.18',
+              //         link: '#',
+              //     },
+              //     {
+              //         title: '«Арт-Изо»',
+              //         address: 'г. Архангельск, пер. Троицкий, д.18',
+              //         link: '#',
+              //     },
+              // ];
               origin = document.querySelector('.retail-origin li');
               shopsRetails.innerHTML = '';
+              _iterator = _createForOfIteratorHelper(results);
 
-              for (_i = 0, _results = results; _i < _results.length; _i++) {
-                result = _results[_i];
-                li = origin.cloneNode(true);
-                li.querySelector('.retails__title').innerHTML = "<span>".concat(result.title, "</span>");
-                li.querySelector('.retails__address').innerHTML = "<span>".concat(result.address, "</span>");
-                li.querySelector('.retails__link').href = result.link;
-                li.querySelector('.retails__sm a').href = result.link;
-                shopsRetails.append(li);
+              try {
+                for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                  result = _step.value;
+                  li = origin.cloneNode(true);
+                  li.querySelector('.retails__title').innerHTML = "<span>".concat(result.title, "</span>");
+                  li.querySelector('.retails__address').innerHTML = "<span>".concat(result.address, "</span>");
+                  li.querySelector('.retails__link').href = result.link;
+                  li.querySelector('.retails__sm a').href = result.link;
+                  shopsRetails.append(li);
+                }
+              } catch (err) {
+                _iterator.e(err);
+              } finally {
+                _iterator.f();
               }
 
               shopsRetails.dataset.hidden = 'off';
 
-            case 14:
+            case 17:
             case "end":
               return _context.stop();
           }

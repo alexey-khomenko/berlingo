@@ -28,7 +28,7 @@ if (shopsForm) {
 
         let data = new FormData();
         data.append('city', shopsInput.value);
-        const response = await fetch('/login/', {method: 'POST', body: data});
+        const response = await fetch('/ajax/retail_stores.php', {method: 'POST', body: data});
         const results = await response.json();
 
         // const results = [

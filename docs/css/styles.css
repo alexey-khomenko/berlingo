@@ -1803,6 +1803,10 @@ svg {
     top: 39px;
   }
 }
+.index-header__mobile img {
+  width: 90px;
+  height: auto;
+}
 .index-header__mobile .content, .index-header__mobile .bottom {
   width: 1160px;
 }
@@ -1883,6 +1887,10 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.index-header__main img {
+  width: 90px;
+  height: auto;
 }
 .index-header__main .content {
   position: relative;
@@ -3608,6 +3616,10 @@ svg {
     top: 39px;
   }
 }
+.account-header__mobile img {
+  width: 90px;
+  height: auto;
+}
 .account-header__mobile .content, .account-header__mobile .bottom {
   width: 1160px;
 }
@@ -3688,6 +3700,10 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.account-header__main img {
+  width: 90px;
+  height: auto;
 }
 .account-header__main .content {
   position: relative;
@@ -5182,6 +5198,10 @@ svg {
     top: 39px;
   }
 }
+.pens-header__mobile img {
+  width: 90px;
+  height: auto;
+}
 .pens-header__mobile .content, .pens-header__mobile .bottom {
   width: 1160px;
 }
@@ -5262,6 +5282,10 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.pens-header__main img {
+  width: 90px;
+  height: auto;
 }
 .pens-header__main .content {
   position: relative;
@@ -5904,6 +5928,10 @@ svg {
     top: 39px;
   }
 }
+.winners-header__mobile img {
+  width: 90px;
+  height: auto;
+}
 .winners-header__mobile .content, .winners-header__mobile .bottom {
   width: 1160px;
 }
@@ -5984,6 +6012,10 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.winners-header__main img {
+  width: 90px;
+  height: auto;
 }
 .winners-header__main .content {
   position: relative;

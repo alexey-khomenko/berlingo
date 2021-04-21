@@ -2107,8 +2107,8 @@ svg {
 }
 @media (max-width: 959px) {
   .index-stages__main .text_one {
-    top: 144px;
-    left: 215px;
+    top: 130px;
+    left: 230px;
   }
 }
 .index-stages__main .text_two {
@@ -2124,8 +2124,8 @@ svg {
 }
 @media (max-width: 959px) {
   .index-stages__main .text_two {
-    top: 433px;
-    left: 215px;
+    top: 440px;
+    left: 230px;
   }
 }
 .index-stages__main .text_three {
@@ -2141,8 +2141,8 @@ svg {
 }
 @media (max-width: 959px) {
   .index-stages__main .text_three {
-    top: 728px;
-    right: 65px;
+    top: 770px;
+    right: 40px;
   }
 }
 .index-stages__main .text_four {
@@ -2158,8 +2158,8 @@ svg {
 }
 @media (max-width: 959px) {
   .index-stages__main .text_four {
-    top: 1028px;
-    right: 65px;
+    top: 1070px;
+    right: 30px;
   }
 }
 .index-stages__main .text a {

@@ -274,15 +274,15 @@
                 top: 1832px;
 
                 @media (max-width: $md_max_pens) {
-                    width: 302px;
+                    width: 496px;
                     right: 78px;
-                    top: 810px;
+                    top: 919px;
                 }
 
                 @media (max-width: $sm_max_pens) {
-                    width: 280px;
-                    right: 0;
-                    top: 3026px;
+                    width: 310px;
+                    right: -15px;
+                    top: 3036px;
                 }
             }
         }
@@ -291,15 +291,20 @@
             &-0 {
                 display: block;
                 position: absolute;
-                display: none;
+                width: 208px;
+                right: 515px;
+                top: 2145px;
 
                 @media (max-width: $md_max_pens) {
-
+                    width: 110px;
+                    right: 313px;
+                    top: 1095px;
                 }
 
                 @media (max-width: $sm_max_pens) {
                     width: 280px;
                     right: 0;
+                    top: 4185px;
                 }
             }
 

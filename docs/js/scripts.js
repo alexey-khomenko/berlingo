@@ -91,7 +91,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./test */ "./resources/scripts/test.js");
 /* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_test__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _receipt__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./receipt */ "./resources/scripts/receipt.js");
-/* harmony import */ var _receipt__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_receipt__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./auth */ "./resources/scripts/auth.js");
 
 
@@ -512,20 +511,104 @@ function getModalElements() {
 /*!**************************************!*\
   !*** ./resources/scripts/receipt.js ***!
   \**************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-document.querySelector("[data-modal-name=\"receipt\"] .form").addEventListener('submit', function (e) {
-  e.preventDefault();
-  var checkbox = document.querySelector("#receipt-agree");
-  if (!checkbox.checked) return false;
-  var shop = document.querySelector("[name=\"receipt-shop\"]").value.trim();
-  var files = document.querySelector("[name=\"receipt-file\"]").files;
-  if (files.length === 0) return true;
-  console.log(shop, files[0]); // todo ajax
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
-  window.misc.modalClose();
-  resetFile();
-});
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+document.querySelector("[data-modal-name=\"receipt\"] .form").addEventListener('submit', /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
+    var checkbox, shop, files, data, response, results;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            e.preventDefault();
+            checkbox = document.querySelector("#receipt-agree");
+
+            if (checkbox.checked) {
+              _context.next = 4;
+              break;
+            }
+
+            return _context.abrupt("return", false);
+
+          case 4:
+            shop = document.querySelector("[name=\"receipt-shop\"]").value.trim();
+            files = document.querySelector("[name=\"receipt-file\"]").files;
+
+            if (!(files.length === 0)) {
+              _context.next = 8;
+              break;
+            }
+
+            return _context.abrupt("return", true);
+
+          case 8:
+            data = new FormData();
+            data.append('shop', shop);
+            data.append('file', files[0]);
+            _context.next = 13;
+            return fetch('/ajax/check_registration.php', {
+              method: 'POST',
+              body: data
+            });
+
+          case 13:
+            response = _context.sent;
+
+            if (!(response.status === 200)) {
+              _context.next = 20;
+              break;
+            }
+
+            _context.next = 17;
+            return response.json();
+
+          case 17:
+            results = _context.sent;
+            _context.next = 21;
+            break;
+
+          case 20:
+            results = {
+              status: '+',
+              demo: '+'
+            };
+
+          case 21:
+            console.log(results);
+
+            if (!(results.status !== '+')) {
+              _context.next = 24;
+              break;
+            }
+
+            return _context.abrupt("return", true);
+
+          case 24:
+            window.misc.modalClose();
+            resetFile();
+
+          case 26:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}());
 document.querySelector("[ name=\"receipt-file\"]").addEventListener('change', function () {
   if (!this.files[0]) return true;
   var types = ['image/png', 'image/jpg', 'image/jpeg'];

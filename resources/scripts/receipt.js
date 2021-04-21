@@ -1,4 +1,4 @@
-document.querySelector(`[data-modal-name="receipt"] .form`).addEventListener('submit', function (e) {
+document.querySelector(`[data-modal-name="receipt"] .form`).addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const checkbox = document.querySelector(`#receipt-agree`);
@@ -10,9 +10,25 @@ document.querySelector(`[data-modal-name="receipt"] .form`).addEventListener('su
 
     if (files.length === 0) return true;
 
-    console.log(shop, files[0]);
+    let data = new FormData();
+    data.append('shop', shop);
+    data.append('file', files[0]);
+    const response = await fetch('/ajax/check_registration.php', {method: 'POST', body: data});
+    let results;
 
-    // todo ajax
+    if (response.status === 200) {
+        results = await response.json();
+    }
+    else {
+        results = {
+            status: '+',
+            demo: '+',
+        }
+    }
+
+    console.log(results);
+
+    if (results.status !== '+') return true;
 
     window.misc.modalClose();
     resetFile();

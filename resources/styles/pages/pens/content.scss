@@ -21,5 +21,85 @@
 
     .pens-content__main {
         margin: 0 auto;
+
+        .text {
+            font-family: "PF Din Text Cond Pro", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            text-align: left;
+
+            @media (max-width: $sm_max_pens) {
+                text-align: center;
+            }
+
+            &_lg {
+                font-size: 64px;
+                line-height: 77px;
+
+                @media (max-width: $md_max_pens) {
+                    font-size: 34px;
+                    line-height: 41px;
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+            }
+
+            &_md {
+                font-size: 36px;
+                line-height: 43px;
+
+                @media (max-width: $md_max_pens) {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+
+            &_sm {
+                font-size: 22px;
+                line-height: 26px;
+
+                @media (max-width: $md_max_pens) {
+                    font-size: 11px;
+                    line-height: 13px;
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+
+            &_ffffff {
+                color: #ffffff;
+            }
+
+            &_000000 {
+                color: #000000;
+            }
+
+            &_79c942 {
+                color: #79c942;
+            }
+
+            &_ed1b5c {
+                color: #ed1b5c;
+            }
+
+            &_29aae3 {
+                color: #29aae3;
+            }
+
+            &_f8931f {
+                color: #f8931f;
+            }
+        }
     }
 }

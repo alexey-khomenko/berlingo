@@ -5288,6 +5288,83 @@ svg {
 .pens-content .pens-content__main {
   margin: 0 auto;
 }
+.pens-content .pens-content__main .text {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .text {
+    text-align: center;
+  }
+}
+.pens-content .pens-content__main .text_lg {
+  font-size: 64px;
+  line-height: 77px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .text_lg {
+    font-size: 34px;
+    line-height: 41px;
+  }
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .text_lg {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+.pens-content .pens-content__main .text_md {
+  font-size: 36px;
+  line-height: 43px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .text_md {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .text_md {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.pens-content .pens-content__main .text_sm {
+  font-size: 22px;
+  line-height: 26px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .text_sm {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .text_sm {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.pens-content .pens-content__main .text_ffffff {
+  color: #ffffff;
+}
+.pens-content .pens-content__main .text_000000 {
+  color: #000000;
+}
+.pens-content .pens-content__main .text_79c942 {
+  color: #79c942;
+}
+.pens-content .pens-content__main .text_ed1b5c {
+  color: #ed1b5c;
+}
+.pens-content .pens-content__main .text_29aae3 {
+  color: #29aae3;
+}
+.pens-content .pens-content__main .text_f8931f {
+  color: #f8931f;
+}
 
 .pens-footer {
   height: 197px;

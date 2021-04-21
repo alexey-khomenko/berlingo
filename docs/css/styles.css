@@ -5934,15 +5934,14 @@ svg {
   font-weight: 400;
   border: 1px solid #ffffff;
   border-radius: 40px;
-  padding: 59px;
+  padding: 59px 113px;
   width: 1160px;
-  height: 678px;
+  height: 420px;
 }
 @media (max-width: 1199px) {
   .winners-tab .tabs__body {
-    padding: 59px 39px;
+    padding: 59px 49px;
     width: 940px;
-    height: 420px;
   }
 }
 @media (max-width: 959px) {
@@ -5967,14 +5966,30 @@ svg {
   height: 100%;
   width: auto;
 }
+.winners-tab .tabs .list-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.winners-tab .tabs .list-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  transform: scale(1, -1);
+  pointer-events: none;
+}
 .winners-tab .tabs__list {
   display: block;
-  margin: 0;
-  padding: 0;
-  width: 600px;
-  max-height: 300px;
+  box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
+  margin: 0;
+  padding: 0 40px;
+  max-height: 300px;
+  width: 600px;
 }
 @media (max-width: 1199px) {
   .winners-tab .tabs__list {
@@ -5983,14 +5998,55 @@ svg {
 }
 @media (max-width: 959px) {
   .winners-tab .tabs__list {
-    width: 100%;
+    padding: 0 20px;
     max-height: 400px;
+    width: 100%;
   }
 }
-.winners-tab .tabs__list li {
-  display: block;
+.winners-tab .tabs__list .winner {
   margin: 0;
-  padding: 0;
+  padding: 11px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 50px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (max-width: 959px) {
+  .winners-tab .tabs__list .winner {
+    flex-wrap: wrap;
+    min-height: 80px;
+  }
+}
+.winners-tab .tabs__list .winner:last-child {
+  margin-bottom: 10px;
+}
+@media (max-width: 959px) {
+  .winners-tab .tabs__list .winner:last-child {
+    margin-bottom: 20px;
+  }
+}
+.winners-tab .tabs__list .winner__date {
+  flex-shrink: 0;
+  width: 75px;
+}
+.winners-tab .tabs__list .winner__nick {
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  margin: 0 10px 0 30px;
+}
+@media (max-width: 959px) {
+  .winners-tab .tabs__list .winner__nick {
+    margin: 0 0 0 27px;
+  }
+}
+.winners-tab .tabs__list .winner__phone {
+  flex-shrink: 0;
+  margin-left: auto;
 }
 .winners-tab .tabs__warning {
   font-size: 24px;

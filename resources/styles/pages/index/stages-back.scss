@@ -2,4 +2,10 @@
     top: 0;
     transform: translateX(-50%);
     left: 50%;
+
+    @media (max-width: $sm_max) {
+        img {
+            width: 350px;
+        }
+    }
 }

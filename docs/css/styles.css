@@ -2059,6 +2059,11 @@ svg {
   transform: translateX(-50%);
   left: 50%;
 }
+@media (max-width: 959px) {
+  .index-stages__back img {
+    width: 350px;
+  }
+}
 
 .index-stages__main {
   top: 0;

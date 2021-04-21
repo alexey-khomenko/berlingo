@@ -193,14 +193,13 @@
             font-weight: 400;
             border: 1px solid #ffffff;
             border-radius: 40px;
-            padding: 59px;
+            padding: 59px 113px;
             width: 1160px;
-            height: 678px;
+            height: 420px;
 
             @media (max-width: $md_max) {
-                padding: 59px 39px;
+                padding: 59px 49px;
                 width: 940px;
-                height: 420px;
             }
 
             @media (max-width: $sm_max) {
@@ -226,29 +225,88 @@
             }
         }
 
+        .list-wrapper {
+            overflow: hidden;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100px;
+                background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+                transform: scale(1, -1);
+                pointer-events: none;
+            }
+        }
+
         &__list {
             display: block;
-            margin: 0;
-            padding: 0;
-            width: 600px;
-            max-height: 300px;
+            box-sizing: border-box;
             overflow-x: hidden;
             overflow-y: auto;
+            margin: 0;
+            padding: 0 40px;
+            max-height: 300px;
+            width: 600px;
 
             @media (max-width: $md_max) {
                 width: 580px;
             }
 
             @media (max-width: $sm_max) {
-                width: 100%;
+                padding: 0 20px;
                 max-height: 400px;
+                width: 100%;
             }
 
-            li {
-                display: block;
+            .winner {
                 margin: 0;
-                padding: 0;
+                padding: 11px 0;
+                box-sizing: border-box;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                min-height: 50px;
+                font-size: 16px;
+                line-height: 22px;
 
+                @media (max-width: $sm_max) {
+                    flex-wrap: wrap;
+                    min-height: 80px;
+                }
+
+                &:last-child {
+                    margin-bottom: 10px;
+
+                    @media (max-width: $sm_max) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &__date {
+                    flex-shrink: 0;
+                    width: 75px;
+                }
+
+                &__nick {
+                    flex-shrink: 1;
+                    flex-grow: 1;
+                    overflow: hidden;
+                    margin: 0 10px 0 30px;
+
+                    @media (max-width: $sm_max) {
+                        margin: 0 0 0 27px;
+                    }
+                }
+
+                &__phone {
+                    flex-shrink: 0;
+                    margin-left: auto;
+                }
             }
         }
 

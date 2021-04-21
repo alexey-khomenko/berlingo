@@ -159,26 +159,42 @@ document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('su
 
           case 10:
             response = _context.sent;
-            _context.next = 13;
+
+            if (!(response.status === 200)) {
+              _context.next = 17;
+              break;
+            }
+
+            _context.next = 14;
             return response.json();
 
-          case 13:
+          case 14:
             results = _context.sent;
+            _context.next = 18;
+            break;
+
+          case 17:
+            results = {
+              status: '+',
+              demo: '+'
+            };
+
+          case 18:
             console.log(results);
 
             if (!(results.status !== '+')) {
-              _context.next = 17;
+              _context.next = 21;
               break;
             }
 
             return _context.abrupt("return", true);
 
-          case 17:
+          case 21:
             document.querySelector("[name=\"login-email\"]").value = '';
             document.querySelector("[name=\"login-password\"]").value = '';
             location.reload();
 
-          case 20:
+          case 24:
           case "end":
             return _context.stop();
         }
@@ -221,42 +237,57 @@ document.querySelector("[data-modal-name=\"register\"] .form").addEventListener(
             return _context2.abrupt("return", true);
 
           case 10:
-            console.log(email, phone, password, city);
             data = new FormData();
             data.append('email', email);
             data.append('phone', phone);
             data.append('password', password);
             data.append('city', city);
-            _context2.next = 18;
+            _context2.next = 17;
             return fetch('/ajax/register_ajax.php', {
               method: 'POST',
               body: data
             });
 
-          case 18:
+          case 17:
             response = _context2.sent;
+
+            if (!(response.status === 200)) {
+              _context2.next = 24;
+              break;
+            }
+
             _context2.next = 21;
             return response.json();
 
           case 21:
             results = _context2.sent;
+            _context2.next = 25;
+            break;
+
+          case 24:
+            results = {
+              status: '+',
+              demo: '+'
+            };
+
+          case 25:
             console.log(results);
 
             if (!(results.status !== '+')) {
-              _context2.next = 25;
+              _context2.next = 28;
               break;
             }
 
             return _context2.abrupt("return", true);
 
-          case 25:
+          case 28:
             document.querySelector("[name=\"register-email\"]").value = '';
             document.querySelector("[name=\"register-phone\"]").value = '';
             document.querySelector("[name=\"register-password\"]").value = '';
             document.querySelector("[name=\"register-city\"]").value = '';
             window.misc.modalOpen('success');
 
-          case 30:
+          case 33:
           case "end":
             return _context2.stop();
         }
@@ -616,103 +647,96 @@ if (shopsForm) {
 
             case 8:
               response = _context.sent;
-              _context.next = 11;
+
+              if (!(response.status === 200)) {
+                _context.next = 15;
+                break;
+              }
+
+              _context.next = 12;
               return response.json();
 
-            case 11:
+            case 12:
               results = _context.sent;
-              // const results = [
-              //     {
-              //         title: 'Гипермаркет «Анвар»',
-              //         address: 'г. Актобе, ул. Нокина, д. 35',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Мега Анвар»',
-              //         address: 'г. Актобе, ул. Маметова, д. 4',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Школьник»',
-              //         address: 'г. Алексин, ул. Мира, д. 18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Книги»',
-              //         address: 'г. Алексин, ул. Мира, д. 18/11',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Арт-Изо»',
-              //         address: 'г. Архангельск, пер. Троицкий, д.18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Арт-Изо»',
-              //         address: 'г. Архангельск, пер. Троицкий, д.18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: 'Гипермаркет «Анвар»',
-              //         address: 'г. Актобе, ул. Нокина, д. 35',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Мега Анвар»',
-              //         address: 'г. Актобе, ул. Маметова, д. 4',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Школьник»',
-              //         address: 'г. Алексин, ул. Мира, д. 18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Книги»',
-              //         address: 'г. Алексин, ул. Мира, д. 18/11',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Арт-Изо»',
-              //         address: 'г. Архангельск, пер. Троицкий, д.18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Арт-Изо»',
-              //         address: 'г. Архангельск, пер. Троицкий, д.18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: 'Гипермаркет «Анвар»',
-              //         address: 'г. Актобе, ул. Нокина, д. 35',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Мега Анвар»',
-              //         address: 'г. Актобе, ул. Маметова, д. 4',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Школьник»',
-              //         address: 'г. Алексин, ул. Мира, д. 18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Книги»',
-              //         address: 'г. Алексин, ул. Мира, д. 18/11',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Арт-Изо»',
-              //         address: 'г. Архангельск, пер. Троицкий, д.18',
-              //         link: '#',
-              //     },
-              //     {
-              //         title: '«Арт-Изо»',
-              //         address: 'г. Архангельск, пер. Троицкий, д.18',
-              //         link: '#',
-              //     },
-              // ];
+              _context.next = 16;
+              break;
+
+            case 15:
+              results = [{
+                title: 'Гипермаркет «Анвар»',
+                address: 'г. Актобе, ул. Нокина, д. 35',
+                link: '#'
+              }, {
+                title: '«Мега Анвар»',
+                address: 'г. Актобе, ул. Маметова, д. 4',
+                link: '#'
+              }, {
+                title: '«Школьник»',
+                address: 'г. Алексин, ул. Мира, д. 18',
+                link: '#'
+              }, {
+                title: '«Книги»',
+                address: 'г. Алексин, ул. Мира, д. 18/11',
+                link: '#'
+              }, {
+                title: '«Арт-Изо»',
+                address: 'г. Архангельск, пер. Троицкий, д.18',
+                link: '#'
+              }, {
+                title: '«Арт-Изо»',
+                address: 'г. Архангельск, пер. Троицкий, д.18',
+                link: '#'
+              }, {
+                title: 'Гипермаркет «Анвар»',
+                address: 'г. Актобе, ул. Нокина, д. 35',
+                link: '#'
+              }, {
+                title: '«Мега Анвар»',
+                address: 'г. Актобе, ул. Маметова, д. 4',
+                link: '#'
+              }, {
+                title: '«Школьник»',
+                address: 'г. Алексин, ул. Мира, д. 18',
+                link: '#'
+              }, {
+                title: '«Книги»',
+                address: 'г. Алексин, ул. Мира, д. 18/11',
+                link: '#'
+              }, {
+                title: '«Арт-Изо»',
+                address: 'г. Архангельск, пер. Троицкий, д.18',
+                link: '#'
+              }, {
+                title: '«Арт-Изо»',
+                address: 'г. Архангельск, пер. Троицкий, д.18',
+                link: '#'
+              }, {
+                title: 'Гипермаркет «Анвар»',
+                address: 'г. Актобе, ул. Нокина, д. 35',
+                link: '#'
+              }, {
+                title: '«Мега Анвар»',
+                address: 'г. Актобе, ул. Маметова, д. 4',
+                link: '#'
+              }, {
+                title: '«Школьник»',
+                address: 'г. Алексин, ул. Мира, д. 18',
+                link: '#'
+              }, {
+                title: '«Книги»',
+                address: 'г. Алексин, ул. Мира, д. 18/11',
+                link: '#'
+              }, {
+                title: '«Арт-Изо»',
+                address: 'г. Архангельск, пер. Троицкий, д.18',
+                link: '#'
+              }, {
+                title: '«Арт-Изо»',
+                address: 'г. Архангельск, пер. Троицкий, д.18',
+                link: '#'
+              }];
+
+            case 16:
               origin = document.querySelector('.retail-origin li');
               shopsRetails.innerHTML = '';
               _iterator = _createForOfIteratorHelper(results);
@@ -735,7 +759,7 @@ if (shopsForm) {
 
               shopsRetails.dataset.hidden = 'off';
 
-            case 17:
+            case 21:
             case "end":
               return _context.stop();
           }

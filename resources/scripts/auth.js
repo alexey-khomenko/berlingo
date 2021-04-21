@@ -10,7 +10,17 @@ document.querySelector(`[data-modal-name="login"] .form`).addEventListener('subm
     data.append('email', email);
     data.append('password', password);
     const response = await fetch('/ajax/login_ajax.php', {method: 'POST', body: data});
-    const results = await response.json();
+    let results;
+
+    if (response.status === 200) {
+        results = await response.json();
+    }
+    else {
+        results = {
+            status: '+',
+            demo: '+',
+        }
+    }
 
     console.log(results);
 
@@ -36,15 +46,23 @@ document.querySelector(`[data-modal-name="register"] .form`).addEventListener('s
 
     if (email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 2) return true;
 
-    console.log(email, phone, password, city);
-
     let data = new FormData();
     data.append('email', email);
     data.append('phone', phone);
     data.append('password', password);
     data.append('city', city);
     const response = await fetch('/ajax/register_ajax.php', {method: 'POST', body: data});
-    const results = await response.json();
+    let results;
+
+    if (response.status === 200) {
+        results = await response.json();
+    }
+    else {
+        results = {
+            status: '+',
+            demo: '+',
+        }
+    }
 
     console.log(results);
 

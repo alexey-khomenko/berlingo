@@ -1,0 +1,25 @@
+.pens-content {
+    height: 4090px;
+
+    @media (max-width: $md_max_pens) {
+        height: 2180px;
+    }
+
+    @media (max-width: $sm_max_pens) {
+        height: 5650px;
+    }
+
+    .pens-content__back {
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width: $sm_max_pens) {
+            top: -40px;
+        }
+    }
+
+    .pens-content__main {
+        margin: 0 auto;
+    }
+}

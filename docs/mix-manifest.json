@@ -1,7 +1,6 @@
 {
     "/js/scripts.js": "/js/scripts.js",
     "/css/styles.css": "/css/styles.css",
-    "/images/___modal___test.png": "/images/___modal___test.png",
     "/images/_svg_index-prizes-line.svg": "/images/_svg_index-prizes-line.svg",
     "/images/_svg-index-bottom-instagram.svg": "/images/_svg-index-bottom-instagram.svg",
     "/images/_svg-index-bottom-vk.svg": "/images/_svg-index-bottom-vk.svg",
@@ -165,6 +164,9 @@
     "/images/modal-test-6-lg.png": "/images/modal-test-6-lg.png",
     "/images/modal-test-6-md.png": "/images/modal-test-6-md.png",
     "/images/modal-test-6-sm.png": "/images/modal-test-6-sm.png",
+    "/images/pens-content-back-lg.png": "/images/pens-content-back-lg.png",
+    "/images/pens-content-back-md.png": "/images/pens-content-back-md.png",
+    "/images/pens-content-back-sm.png": "/images/pens-content-back-sm.png",
     "/images/pens-footer-back-lg.png": "/images/pens-footer-back-lg.png",
     "/images/pens-footer-back-md.png": "/images/pens-footer-back-md.png",
     "/images/pens-footer-back-sm.png": "/images/pens-footer-back-sm.png",

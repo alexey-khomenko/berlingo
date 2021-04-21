@@ -1,7 +1,7 @@
 .pens-header {
     height: 60px;
 
-    @media (max-width: $sm_max) {
+    @media (max-width: $sm_max_pens) {
         height: 40px;
     }
 
@@ -46,7 +46,7 @@
             justify-content: space-between;
             align-items: center;
 
-            @media (max-width: $md_max) {
+            @media (max-width: $md_max_pens) {
                 &.content__left {
                     display: none;
                 }
@@ -55,7 +55,7 @@
             a:not(:last-of-type) {
                 margin-right: 40px;
 
-                @media (max-width: $sm_max) {
+                @media (max-width: $sm_max_pens) {
                     margin-right: 20px;
                 }
             }
@@ -70,7 +70,7 @@
                 letter-spacing: 0.01em;
                 font-size: 20px;
 
-                @media (max-width: $sm_max) {
+                @media (max-width: $sm_max_pens) {
                     display: none;
                 }
 
@@ -87,11 +87,11 @@
                     display: flex;
                     margin-right: 0 !important;
 
-                    @media (max-width: $md_max) {
+                    @media (max-width: $md_max_pens) {
                         margin-right: 40px !important;
                     }
 
-                    @media (max-width: $sm_max) {
+                    @media (max-width: $sm_max_pens) {
                         margin-right: 20px !important;
                     }
 
@@ -99,7 +99,7 @@
                         width: 17px;
                         height: 20px;
 
-                        @media (max-width: $sm_max) {
+                        @media (max-width: $sm_max_pens) {
                             width: 12px;
                             height: 14px;
                         }
@@ -114,11 +114,11 @@
                     height: 40px;
                     display: none;
 
-                    @media (max-width: $md_max) {
+                    @media (max-width: $md_max_pens) {
                         display: flex;
                     }
 
-                    @media (max-width: $sm_max) {
+                    @media (max-width: $sm_max_pens) {
                         width: 28px;
                         height: 28px;
                     }
@@ -127,7 +127,7 @@
                         width: 16px;
                         height: 14px;
 
-                        @media (max-width: $sm_max) {
+                        @media (max-width: $sm_max_pens) {
                             width: 12px;
                             height: 9px;
                         }

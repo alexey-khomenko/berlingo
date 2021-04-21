@@ -1,3 +1,7 @@
+import Inputmask from 'inputmask';
+
+Inputmask('+7(999)999-99-99').mask(document.querySelector(`[name="register-phone"]`));
+
 window.misc = {
     mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
     header: document.querySelector('header') ,

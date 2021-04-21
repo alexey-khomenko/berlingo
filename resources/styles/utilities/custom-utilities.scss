@@ -70,7 +70,7 @@
 }
 
 //----------------------------------------------------------------------------------------------------------------------
-.main .image {
+.image {
     &_lg, &_md, &_sm {
         display: none;
     }
@@ -94,9 +94,7 @@
     }
 }
 
-.main-pens .image,
-.pens-content__back .image,
-.pens-header__mobile .image {
+.image-pens {
     &_lg, &_md, &_sm {
         display: none;
     }

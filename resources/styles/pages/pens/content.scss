@@ -21,16 +21,16 @@
 
     .pens-content__main {
         margin: 0 auto;
+        text-align: left;
+
+        @media (max-width: $sm_max_pens) {
+            text-align: center;
+        }
 
         .text {
             font-family: "PF Din Text Cond Pro", sans-serif;
             font-style: normal;
             font-weight: 400;
-            text-align: left;
-
-            @media (max-width: $sm_max_pens) {
-                text-align: center;
-            }
 
             &_lg {
                 font-size: 64px;
@@ -99,6 +99,233 @@
 
             &_f8931f {
                 color: #f8931f;
+            }
+        }
+
+        .title {
+            margin-bottom: 9px;
+
+            @media (max-width: $md_max_pens) {
+                margin-bottom: 5px;
+            }
+
+            @media (max-width: $sm_max_pens) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .the-quality-of-writing {
+            &-0 {
+                display: block;
+                position: absolute;
+                width: 410px;
+                right: 135px;
+                top: 156px;
+
+                @media (max-width: $md_max_pens) {
+                    width: 220px;
+                    right: 110px;
+                    top: 48px;
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                    top: 456px;
+                }
+            }
+
+            &-1 {
+                display: block;
+                position: absolute;
+                width: 680px;
+                right: 104px;
+                top: 344px;
+
+                @media (max-width: $md_max_pens) {
+                    width: 360px;
+                    right: 90px;
+                    top: 133px;
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                    top: 564px;
+                }
+            }
+
+            &-2 {
+                display: block;
+                position: absolute;
+                width: 760px;
+                right: 120px;
+                top: 572px;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-3 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+        }
+
+        .ergonomics-and-comfort {
+            &-0 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-1 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-2 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-3 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+        }
+        
+        .design {
+            &-0 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-1 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+        }
+
+        .additional-benefits {
+            &-0 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-1 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
+            }
+
+            &-2 {
+                display: block;
+                position: absolute;
+                display: none;
+
+                @media (max-width: $md_max_pens) {
+
+                }
+
+                @media (max-width: $sm_max_pens) {
+                    width: 280px;
+                    right: 0;
+                }
             }
         }
     }

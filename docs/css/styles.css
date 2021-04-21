@@ -5287,17 +5287,17 @@ svg {
 }
 .pens-content .pens-content__main {
   margin: 0 auto;
+  text-align: left;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main {
+    text-align: center;
+  }
 }
 .pens-content .pens-content__main .text {
   font-family: "PF Din Text Cond Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
-  text-align: left;
-}
-@media (max-width: 939px) {
-  .pens-content .pens-content__main .text {
-    text-align: center;
-  }
 }
 .pens-content .pens-content__main .text_lg {
   font-size: 64px;
@@ -5364,6 +5364,184 @@ svg {
 }
 .pens-content .pens-content__main .text_f8931f {
   color: #f8931f;
+}
+.pens-content .pens-content__main .title {
+  margin-bottom: 9px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .title {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .title {
+    margin-bottom: 20px;
+  }
+}
+.pens-content .pens-content__main .the-quality-of-writing-0 {
+  display: block;
+  position: absolute;
+  width: 410px;
+  right: 135px;
+  top: 156px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .the-quality-of-writing-0 {
+    width: 220px;
+    right: 110px;
+    top: 48px;
+  }
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .the-quality-of-writing-0 {
+    width: 280px;
+    right: 0;
+    top: 456px;
+  }
+}
+.pens-content .pens-content__main .the-quality-of-writing-1 {
+  display: block;
+  position: absolute;
+  width: 680px;
+  right: 104px;
+  top: 344px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .the-quality-of-writing-1 {
+    width: 360px;
+    right: 90px;
+    top: 133px;
+  }
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .the-quality-of-writing-1 {
+    width: 280px;
+    right: 0;
+    top: 564px;
+  }
+}
+.pens-content .pens-content__main .the-quality-of-writing-2 {
+  display: block;
+  position: absolute;
+  width: 760px;
+  right: 120px;
+  top: 572px;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .the-quality-of-writing-2 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .the-quality-of-writing-3 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .the-quality-of-writing-3 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .ergonomics-and-comfort-0 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .ergonomics-and-comfort-0 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .ergonomics-and-comfort-1 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .ergonomics-and-comfort-1 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .ergonomics-and-comfort-2 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .ergonomics-and-comfort-2 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .ergonomics-and-comfort-3 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .ergonomics-and-comfort-3 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .design-0 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .design-0 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .design-1 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .design-1 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .additional-benefits-0 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .additional-benefits-0 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .additional-benefits-1 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .additional-benefits-1 {
+    width: 280px;
+    right: 0;
+  }
+}
+.pens-content .pens-content__main .additional-benefits-2 {
+  display: block;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 939px) {
+  .pens-content .pens-content__main .additional-benefits-2 {
+    width: 280px;
+    right: 0;
+  }
 }
 
 .pens-footer {

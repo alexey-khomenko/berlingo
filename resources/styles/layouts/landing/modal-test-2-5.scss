@@ -4,7 +4,7 @@
 [data-modal-name="test_5"] {
 
     .modal__body-0 {
-        height: 660px;
+        height: 570px;
 
         @media (max-width: $md_max) {
             height: 560px;
@@ -16,7 +16,7 @@
     }
 
     .modal__body-1, .modal__body-2 {
-        height: 660px;
+        height: 570px;
 
         @media (max-width: $md_max) {
             height: 560px;
@@ -46,7 +46,7 @@
     .subtitle {
         font-size: 36px;
         line-height: 43px;
-        margin: 0 100px 60px;
+        margin: 0 100px 40px;
 
         @media (max-width: $md_max) {
             font-size: 30px;
@@ -66,7 +66,7 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 0 100px 105px;
+        margin: 0 100px 60px;
         height: 210px;
 
         @media (max-width: $md_max) {

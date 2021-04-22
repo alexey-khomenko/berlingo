@@ -1,12 +1,8 @@
 [data-modal-name="test_1"] {
 
     .modal__body-0 {
-        height: 700px;
+        height: 570px;
         padding-top: 40px;
-
-        @media (max-width: $md_max) {
-            height: 600px;
-        }
 
         @media (max-width: $sm_max) {
             height: 730px;
@@ -46,13 +42,13 @@
         color:#000000;
         font-size: 48px;
         line-height: 58px;
-        margin: 144px 100px 60px;
+        margin: 144px 100px 40px;
         width: 330px;
 
         @media (max-width: $md_max) {
             font-size: 36px;
             line-height: 43px;
-            margin: 123px 80px 40px;
+            margin: 123px 80px 50px;
             width: 300px;
         }
 
@@ -72,14 +68,14 @@
         line-height: 29px;
         width: 370px;
         right: 90px;
-        bottom: 140px;
+        bottom: 160px;
 
         @media (max-width: $md_max) {
             font-size: 18px;
             line-height: 22px;
             width: 300px;
             right: 80px;
-            bottom: 102px;
+            bottom: 122px;
         }
 
         @media (max-width: $sm_max) {

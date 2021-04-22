@@ -6306,13 +6306,13 @@ svg {
   font-weight: 400;
   border: 1px solid #ffffff;
   border-radius: 40px;
-  padding: 59px 113px;
+  padding: 59px 99px;
   width: 1160px;
   height: 420px;
 }
 @media (max-width: 1199px) {
   .winners-tab .tabs__body {
-    padding: 59px 49px;
+    padding: 59px 37px;
     width: 940px;
   }
 }
@@ -6326,11 +6326,13 @@ svg {
   }
 }
 .winners-tab .tabs__image {
-  width: 160px;
-  height: 160px;
+  width: 240px;
+  height: 240px;
 }
 @media (max-width: 959px) {
   .winners-tab .tabs__image {
+    width: 160px;
+    height: 160px;
     margin-bottom: 40px;
   }
 }

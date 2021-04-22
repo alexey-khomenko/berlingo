@@ -5617,12 +5617,25 @@ svg {
 .pens-content .pens-content__main .design-1 {
   display: block;
   position: absolute;
-  display: none;
+  width: 390px;
+  right: 625px;
+  top: 2406px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .design-1 {
+    width: 215px;
+    right: 375px;
+    top: 1227px;
+  }
 }
 @media (max-width: 939px) {
   .pens-content .pens-content__main .design-1 {
-    width: 280px;
-    right: 0;
+    width: 320px;
+    right: -20px;
+    top: 4280px;
+  }
+  .pens-content .pens-content__main .design-1 .title {
+    margin-bottom: 10px;
   }
 }
 .pens-content .pens-content__main .additional-benefits-0 {
@@ -5649,12 +5662,25 @@ svg {
 .pens-content .pens-content__main .additional-benefits-1 {
   display: block;
   position: absolute;
-  display: none;
+  width: 482px;
+  right: 533px;
+  top: 3390px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .additional-benefits-1 {
+    width: 270px;
+    right: 308px;
+    top: 1812px;
+  }
 }
 @media (max-width: 939px) {
   .pens-content .pens-content__main .additional-benefits-1 {
     width: 280px;
     right: 0;
+    top: 4620px;
+  }
+  .pens-content .pens-content__main .additional-benefits-1 .title {
+    margin-bottom: 10px;
   }
 }
 .pens-content .pens-content__main .additional-benefits-2 {

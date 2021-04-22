@@ -315,15 +315,24 @@
             &-1 {
                 display: block;
                 position: absolute;
-                display: none;
+                width: 390px;
+                right: 625px;
+                top: 2406px;
 
                 @media (max-width: $md_max_pens) {
-
+                    width: 215px;
+                    right: 375px;
+                    top: 1227px;
                 }
 
                 @media (max-width: $sm_max_pens) {
-                    width: 280px;
-                    right: 0;
+                    width: 320px;
+                    right: -20px;
+                    top: 4280px;
+
+                    .title {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -352,15 +361,24 @@
             &-1 {
                 display: block;
                 position: absolute;
-                display: none;
+                width: 482px;
+                right: 533px;
+                top: 3390px;
 
                 @media (max-width: $md_max_pens) {
-
+                    width: 270px;
+                    right: 308px;
+                    top: 1812px;
                 }
 
                 @media (max-width: $sm_max_pens) {
                     width: 280px;
                     right: 0;
+                    top: 4950px;
+
+                    .title {
+                        margin-bottom: 10px;
+                    }
                 }
             }
 

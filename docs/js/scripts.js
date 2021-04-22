@@ -197,10 +197,33 @@ document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('su
   return function (_x) {
     return _ref.apply(this, arguments);
   };
-}());
+}()); //----------------------------------------------------------------------------------------------------------------------
+
+document.querySelector("[name=\"register-email\"]").addEventListener('focus', resetError);
+document.querySelector("[name=\"register-email\"]").addEventListener('paste', resetError);
+document.querySelector("[name=\"register-email\"]").addEventListener('input', resetError);
+document.querySelector("[name=\"register-phone\"]").addEventListener('focus', resetError);
+document.querySelector("[name=\"register-phone\"]").addEventListener('paste', resetError);
+document.querySelector("[name=\"register-phone\"]").addEventListener('input', resetError);
+document.querySelector("[name=\"register-password\"]").addEventListener('focus', resetError);
+document.querySelector("[name=\"register-password\"]").addEventListener('paste', resetError);
+document.querySelector("[name=\"register-password\"]").addEventListener('input', resetError);
+document.querySelector("[name=\"register-city\"]").addEventListener('focus', resetError);
+document.querySelector("[name=\"register-city\"]").addEventListener('paste', resetError);
+document.querySelector("[name=\"register-city\"]").addEventListener('input', resetError);
+document.querySelector("#register-agree").addEventListener('change', function (e) {
+  document.querySelector(".form__check").classList.remove('error');
+});
+
+function resetError(e) {
+  e.target.closest('.form__input').classList.remove('error');
+  e.target.closest('.form__input').dataset.error = '';
+} //----------------------------------------------------------------------------------------------------------------------
+
+
 document.querySelector("[data-modal-name=\"register\"] .form").addEventListener('submit', /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(e) {
-    var checkbox, email, phone, password, city, data, response, results;
+    var checkbox, email, phone, password, city, emailLabel, phoneLabel, pwd_check, passwordLabel, cityLabel, data, response, results;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -209,77 +232,102 @@ document.querySelector("[data-modal-name=\"register\"] .form").addEventListener(
             checkbox = document.querySelector("#register-agree");
 
             if (checkbox.checked) {
-              _context2.next = 4;
+              _context2.next = 5;
               break;
             }
 
+            document.querySelector(".form__check").classList.add('error');
             return _context2.abrupt("return", false);
 
-          case 4:
+          case 5:
             email = document.querySelector("[name=\"register-email\"]").value.trim();
             phone = document.querySelector("[name=\"register-phone\"]").value.trim();
             password = document.querySelector("[name=\"register-password\"]").value.trim();
             city = document.querySelector("[name=\"register-city\"]").value.trim();
 
-            if (!(email.length < 4 || phone.length < 5 || password.length < 4 || city.length < 2)) {
-              _context2.next = 10;
+            if (email.length < 4) {
+              emailLabel = document.querySelector("[name=\"register-email\"]").closest('.form__input');
+              emailLabel.classList.add('error');
+            }
+
+            if (phone.length !== 16 || phone.indexOf('_') > -1) {
+              phoneLabel = document.querySelector("[name=\"register-phone\"]").closest('.form__input');
+              phoneLabel.classList.add('error');
+              phoneLabel.dataset.error = 'Недопустимый формат';
+            }
+
+            pwd_check = /^[a-zA-Z0-9]+$/.test(password);
+
+            if (!pwd_check) {
+              passwordLabel = document.querySelector("[name=\"register-password\"]").closest('.form__input');
+              passwordLabel.classList.add('error');
+              passwordLabel.dataset.error = 'Пароль должен содержать только латинские буквы и цифры';
+            }
+
+            if (city.length < 2) {
+              cityLabel = document.querySelector("[name=\"register-city\"]").closest('.form__input');
+              cityLabel.classList.add('error');
+            }
+
+            if (!(email.length < 4 || phone.length !== 16 || phone.indexOf('_') > -1 || password.length < 4 || city.length < 2 || !pwd_check)) {
+              _context2.next = 16;
               break;
             }
 
             return _context2.abrupt("return", true);
 
-          case 10:
+          case 16:
             data = new FormData();
             data.append('email', email);
             data.append('phone', phone);
             data.append('password', password);
             data.append('city', city);
-            _context2.next = 17;
+            _context2.next = 23;
             return fetch('/ajax/register_ajax.php', {
               method: 'POST',
               body: data
             });
 
-          case 17:
+          case 23:
             response = _context2.sent;
 
             if (!(response.status === 200)) {
-              _context2.next = 24;
+              _context2.next = 30;
               break;
             }
 
-            _context2.next = 21;
+            _context2.next = 27;
             return response.json();
 
-          case 21:
+          case 27:
             results = _context2.sent;
-            _context2.next = 25;
+            _context2.next = 31;
             break;
 
-          case 24:
+          case 30:
             results = {
               status: '+',
               demo: '+'
             };
 
-          case 25:
+          case 31:
             console.log(results);
 
             if (!(results.status !== '+')) {
-              _context2.next = 28;
+              _context2.next = 34;
               break;
             }
 
             return _context2.abrupt("return", true);
 
-          case 28:
+          case 34:
             document.querySelector("[name=\"register-email\"]").value = '';
             document.querySelector("[name=\"register-phone\"]").value = '';
             document.querySelector("[name=\"register-password\"]").value = '';
             document.querySelector("[name=\"register-city\"]").value = '';
             window.misc.modalOpen('success');
 
-          case 33:
+          case 39:
           case "end":
             return _context2.stop();
         }

@@ -111,7 +111,7 @@
     .button {
         color: #ffffff;
         cursor: pointer;
-        background: linear-gradient(180deg, #FF9C47 0%, #E600C6 100%);
+        background: linear-gradient(180deg, #ff9c47 0%, #e600c6 100%);
         border: none;
     }
 
@@ -234,6 +234,7 @@
 
         &__input {
             display: block;
+            position: relative;
             width: 460px;
 
             @media (max-width: $md_max) {
@@ -244,10 +245,33 @@
                 width: 100%;
             }
 
+            &.error {
+                input {
+                    border-color: #ff327c;
+                }
+
+                &::before {
+                    content: attr(data-error);
+                    position: absolute;
+                    bottom: 65px;
+                    left: 30px;
+                    right: 30px;
+                    color: #ff327c;
+                    font-family: "PF Din Text Cond Pro", sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 14px;
+
+                    @media (max-width: $sm_max) {
+                        font-size: 11px;
+                    }
+                }
+            }
 
             &:not(:last-child) {
                 @media (max-width: $sm_max) {
-                    margin-bottom: 20px;
+                    margin-bottom: 40px;
                 }
             }
 
@@ -419,6 +443,10 @@
             border-radius: 99999px;
             border: 1px solid #000000;
 
+            &.error {
+                border-color: #ff327c;
+            }
+
             svg {
                 position: absolute;
                 transform: translate(-50%, -50%);
@@ -428,9 +456,5 @@
                 height: 10px;
             }
         }
-    }
-
-    .form__inputs + .form__inputs {
-        margin-top: -20px;
     }
 }

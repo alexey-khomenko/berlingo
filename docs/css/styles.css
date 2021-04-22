@@ -1021,6 +1021,10 @@ svg {
     bottom: -106px;
     right: -235px;
   }
+  [data-modal-name=test_1] .back img {
+    width: 535px;
+    height: 559px;
+  }
 }
 [data-modal-name=test_1] .title {
   color: #000000;
@@ -1367,6 +1371,10 @@ svg {
     top: auto;
     bottom: -164px;
     right: -235px;
+  }
+  [data-modal-name=test_6] .back img {
+    width: 535px;
+    height: 560px;
   }
 }
 [data-modal-name=test_6] .title {

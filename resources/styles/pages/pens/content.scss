@@ -120,12 +120,12 @@
                 display: block;
                 position: absolute;
                 width: 468px;
-                right: 108px;
+                right: 112px;
                 top: 156px;
 
                 @media (max-width: $md_max_pens) {
                     width: 250px;
-                    right: 102px;
+                    right: 100px;
                     top: 48px;
                 }
 
@@ -280,9 +280,13 @@
                 }
 
                 @media (max-width: $sm_max_pens) {
-                    width: 310px;
-                    right: -15px;
-                    top: 3036px;
+                    width: 320px;
+                    right: -20px;
+                    top: 3040px;
+
+                    .title {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -328,15 +332,20 @@
             &-0 {
                 display: block;
                 position: absolute;
-                display: none;
+                width: 884px;
+                right: 140px;
+                top: 3080px;
 
                 @media (max-width: $md_max_pens) {
-
+                    width: 470px;
+                    right: 96px;
+                    top: 1635px;
                 }
 
                 @media (max-width: $sm_max_pens) {
                     width: 280px;
                     right: 0;
+                    top: 4620px;
                 }
             }
 

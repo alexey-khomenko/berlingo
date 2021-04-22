@@ -5412,13 +5412,13 @@ svg {
   display: block;
   position: absolute;
   width: 468px;
-  right: 108px;
+  right: 112px;
   top: 156px;
 }
 @media (max-width: 1539px) {
   .pens-content .pens-content__main .the-quality-of-writing-0 {
     width: 250px;
-    right: 102px;
+    right: 100px;
     top: 48px;
   }
 }
@@ -5577,9 +5577,12 @@ svg {
 }
 @media (max-width: 939px) {
   .pens-content .pens-content__main .ergonomics-and-comfort-3 {
-    width: 310px;
-    right: -15px;
-    top: 3036px;
+    width: 320px;
+    right: -20px;
+    top: 3040px;
+  }
+  .pens-content .pens-content__main .ergonomics-and-comfort-3 .title {
+    margin-bottom: 10px;
   }
 }
 .pens-content .pens-content__main .design-0 {
@@ -5617,12 +5620,22 @@ svg {
 .pens-content .pens-content__main .additional-benefits-0 {
   display: block;
   position: absolute;
-  display: none;
+  width: 884px;
+  right: 140px;
+  top: 3080px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .additional-benefits-0 {
+    width: 470px;
+    right: 96px;
+    top: 1635px;
+  }
 }
 @media (max-width: 939px) {
   .pens-content .pens-content__main .additional-benefits-0 {
     width: 280px;
     right: 0;
+    top: 4620px;
   }
 }
 .pens-content .pens-content__main .additional-benefits-1 {

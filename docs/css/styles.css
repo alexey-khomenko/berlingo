@@ -5677,7 +5677,7 @@ svg {
   .pens-content .pens-content__main .additional-benefits-1 {
     width: 280px;
     right: 0;
-    top: 4620px;
+    top: 4940px;
   }
   .pens-content .pens-content__main .additional-benefits-1 .title {
     margin-bottom: 10px;
@@ -5686,12 +5686,25 @@ svg {
 .pens-content .pens-content__main .additional-benefits-2 {
   display: block;
   position: absolute;
-  display: none;
+  width: 1353px;
+  right: 80px;
+  top: 3765px;
+}
+@media (max-width: 1539px) {
+  .pens-content .pens-content__main .additional-benefits-2 {
+    width: 700px;
+    right: 90px;
+    top: 2002px;
+  }
 }
 @media (max-width: 939px) {
   .pens-content .pens-content__main .additional-benefits-2 {
-    width: 280px;
-    right: 0;
+    width: 320px;
+    right: -20px;
+    top: 5220px;
+  }
+  .pens-content .pens-content__main .additional-benefits-2 .title {
+    margin-bottom: 10px;
   }
 }
 

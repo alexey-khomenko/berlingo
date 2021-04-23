@@ -121,9 +121,22 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function resetError(e) {
+  e.target.closest('.form__input').classList.remove('error');
+  e.target.closest('.form__input').dataset.error = '';
+} //----------------------------------------------------------------------------------------------------------------------
+
+
+document.querySelector("[name=\"login-email\"]").addEventListener('focus', resetError);
+document.querySelector("[name=\"login-email\"]").addEventListener('paste', resetError);
+document.querySelector("[name=\"login-email\"]").addEventListener('input', resetError);
+document.querySelector("[name=\"login-password\"]").addEventListener('focus', resetError);
+document.querySelector("[name=\"login-password\"]").addEventListener('paste', resetError);
+document.querySelector("[name=\"login-password\"]").addEventListener('input', resetError); //----------------------------------------------------------------------------------------------------------------------
+
 document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('submit', /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
-    var email, password, data, response, results;
+    var email, password, emailLabel, pwdLabel, data, response, results;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -131,62 +144,74 @@ document.querySelector("[data-modal-name=\"login\"] .form").addEventListener('su
             e.preventDefault();
             email = document.querySelector("[name=\"login-email\"]").value.trim();
             password = document.querySelector("[name=\"login-password\"]").value.trim();
+            emailLabel = document.querySelector("[name=\"login-email\"]").closest('.form__input');
+            pwdLabel = document.querySelector("[name=\"login-password\"]").closest('.form__input');
+
+            if (email.length < 4) {
+              emailLabel.classList.add('error');
+            }
+
+            if (password.length < 4) {
+              pwdLabel.classList.add('error');
+            }
 
             if (!(email.length < 4 || password.length < 4)) {
-              _context.next = 5;
+              _context.next = 9;
               break;
             }
 
             return _context.abrupt("return", true);
 
-          case 5:
+          case 9:
             data = new FormData();
             data.append('email', email);
             data.append('password', password);
-            _context.next = 10;
+            _context.next = 14;
             return fetch('/ajax/login_ajax.php', {
               method: 'POST',
               body: data
             });
 
-          case 10:
+          case 14:
             response = _context.sent;
 
             if (!(response.status === 200)) {
-              _context.next = 17;
+              _context.next = 21;
               break;
             }
 
-            _context.next = 14;
+            _context.next = 18;
             return response.json();
 
-          case 14:
+          case 18:
             results = _context.sent;
-            _context.next = 18;
+            _context.next = 22;
             break;
 
-          case 17:
+          case 21:
             results = {
               status: '+',
               demo: '+'
             };
 
-          case 18:
+          case 22:
             console.log(results);
 
             if (!(results.status !== '+')) {
-              _context.next = 21;
+              _context.next = 27;
               break;
             }
 
+            emailLabel.classList.add('error');
+            pwdLabel.classList.add('error');
             return _context.abrupt("return", true);
 
-          case 21:
+          case 27:
             document.querySelector("[name=\"login-email\"]").value = '';
             document.querySelector("[name=\"login-password\"]").value = '';
             location.reload();
 
-          case 24:
+          case 30:
           case "end":
             return _context.stop();
         }
@@ -210,16 +235,11 @@ document.querySelector("[name=\"register-password\"]").addEventListener('paste',
 document.querySelector("[name=\"register-password\"]").addEventListener('input', resetError);
 document.querySelector("[name=\"register-city\"]").addEventListener('focus', resetError);
 document.querySelector("[name=\"register-city\"]").addEventListener('paste', resetError);
-document.querySelector("[name=\"register-city\"]").addEventListener('input', resetError);
+document.querySelector("[name=\"register-city\"]").addEventListener('input', resetError); //----------------------------------------------------------------------------------------------------------------------
+
 document.querySelector("#register-agree").addEventListener('change', function (e) {
   document.querySelector(".form__check").classList.remove('error');
-});
-
-function resetError(e) {
-  e.target.closest('.form__input').classList.remove('error');
-  e.target.closest('.form__input').dataset.error = '';
-} //----------------------------------------------------------------------------------------------------------------------
-
+}); //----------------------------------------------------------------------------------------------------------------------
 
 document.querySelector("[data-modal-name=\"register\"] .form").addEventListener('submit', /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(e) {
@@ -356,16 +376,18 @@ if (regForm) {
   // cityInput.addEventListener('focus', cityInputListener);
   // cityInput.addEventListener('input', cityInputListener);
   // cityInput.addEventListener('paste', cityInputListener);
+  // document.addEventListener('click', function (e) {
+  //     if (e.target.closest('.cities') || e.target.closest('[name="register-city"]')) return true;
+  //
+  //     citiesList.dataset.hidden = 'on';
+  // });
 
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('.cities') || e.target.closest('[name="register-city"]')) return true; //    citiesList.dataset.hidden = 'on';
-  });
   document.querySelector('.form__input_select').addEventListener('click', function (e) {
     e.preventDefault();
   });
   document.addEventListener('click', function (e) {
     if (!e.target.closest('[data-city]') || e.target.tagName === 'LI') return true;
-    cityInput.value = e.target.textContent.trim(); //    citiesList.dataset.hidden = 'on';
+    cityInput.value = e.target.textContent.trim(); // citiesList.dataset.hidden = 'on';
   }); // function cityInputListener(e) {
   //     citiesList.dataset.hidden = 'off';
   //
@@ -435,7 +457,7 @@ document.addEventListener('click', function (e) {
 });
 setTimeout(function () {
   document.querySelector('header').style.visibility = 'visible';
-}, 500);
+}, 700);
 document.querySelector('.wrapper-outer').focus();
 
 /***/ }),

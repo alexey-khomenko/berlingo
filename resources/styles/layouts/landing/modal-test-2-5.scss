@@ -66,7 +66,7 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 0 100px 60px;
+        margin: 0 100px 40px;
         height: 210px;
 
         @media (max-width: $md_max) {
@@ -122,7 +122,7 @@
     }
 
     .button {
-        margin: 0 100px 60px;
+        margin: 0 100px 54px;
         background: linear-gradient(180deg, #04bb33 0%, #00b58a 100%);
         color: #ffffff;
         width: 176px;

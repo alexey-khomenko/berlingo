@@ -1,7 +1,7 @@
 .modal_receipt {
 
     .modal__body-0, .modal__body-1, .modal__body-2 {
-        height: 602px;
+        height: 570px;
 
         @media (max-width: $md_max) {
             height: 517px;
@@ -20,7 +20,7 @@
         font-weight: 400;
         font-size: 48px;
         line-height: 58px;
-        margin: 80px 100px 20px;
+        margin: 60px 100px 20px;
 
         @media (max-width: $md_max) {
             font-size: 36px;
@@ -69,7 +69,7 @@
     }
 
     .form {
-        margin: 0 50px 80px 100px;
+        margin: 0 50px 68px 100px;
 
         @media (max-width: $md_max) {
             margin: 0 80px 40px;

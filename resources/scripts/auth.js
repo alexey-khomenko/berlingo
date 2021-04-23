@@ -1,8 +1,36 @@
+function resetError(e) {
+    e.target.closest('.form__input').classList.remove('error');
+    e.target.closest('.form__input').dataset.error = '';
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
+document.querySelector(`[name="login-email"]`).addEventListener('focus', resetError);
+document.querySelector(`[name="login-email"]`).addEventListener('paste', resetError);
+document.querySelector(`[name="login-email"]`).addEventListener('input', resetError);
+
+document.querySelector(`[name="login-password"]`).addEventListener('focus', resetError);
+document.querySelector(`[name="login-password"]`).addEventListener('paste', resetError);
+document.querySelector(`[name="login-password"]`).addEventListener('input', resetError);
+
+//----------------------------------------------------------------------------------------------------------------------
+
 document.querySelector(`[data-modal-name="login"] .form`).addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const email = document.querySelector(`[name="login-email"]`).value.trim();
     const password = document.querySelector(`[name="login-password"]`).value.trim();
+
+    const emailLabel = document.querySelector(`[name="login-email"]`).closest('.form__input');
+    const pwdLabel = document.querySelector(`[name="login-password"]`).closest('.form__input');
+
+    if (email.length < 4) {
+        emailLabel.classList.add('error');
+    }
+
+    if (password.length < 4) {
+        pwdLabel.classList.add('error');
+    }
 
     if (email.length < 4 || password.length < 4) return true;
 
@@ -19,12 +47,17 @@ document.querySelector(`[data-modal-name="login"] .form`).addEventListener('subm
         results = {
             status: '+',
             demo: '+',
-        }
+        };
     }
 
     console.log(results);
 
-    if (results.status !== '+') return true;
+    if (results.status !== '+') {
+        emailLabel.classList.add('error');
+        pwdLabel.classList.add('error');
+
+        return true;
+    }
 
     document.querySelector(`[name="login-email"]`).value = '';
     document.querySelector(`[name="login-password"]`).value = '';
@@ -50,14 +83,11 @@ document.querySelector(`[name="register-city"]`).addEventListener('focus', reset
 document.querySelector(`[name="register-city"]`).addEventListener('paste', resetError);
 document.querySelector(`[name="register-city"]`).addEventListener('input', resetError);
 
+//----------------------------------------------------------------------------------------------------------------------
+
 document.querySelector(`#register-agree`).addEventListener('change', function (e) {
     document.querySelector(`.form__check`).classList.remove('error');
 });
-
-function resetError (e) {
-    e.target.closest('.form__input').classList.remove('error');
-    e.target.closest('.form__input').dataset.error = '';
-}
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -121,7 +151,7 @@ document.querySelector(`[data-modal-name="register"] .form`).addEventListener('s
         results = {
             status: '+',
             demo: '+',
-        }
+        };
     }
 
     console.log(results);
@@ -159,14 +189,14 @@ if (regForm) {
     // cityInput.addEventListener('input', cityInputListener);
     // cityInput.addEventListener('paste', cityInputListener);
 
-    document.addEventListener('click', function (e) {
-        if (e.target.closest('.cities') || e.target.closest('[name="register-city"]')) return true;
-
-    //    citiesList.dataset.hidden = 'on';
-    });
+    // document.addEventListener('click', function (e) {
+    //     if (e.target.closest('.cities') || e.target.closest('[name="register-city"]')) return true;
+    //
+    //     citiesList.dataset.hidden = 'on';
+    // });
 
     document.querySelector('.form__input_select').addEventListener('click', function (e) {
-       e.preventDefault();
+        e.preventDefault();
     });
 
     document.addEventListener('click', function (e) {
@@ -174,7 +204,7 @@ if (regForm) {
 
         cityInput.value = e.target.textContent.trim();
 
-    //    citiesList.dataset.hidden = 'on';
+        // citiesList.dataset.hidden = 'on';
     });
 
     // function cityInputListener(e) {

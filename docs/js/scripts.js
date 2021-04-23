@@ -436,6 +436,7 @@ document.addEventListener('click', function (e) {
 setTimeout(function () {
   document.querySelector('header').style.visibility = 'visible';
 }, 500);
+document.querySelector('.wrapper-outer').focus();
 
 /***/ }),
 
@@ -503,6 +504,7 @@ window.misc.modalClose = function () {
   setTimeout(function () {
     modal.classList.remove('open');
     shadow.classList.remove('open');
+    document.querySelector('.wrapper-outer').focus();
   }, 600);
 };
 
@@ -530,6 +532,9 @@ window.misc.modalOpen = function (t) {
   setTimeout(function () {
     wrapper.classList.add('open');
   }, timeout);
+  setTimeout(function () {
+    target.focus();
+  }, timeout + 10);
 };
 
 function getModalElements() {

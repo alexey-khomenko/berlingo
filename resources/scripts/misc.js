@@ -22,3 +22,5 @@ document.addEventListener('click', function (e) {
 setTimeout(() => {
     document.querySelector('header').style.visibility = 'visible';
 }, 500);
+
+document.querySelector('.wrapper-outer').focus();

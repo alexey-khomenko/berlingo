@@ -4,7 +4,11 @@
 [data-modal-name="test_5"] {
 
     .modal__body-0 {
-        height: 570px;
+        height: 660px;
+
+        @media (max-width: 1365px) {
+            height: 570px;
+        }
 
         @media (max-width: $md_max) {
             height: 560px;
@@ -16,7 +20,11 @@
     }
 
     .modal__body-1, .modal__body-2 {
-        height: 570px;
+        height: 660px;
+
+        @media (max-width: 1365px) {
+            height: 570px;
+        }
 
         @media (max-width: $md_max) {
             height: 560px;
@@ -46,7 +54,11 @@
     .subtitle {
         font-size: 36px;
         line-height: 43px;
-        margin: 0 100px 40px;
+        margin: 0 100px 65px;
+
+        @media (max-width: 1365px) {
+            margin: 0 100px 40px;
+        }
 
         @media (max-width: $md_max) {
             font-size: 30px;
@@ -66,8 +78,12 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 0 100px 40px;
+        margin: 0 100px 100px;
         height: 210px;
+
+        @media (max-width: 1365px) {
+            margin: 0 100px 40px;
+        }
 
         @media (max-width: $md_max) {
             margin: 0 80px 72px;

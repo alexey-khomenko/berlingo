@@ -1,19 +1,10 @@
 {
     "/js/scripts.js": "/js/scripts.js",
     "/css/styles.css": "/css/styles.css",
-    "/favicons/favicon.png": "/favicons/favicon.png",
     "/account.html": "/account.html",
     "/index.html": "/index.html",
     "/pens.html": "/pens.html",
     "/winners.html": "/winners.html",
-    "/images/_svg_index-prizes-line.svg": "/images/_svg_index-prizes-line.svg",
-    "/images/_svg-index-bottom-instagram.svg": "/images/_svg-index-bottom-instagram.svg",
-    "/images/_svg-index-bottom-vk.svg": "/images/_svg-index-bottom-vk.svg",
-    "/images/_svg-index-header-close.svg": "/images/_svg-index-header-close.svg",
-    "/images/_svg-index-header-menu.svg": "/images/_svg-index-header-menu.svg",
-    "/images/_svg-index-header-user.svg": "/images/_svg-index-header-user.svg",
-    "/images/_svg-index-shops-chevrone.svg": "/images/_svg-index-shops-chevrone.svg",
-    "/images/_svg-index-shops-pin.svg": "/images/_svg-index-shops-pin.svg",
     "/images/0_content-account-receipt.png": "/images/0_content-account-receipt.png",
     "/images/0_content-index-shops-large-1.png": "/images/0_content-index-shops-large-1.png",
     "/images/0_content-index-shops-large-2.png": "/images/0_content-index-shops-large-2.png",
@@ -191,5 +182,6 @@
     "/images/winners-header-main-logo-sm.png": "/images/winners-header-main-logo-sm.png",
     "/images/winners-top-back-lg.png": "/images/winners-top-back-lg.png",
     "/images/winners-top-back-md.png": "/images/winners-top-back-md.png",
-    "/images/winners-top-back-sm.png": "/images/winners-top-back-sm.png"
+    "/images/winners-top-back-sm.png": "/images/winners-top-back-sm.png",
+    "/favicons/favicon.png": "/favicons/favicon.png"
 }

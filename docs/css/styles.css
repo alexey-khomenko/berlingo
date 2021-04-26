@@ -1009,7 +1009,7 @@ svg {
   padding-top: 40px;
   height: 700px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_1] .modal__body-0 {
     height: 570px;
   }
@@ -1023,7 +1023,7 @@ svg {
 [data-modal-name=test_1] .modal__body-1, [data-modal-name=test_1] .modal__body-2 {
   height: 660px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_1] .modal__body-1, [data-modal-name=test_1] .modal__body-2 {
     height: 530px;
   }
@@ -1055,7 +1055,7 @@ svg {
   margin: 144px 100px 60px;
   width: 330px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_1] .title {
     margin: 144px 100px 40px;
   }
@@ -1086,7 +1086,7 @@ svg {
   right: 90px;
   bottom: 140px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_1] .text {
     bottom: 29px;
   }
@@ -1133,7 +1133,7 @@ svg {
 [data-modal-name=test_5] .modal__body-0 {
   height: 660px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_2] .modal__body-0,
 [data-modal-name=test_3] .modal__body-0,
 [data-modal-name=test_4] .modal__body-0,
@@ -1166,7 +1166,7 @@ svg {
 [data-modal-name=test_5] .modal__body-2 {
   height: 660px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_2] .modal__body-1, [data-modal-name=test_2] .modal__body-2,
 [data-modal-name=test_3] .modal__body-1,
 [data-modal-name=test_3] .modal__body-2,
@@ -1233,7 +1233,7 @@ svg {
   line-height: 43px;
   margin: 0 100px 65px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_2] .subtitle,
 [data-modal-name=test_3] .subtitle,
 [data-modal-name=test_4] .subtitle,
@@ -1272,7 +1272,7 @@ svg {
   margin: 0 100px 100px;
   height: 210px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_2] form,
 [data-modal-name=test_3] form,
 [data-modal-name=test_4] form,
@@ -1400,7 +1400,7 @@ svg {
   padding-top: 40px;
   height: 700px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_6] .modal__body-0 {
     height: 570px;
   }
@@ -1414,7 +1414,7 @@ svg {
 [data-modal-name=test_6] .modal__body-1, [data-modal-name=test_6] .modal__body-2 {
   height: 660px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_6] .modal__body-1, [data-modal-name=test_6] .modal__body-2 {
     height: 530px;
   }
@@ -1451,7 +1451,7 @@ svg {
   margin: 60px 100px 25px;
   width: 560px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_6] .title {
     margin: 55px 100px 10px;
   }
@@ -1475,7 +1475,7 @@ svg {
   margin: 0 100px 40px;
   width: 560px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_6] .subtitle {
     margin: 0 100px 15px;
   }
@@ -1502,7 +1502,7 @@ svg {
   right: 100px;
   bottom: 100px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_6] .text {
     bottom: 26px;
   }
@@ -1534,7 +1534,7 @@ svg {
   margin: 0 100px 50px;
   width: 500px;
 }
-@media (max-width: 1365px) {
+@media (max-width: 1399px) {
   [data-modal-name=test_6] .pens {
     margin: 0 100px 15px;
   }

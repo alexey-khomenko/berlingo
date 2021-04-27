@@ -6546,11 +6546,13 @@ svg {
   flex-shrink: 1;
   flex-grow: 1;
   overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0 10px 0 30px;
 }
 @media (max-width: 959px) {
   .winners-tab .tabs__list .winner__nick {
     margin: 0 0 0 27px;
+    max-width: 98px;
   }
 }
 .winners-tab .tabs__list .winner__phone {

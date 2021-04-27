@@ -298,10 +298,12 @@
                     flex-shrink: 1;
                     flex-grow: 1;
                     overflow: hidden;
+                    text-overflow: ellipsis;
                     margin: 0 10px 0 30px;
 
                     @media (max-width: $sm_max) {
                         margin: 0 0 0 27px;
+                        max-width: 98px;
                     }
                 }
 

@@ -3,8 +3,15 @@
     transform: translateX(-50%);
     left: 50%;
 
-    @media (max-width: $sm_max) {
-        img {
+    img {
+        height: auto;
+        width: 1160px;
+
+        @media (max-width: $md_max) {
+            width: 940px;
+        }
+
+        @media (max-width: $sm_max) {
             width: 350px;
         }
     }

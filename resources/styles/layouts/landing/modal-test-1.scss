@@ -34,8 +34,18 @@
             top: auto;
             bottom: -106px;
             right: -235px;
+        }
 
-            img {
+        img {
+            width: 780px;
+            height: 853px;
+
+            @media (max-width: $md_max) {
+                width: 661px;
+                height: 715px;
+            }
+
+            @media (max-width: $sm_max) {
                 width: 535px;
                 height: 559px;
             }
